@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ZestixAI – Custom AI solutions to power your business into the future." />
+  <meta name="keywords" content="AI consulting, AI automation, AI dashboards, intelligent automation, ZestixAI, workflow AI, business intelligence, chatbot development, AI-powered analytics" />
+  <meta property="og:title" content="ZestixAI - Human-Centered AI Solutions" />
+  <meta property="og:image" content="preview.png" />
+  <meta property="og:description" content="We build emotionally intelligent AI that drives growth and elevates your customer experience." />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="prefetch" href="zestixai_main.html" as="document" />
+  <title>ZestixAI Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+      font-family: 'Orbitron', sans-serif;
+    }
+    #overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff;
+      font-size: 2rem;
+      text-shadow: 0 0 15px #00f7ff, 0 0 25px #00f7ff;
+      z-index: 2;
+      animation: heartbeat 1.6s infinite;
+      letter-spacing: 0.6px;
+    }
+    @keyframes heartbeat {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.05); }
+    }
+    #logo {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      width: min(30vw, 120px);
+      opacity: 0.9;
+      z-index: 2;
+      animation: zoomIntoLogo 6s ease-in-out forwards;
+      filter: drop-shadow(0 0 10px #00f7ff);
+    }
+    @keyframes zoomIntoLogo {
+      0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+      100% { transform: translate(-50%, -50%) scale(6); opacity: 0; }
+    }
+    #skip-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 0.5rem 1rem;
+      background: rgba(0, 247, 255, 0.2);
+      border: 1px solid #00f7ff;
+      color: #00f7ff;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 4;
+      font-size: 0.9rem;
+      backdrop-filter: blur(4px);
+    }
+    #skip-button:focus {
+      outline: 2px solid #00f7ff;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: none;
+      position: absolute;
+      z-index: 3;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    iframe.show {
+      display: block;
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 600px) {
+      #overlay-text {
+        font-size: 1.4rem;
+        text-align: center;
+        width: 90%;
+      }
+      #logo {
+        width: 100px;
+      }
+      #skip-button {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img id="logo" src="logo.png" alt="ZestixAI Logo">
+  <div id="overlay-text" aria-live="polite">Initializing ZestixAI Core...</div>
+  <button id="skip-button" role="button" aria-label="Skip ZestixAI intro animation">Skip Intro</button>
+  <iframe id="main-site" src="zestixai_main.html"></iframe>
+
+  <script>
+    function endIntro() {
+      document.getElementById("logo").style.display = 'none';
+      document.getElementById("overlay-text").style.display = 'none';
+      document.getElementById("skip-button").style.display = 'none';
+      const iframe = document.getElementById("main-site");
+      iframe.classList.add("show");
+    }
+
+    document.getElementById("skip-button").addEventListener('click', endIntro);
+    setTimeout(endIntro, 6000);
+  </script>
+</body>
+</html>
