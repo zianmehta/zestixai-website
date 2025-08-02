@@ -1,147 +1,530 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Canonical -->
-<link rel="canonical" href="https://www.zestixai.com/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZestixAI is a leading AI consulting firm specializing in emotionally intelligent AI solutions, workflow automation, predictive analytics, custom chatbots, and more to empower your business growth.">
+    <meta name="keywords" content="AI consulting, emotionally intelligent AI, AI strategy, workflow automation, predictive analytics, custom chatbots, CRM integration, AI dashboards">
+    <title>ZestixAI - Pioneering Emotionally Intelligent AI Consulting Solutions</title>
+    <!-- Manifest for PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Icon for PWA and favicon (create a 144x144 PNG icon and place at /icon.png) -->
+    <link rel="icon" href="/icon.png" type="image/png" sizes="144x144" alt="ZestixAI Logo Icon">
+    <style>
+        /* Root variables for color scheme: Sleek Monochrome with Neon Edges */
+        :root {
+            --primary-bg: #121212; /* Charcoal Black - Immersive dark mode */
+            --secondary-text: #FFFFFF; /* Crisp White - High contrast */
+            --accent-glow: linear-gradient(135deg, #00FFFF, #00FF7F); /* Cyan-Green Gradient - Futuristic neon */
+            --neutral-gray: #A9A9A9; /* Mid-Gray - Subtle elements */
+            --font-family: 'Inter', sans-serif; /* Clean, professional typography */
+        }
 
-<!-- Open Graph -->
-<meta property="og:title" content="ZestixAI – Custom AI Solutions" />
-<meta property="og:description" content="We build emotionally intelligent AI that drives growth and elevates your business." />
-<meta property="og:image" content="preview.png" />
-<meta property="og:url" content="https://www.zestixai.com" />
-<meta name="twitter:card" content="summary_large_image" />
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!-- Keywords -->
-<meta name="keywords" content="ZestixAI, AI consulting, AI dashboards, AI automation, custom AI, intelligent automation, data science, workflow bots" />
+        body {
+            font-family: var(--font-family);
+            background-color: var(--primary-bg);
+            color: var(--secondary-text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "ZestixAI",
-  "url": "https://www.zestixai.com",
-  "logo": "https://www.zestixai.com/logo.png",
-  "sameAs": [],
-  "description": "ZestixAI builds emotionally intelligent AI that helps businesses scale with smart automation and analytics."
-}
-</script>
+        /* Global subtle neon particle background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.05), transparent 70%);
+            opacity: 0.2;
+            pointer-events: none;
+            animation: neonPulse 30s ease infinite;
+        }
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ZestixAI – Custom AI solutions to power your business into the future." />
-  <meta name="keywords" content="AI consulting, AI automation, AI dashboards, intelligent automation, ZestixAI, workflow AI, business intelligence, chatbot development, AI-powered analytics" />
-  <meta property="og:title" content="ZestixAI - Human-Centered AI Solutions" />
-  <meta property="og:image" content="preview.png" />
-  <meta property="og:description" content="We build emotionally intelligent AI that drives growth and elevates your customer experience." />
-  <link rel="icon" href="favicon.ico" />
-  <link rel="prefetch" href="zestixai_main.html" as="document" />
-  <title>ZestixAI Portal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: black;
-      font-family: 'Orbitron', sans-serif;
-    }
-    #overlay-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #ffffff;
-      font-size: 2rem;
-      text-shadow: 0 0 15px #00f7ff, 0 0 25px #00f7ff;
-      z-index: 2;
-      animation: heartbeat 1.6s infinite;
-      letter-spacing: 0.6px;
-    }
-    @keyframes heartbeat {
-      0%, 100% { transform: translate(-50%, -50%) scale(1); }
-      50% { transform: translate(-50%, -50%) scale(1.05); }
-    }
-    #logo {
-      position: absolute;
-      top: 30%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(1);
-      width: min(30vw, 120px);
-      opacity: 0.9;
-      z-index: 2;
-      animation: zoomIntoLogo 6s ease-in-out forwards;
-      filter: drop-shadow(0 0 10px #00f7ff);
-    }
-    @keyframes zoomIntoLogo {
-      0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-      100% { transform: translate(-50%, -50%) scale(6); opacity: 0; }
-    }
-    #skip-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      padding: 0.5rem 1rem;
-      background: rgba(0, 247, 255, 0.2);
-      border: 1px solid #00f7ff;
-      color: #00f7ff;
-      border-radius: 5px;
-      cursor: pointer;
-      z-index: 4;
-      font-size: 0.9rem;
-      backdrop-filter: blur(4px);
-    }
-    #skip-button:focus {
-      outline: 2px solid #00f7ff;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: none;
-      position: absolute;
-      z-index: 3;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-    iframe.show {
-      display: block;
-      opacity: 1;
-    }
+        @keyframes neonPulse {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.1; }
+        }
 
-    @media screen and (max-width: 600px) {
-      #overlay-text {
-        font-size: 1.4rem;
-        text-align: center;
-        width: 90%;
-      }
-      #logo {
-        width: 100px;
-      }
-      #skip-button {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.8rem;
-      }
-    }
-  </style>
+        /* Navigation - Minimalist with neon border hover */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(18, 18, 18, 0.7);
+            backdrop-filter: blur(20px);
+            padding: 1.2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            background: var(--accent-glow);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 3rem;
+        }
+
+        nav ul li a {
+            color: var(--neutral-gray);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.4s ease;
+            padding: 0.5rem 0;
+        }
+
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-glow);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+            transform-origin: right;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-text);
+        }
+
+        nav ul li a:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Hero Section - Ultra-minimal with neon edge animations */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 0 4rem;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background: var(--accent-glow);
+            animation: expandLine 2s ease forwards 1s;
+        }
+
+        @keyframes expandLine {
+            to { width: 50%; }
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: neonText 1.5s ease-out;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+        }
+
+        @keyframes neonText {
+            from { opacity: 0; text-shadow: 0 0 30px rgba(0, 255, 255, 0.5); }
+            to { opacity: 1; text-shadow: 0 0 10px rgba(0, 255, 255, 0.2); }
+        }
+
+        .hero p {
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            max-width: 900px;
+            color: var(--neutral-gray);
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .cta-button {
+            background: transparent;
+            border: 2px solid;
+            border-image: var(--accent-glow) 1;
+            color: var(--secondary-text);
+            padding: 1.2rem 3rem;
+            border-radius: 0;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .cta-button:hover {
+            background: rgba(0, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 255, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0); }
+        }
+
+        /* About Section - Monochrome depth with subtle glow */
+        .about {
+            padding: 8rem 4rem;
+            text-align: center;
+            border-top: 1px solid rgba(0, 255, 255, 0.05);
+        }
+
+        .about h2 {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+            color: var(--secondary-text);
+            position: relative;
+        }
+
+        .about h2::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 1px;
+            background: var(--accent-glow);
+        }
+
+        .about p {
+            max-width: 1000px;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            color: var(--neutral-gray);
+        }
+
+        /* Services - Grid with neon border cards */
+        .services {
+            padding: 8rem 4rem;
+            background: linear-gradient(to bottom, #121212, #1A1A1A);
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 4rem;
+            margin-bottom: 5rem;
+            color: var(--secondary-text);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: transparent;
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: border 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .service-card:hover {
+            border-color: rgba(0, 255, 255, 0.3);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-text);
+        }
+
+        .service-card p {
+            font-size: 1.2rem;
+            color: var(--neutral-gray);
+        }
+
+        /* Contact - Sleek form with neon focus effects */
+        .contact {
+            padding: 8rem 4rem;
+            text-align: center;
+            border-top: 1px solid rgba(0, 255, 255, 0.05);
+        }
+
+        .contact h2 {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+            color: var(--secondary-text);
+        }
+
+        .contact p {
+            margin-bottom: 4rem;
+            font-size: 1.3rem;
+            color: var(--neutral-gray);
+        }
+
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 1.5rem;
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.02);
+            color: var(--secondary-text);
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: border 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #00FFFF;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+        }
+
+        label {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            color: var(--neutral-gray);
+            transition: 0.3s ease;
+            pointer-events: none;
+        }
+
+        input:focus + label, input:not(:placeholder-shown) + label,
+        textarea:focus + label, textarea:not(:placeholder-shown) + label {
+            top: -1rem;
+            left: 1.2rem;
+            font-size: 0.9rem;
+            color: #00FFFF;
+            background: var(--primary-bg);
+            padding: 0 0.5rem;
+        }
+
+        button {
+            background: transparent;
+            border: 2px solid;
+            border-image: var(--accent-glow) 1;
+            color: var(--secondary-text);
+            padding: 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        button:hover {
+            background: rgba(0, 255, 255, 0.1);
+        }
+
+        /* Footer - Minimal with neon accents */
+        footer {
+            padding: 4rem;
+            text-align: center;
+            background: rgba(18, 18, 18, 0.7);
+            color: var(--neutral-gray);
+            border-top: 1px solid rgba(0, 255, 255, 0.05);
+        }
+
+        footer p {
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .social-links a {
+            color: var(--neutral-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #00FFFF;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+            .hero p {
+                font-size: 1.4rem;
+                padding: 0 2rem;
+            }
+            header {
+                padding: 1rem 2rem;
+            }
+            nav ul li {
+                margin-left: 1.5rem;
+            }
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-button {
+                padding: 1.5rem 4rem; /* Larger tap target */
+                font-size: 1.2rem;
+            }
+            input, textarea, button {
+                padding: 1.8rem; /* Easier touch input */
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+    <!-- Google Analytics gtag.js snippet (replace G-XXXXXXX with your Measurement ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXX');
+    </script>
 </head>
 <body>
-  <img id="logo" src="logo.png" alt="ZestixAI Logo">
-  <div id="overlay-text" aria-live="polite">Initializing ZestixAI Core...</div>
-  <button id="skip-button" role="button" aria-label="Skip ZestixAI intro animation">Skip Intro</button>
-  <iframe id="main-site" src="zestixai_main.html"></iframe>
 
-  <script>
-    function endIntro() {
-      document.getElementById("logo").style.display = 'none';
-      document.getElementById("overlay-text").style.display = 'none';
-      document.getElementById("skip-button").style.display = 'none';
-      const iframe = document.getElementById("main-site");
-      iframe.classList.add("show");
-    }
+    <header>
+        <div class="logo">ZestixAI</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    document.getElementById("skip-button").addEventListener('click', endIntro);
-    setTimeout(endIntro, 6000);
-  </script>
+    <section class="hero">
+        <h1>Emotionally Intelligent AI</h1>
+        <p>Transforming businesses with AI that understands human nuances, drives innovation, and delivers measurable growth.</p>
+        <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About ZestixAI</h2>
+        <p>Headquartered in Vernon Hills, IL, ZestixAI stands at the forefront of AI consulting, merging profound human insights with cutting-edge machine intelligence to craft bespoke AI solutions that propel your business into the future.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>AI Strategy & Implementation</h3>
+                <p>Navigate from ideation to full-scale deployment with expert guidance on intelligent automation tailored to your enterprise needs.</p>
+            </div>
+            <div class="service-card">
+                <h3>Workflow Automation</h3>
+                <p>Liberate your teams from mundane tasks through bespoke AI bots and scripts engineered for peak efficiency and seamless integration.</p>
+            </div>
+            <div class="service-card">
+                <h3>Predictive Analytics</h3>
+                <p>Harness data to anticipate market shifts, reveal hidden patterns, and refine operations with precision-driven intelligence.</p>
+            </div>
+            <div class="service-card">
+                <h3>Custom Chatbots</h3>
+                <p>Elevate customer interactions with AI agents that converse with empathy and accuracy, fostering loyalty and satisfaction.</p>
+            </div>
+            <div class="service-card">
+                <h3>CRM/ERP Integration</h3>
+                <p>Enhance your core systems with AI layers that provide deep insights, automate processes, and support informed decision-making.</p>
+            </div>
+            <div class="service-card">
+                <h3>AI-powered Dashboards</h3>
+                <p>Gain real-time visibility into your operations with intelligent dashboards that analyze, predict, and recommend actions proactively.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Connect with our experts to explore how ZestixAI can revolutionize your business landscape with emotionally intelligent AI consulting. We're here to listen and innovate together.</p>
+        <!-- Calendly inline widget embed (replace https://calendly.com/your-scheduling-page with your actual Calendly link) -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/your-scheduling-page" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </section>
+
+    <footer>
+        <p>© 2025 ZestixAI. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Email</a>
+        </div>
+    </footer>
+
+    <!-- Service Worker registration for PWA (create sw.js file with basic content like: self.addEventListener('fetch', e => {}); ) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('Service Worker registration failed:', err));
+            });
+        }
+    </script>
+
 </body>
 </html>
