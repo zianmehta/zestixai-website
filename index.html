@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ZestixAI is a leading AI consulting firm specializing in emotionally intelligent AI solutions, workflow automation, predictive analytics, custom chatbots, and more to empower your business growth.">
-    <meta name="keywords" content="AI consulting, emotionally intelligent AI, AI strategy, workflow automation, predictive analytics, custom chatbots, CRM integration, AI dashboards">
-    <title>ZestixAI - Pioneering Emotionally Intelligent AI Consulting Solutions</title>
+
+    <meta name="description" content="ZestixAI builds emotionally intelligent AI solutions including 24/7 AI Call Assistants, workflow automation, predictive analytics, custom chatbots, and AI dashboards to grow your business.">
+    <meta name="keywords" content="AI consulting, AI call assistant, voice AI, appointment booking, emotionally intelligent AI, workflow automation, predictive analytics, custom chatbots, CRM integration, AI dashboards">
+    <title>ZestixAI - Emotionally Intelligent AI + AI Call Assistants</title>
+
     <!-- Manifest for PWA -->
     <link rel="manifest" href="/manifest.json">
-    <!-- Favicons with multiple sizes -->
+
+    <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
@@ -16,19 +19,19 @@
     <link rel="icon" type="image/webp" sizes="144x144" href="/icon.webp">
     <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
-
-    <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    <!-- Font preconnect for performance -->
+    <!-- Font preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="ZestixAI - Pioneering Emotionally Intelligent AI Consulting Solutions">
-    <meta property="og:description" content="ZestixAI specializes in emotionally intelligent AI solutions to empower business growth.">
-    <meta property="og:image" content="https://yourdomain.com/og-image.png"> <!-- Add an OG image -->
+
+    <!-- Open Graph Meta Tags (update these to your real domain assets later) -->
+    <meta property="og:title" content="ZestixAI - Emotionally Intelligent AI + AI Call Assistants">
+    <meta property="og:description" content="AI Call Assistants that answer 24/7, book appointments, capture leads, and update your CRM — plus custom AI solutions.">
+    <meta property="og:image" content="https://yourdomain.com/og-image.png">
     <meta property="og:url" content="https://yourdomain.com">
     <meta property="og:type" content="website">
+
     <!-- Schema.org Structured Data for Organization -->
     <script type="application/ld+json">
     {
@@ -52,28 +55,25 @@
       }
     }
     </script>
-    <!-- Font Awesome for service icons -->
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Cookie Consent CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+
     <style>
-        /* Root variables for color scheme: Sleek Monochrome with Neon Edges */
         :root {
-            --primary-bg: #121212; /* Charcoal Black - Immersive dark mode */
-            --secondary-text: #FFFFFF; /* Crisp White - High contrast */
-            --accent-glow: linear-gradient(135deg, #00FFFF, #00FF7F); /* Cyan-Green Gradient - Futuristic neon */
-            --neutral-gray: #A9A9A9; /* Mid-Gray - Subtle elements */
-            --font-family: 'Inter', sans-serif; /* Clean, professional typography */
+            --primary-bg: #121212;
+            --secondary-text: #FFFFFF;
+            --accent-glow: linear-gradient(135deg, #00FFFF, #00FF7F);
+            --neutral-gray: #A9A9A9;
+            --font-family: 'Inter', sans-serif;
             --line-width: 50%;
         }
 
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: var(--font-family);
@@ -84,14 +84,11 @@
             position: relative;
         }
 
-        /* Global subtle neon particle background */
         body::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: radial-gradient(circle, rgba(0, 255, 255, 0.05), transparent 70%);
             opacity: 0.2;
             pointer-events: none;
@@ -103,7 +100,6 @@
             50% { opacity: 0.1; }
         }
 
-        /* Navigation - Minimalist with neon border hover */
         header {
             position: fixed;
             top: 0;
@@ -128,14 +124,8 @@
             text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: clamp(1rem, 3vw, 3rem);
-        }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: clamp(1rem, 3vw, 3rem); }
 
         nav ul li a {
             color: var(--neutral-gray);
@@ -148,24 +138,16 @@
         nav ul li a::before {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
+            bottom: 0; left: 0;
+            width: 100%; height: 2px;
             background: var(--accent-glow);
             transform: scaleX(0);
             transition: transform 0.4s ease;
             transform-origin: right;
         }
 
-        nav ul li a:hover {
-            color: var(--secondary-text);
-        }
-
-        nav ul li a:hover::before {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
+        nav ul li a:hover { color: var(--secondary-text); }
+        nav ul li a:hover::before { transform: scaleX(1); transform-origin: left; }
 
         .menu-toggle {
             display: none;
@@ -177,7 +159,7 @@
             margin-left: auto;
         }
 
-        /* Hero Section - Ultra-minimal with neon edge animations */
+        /* HERO */
         .hero {
             height: 100vh;
             display: flex;
@@ -191,7 +173,7 @@
 
         .hero h1 {
             font-size: clamp(2rem, 10vw, 5rem);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             letter-spacing: 1px;
             text-transform: uppercase;
             animation: neonText 1.5s ease-out;
@@ -205,8 +187,8 @@
 
         .hero p {
             font-size: clamp(1rem, 4vw, 1.8rem);
-            margin-bottom: 3rem;
-            max-width: 900px;
+            margin-bottom: 2.2rem;
+            max-width: 950px;
             color: var(--neutral-gray);
             animation: fadeIn 2s ease-out;
         }
@@ -214,6 +196,13 @@
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
+        }
+
+        .cta-row{
+            display:flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .cta-button {
@@ -228,11 +217,16 @@
             letter-spacing: 1px;
             transition: background 0.4s ease, box-shadow 0.4s ease;
             animation: pulse 2s infinite;
+            display: inline-block;
         }
 
         .cta-button:hover {
             background: rgba(0, 255, 255, 0.1);
             box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+
+        .cta-secondary{
+            background: rgba(255,255,255,0.03);
         }
 
         @keyframes pulse {
@@ -241,16 +235,15 @@
             100% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0); }
         }
 
-        /* About Section - Monochrome depth with subtle glow */
+        /* ABOUT */
         .about {
             padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
             text-align: center;
-            /* Removed border-top */
         }
 
         .about h2 {
             font-size: clamp(2rem, 8vw, 4rem);
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             color: var(--secondary-text);
             position: relative;
         }
@@ -273,7 +266,95 @@
             color: var(--neutral-gray);
         }
 
-        /* Services - Grid with neon border cards */
+        /* FEATURED CALL ASSISTANT SECTION */
+        .call-assistant {
+            padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+            background: linear-gradient(to bottom, #121212, #1A1A1A);
+            text-align: center;
+        }
+
+        .featured-wrap{
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid rgba(0, 255, 255, 0.18);
+            border-radius: 14px;
+            padding: clamp(2rem, 5vw, 3rem);
+            position: relative;
+            overflow: hidden;
+            background: rgba(255,255,255,0.02);
+        }
+
+        .featured-wrap::before{
+            content:'';
+            position:absolute;
+            top:-50%;
+            left:-50%;
+            width:200%;
+            height:200%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.06), transparent 60%);
+            opacity: 0.8;
+            pointer-events:none;
+        }
+
+        .badge{
+            position:absolute;
+            top: 18px;
+            right: 18px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            padding: 0.35rem 0.7rem;
+            border-radius: 999px;
+            background: rgba(0,255,255,0.12);
+            border: 1px solid rgba(0,255,255,0.25);
+            color: #00FFFF;
+            z-index: 1;
+        }
+
+        .call-assistant h2{
+            font-size: clamp(2rem, 8vw, 4rem);
+            margin-bottom: 1.2rem;
+            color: var(--secondary-text);
+            position: relative;
+            z-index: 1;
+        }
+
+        .call-sub{
+            max-width: 1000px;
+            margin: 0 auto;
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: var(--neutral-gray);
+            position: relative;
+            z-index: 1;
+        }
+
+        .mini-title{
+            margin-top: 3rem;
+            font-size: clamp(1.2rem, 4vw, 1.6rem);
+            color: var(--secondary-text);
+            position: relative;
+            z-index: 1;
+        }
+
+        .chip-row{
+            margin-top: 1.2rem;
+            display:flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .chip{
+            padding: 0.5rem 0.8rem;
+            border-radius: 999px;
+            border: 1px solid rgba(0,255,255,0.15);
+            background: rgba(255,255,255,0.03);
+            color: var(--neutral-gray);
+            font-size: 0.95rem;
+        }
+
+        /* SERVICES */
         .services {
             padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
             background: linear-gradient(to bottom, #121212, #1A1A1A);
@@ -299,7 +380,7 @@
             border-radius: 10px;
             padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2rem);
             text-align: center;
-            transition: border 0.4s ease, box-shadow 0.4s ease;
+            transition: border 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -322,11 +403,10 @@
         .service-card:hover {
             border-color: rgba(0, 255, 255, 0.3);
             box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+            transform: translateY(-4px);
         }
 
-        .service-card:hover::before {
-            opacity: 1;
-        }
+        .service-card:hover::before { opacity: 1; }
 
         .service-card i {
             font-size: clamp(2rem, 6vw, 3rem);
@@ -336,7 +416,7 @@
 
         .service-card h3 {
             font-size: clamp(1.3rem, 5vw, 2.2rem);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             color: var(--secondary-text);
         }
 
@@ -346,7 +426,24 @@
             flex-grow: 1;
         }
 
-        /* Testimonials Section */
+        /* featured card accent (AI Call Assistant) */
+        .service-card.featured{
+            border-color: rgba(0, 255, 255, 0.35);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.10);
+        }
+        .service-card.featured::after{
+            content:"FEATURED";
+            position:absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: #00FFFF;
+            opacity: 0.85;
+            font-weight: 700;
+        }
+
+        /* Testimonials */
         .testimonials {
             padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
             text-align: center;
@@ -386,21 +483,20 @@
             color: var(--secondary-text);
         }
 
-        /* Contact - Sleek form with neon focus effects */
+        /* Contact */
         .contact {
             padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
             text-align: center;
-            /* Removed border-top */
         }
 
         .contact h2 {
             font-size: clamp(2rem, 8vw, 4rem);
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             color: var(--secondary-text);
         }
 
         .contact p {
-            margin-bottom: 4rem;
+            margin-bottom: 3.2rem;
             font-size: clamp(1rem, 3vw, 1.3rem);
             color: var(--neutral-gray);
         }
@@ -411,10 +507,6 @@
             display: flex;
             flex-direction: column;
             gap: clamp(1.5rem, 3vw, 2rem);
-        }
-
-        .form-group {
-            position: relative;
         }
 
         input, textarea {
@@ -431,25 +523,7 @@
         input:focus, textarea:focus {
             border-color: #00FFFF;
             box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-        }
-
-        label {
-            position: absolute;
-            top: clamp(1.2rem, 3vw, 1.5rem);
-            left: clamp(1.2rem, 3vw, 1.5rem);
-            color: var(--neutral-gray);
-            transition: 0.3s ease;
-            pointer-events: none;
-        }
-
-        input:focus + label, input:not(:placeholder-shown) + label,
-        textarea:focus + label, textarea:not(:placeholder-shown) + label {
-            top: -1rem;
-            left: 1.2rem;
-            font-size: 0.9rem;
-            color: #00FFFF;
-            background: var(--primary-bg);
-            padding: 0 0.5rem;
+            outline: none;
         }
 
         button {
@@ -469,7 +543,6 @@
             background: rgba(0, 255, 255, 0.1);
         }
 
-        /* Footer - Minimal with neon accents */
         footer {
             padding: clamp(3rem, 5vw, 4rem);
             text-align: center;
@@ -478,9 +551,7 @@
             border-top: 1px solid rgba(0, 255, 255, 0.05);
         }
 
-        footer p {
-            margin-bottom: 2rem;
-        }
+        footer p { margin-bottom: 2rem; }
 
         .social-links {
             display: flex;
@@ -495,28 +566,10 @@
             transition: color 0.3s ease;
         }
 
-        .social-links a:hover {
-            color: #00FFFF;
-        }
-
-        /* Newsletter Signup */
-        .newsletter-form {
-            max-width: 400px;
-            margin: 2rem auto;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .newsletter-form input {
-            flex: 1;
-            min-width: 200px;
-        }
+        .social-links a:hover { color: #00FFFF; }
 
         /* Section lines */
-        section {
-            position: relative;
-        }
+        section { position: relative; }
 
         section::after {
             content: '';
@@ -537,34 +590,19 @@
             to { width: var(--line-width); }
         }
 
-        /* Responsive adjustments - Hamburger menu for mobile */
+        /* Responsive */
         @media (min-width: 1200px) {
-            .service-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            .service-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
         @media (min-width: 768px) and (max-width: 1199px) {
-            .service-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .service-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 767px) {
-            :root {
-                --line-width: 80%;
-            }
-
-            .service-grid,
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-                gap: clamp(3rem, 7vw, 4rem);
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
+            :root { --line-width: 80%; }
+            .service-grid, .testimonial-grid { grid-template-columns: 1fr; gap: clamp(3rem, 7vw, 4rem); }
+            .menu-toggle { display: block; }
             nav ul {
                 display: none;
                 flex-direction: column;
@@ -576,118 +614,28 @@
                 padding: 2rem 0;
                 border-top: 1px solid rgba(0, 255, 255, 0.1);
             }
+            nav ul.active { display: flex; }
+            nav ul li { margin: 1.5rem 0; text-align: center; }
+            nav ul li a { padding: 1.5rem; display: block; font-size: clamp(1.1rem, 4vw, 1.3rem); }
 
-            nav ul.active {
-                display: flex;
-            }
-
-            nav ul li {
-                margin: 1.5rem 0;
-                text-align: center;
-            }
-
-            nav ul li a {
-                padding: 1.5rem;
-                display: block;
-                font-size: clamp(1.1rem, 4vw, 1.3rem);
-            }
-
-            .hero {
-                padding: 0 clamp(2.5rem, 7vw, 3.5rem);
-                height: auto;
-                min-height: 100vh;
-            }
-
-            .hero h1 {
-                margin-bottom: 2.5rem;
-            }
-
-            .hero p {
-                margin-bottom: 4.5rem;
-            }
-
-            .about,
-            .services,
-            .testimonials,
-            .contact {
+            .hero { padding: 0 clamp(2.5rem, 7vw, 3.5rem); height: auto; min-height: 100vh; }
+            .hero h1 { margin-bottom: 2.5rem; }
+            .hero p { margin-bottom: 3.5rem; }
+            .about, .services, .testimonials, .contact, .call-assistant {
                 padding: clamp(6rem, 14vw, 8rem) clamp(2.5rem, 7vw, 3.5rem);
             }
-
-            .about h2::after,
-            .services h2::after {
-                width: 80px;
-            }
-
-            .cta-button {
-                width: 100%; /* Full width on smaller screens */
-                padding: clamp(1.2rem, 4vw, 1.5rem) clamp(2.5rem, 7vw, 3.5rem);
-            }
-
-            .service-card,
-            .testimonial-card {
-                padding: clamp(3rem, 7vw, 4rem) clamp(2.5rem, 6vw, 3rem);
-            }
-
-            .service-card i {
-                margin-bottom: 2.5rem;
-            }
-
-            .service-card h3,
-            .testimonial-card p {
-                margin-bottom: 2.5rem;
-            }
-
-            input, textarea, button {
-                padding: clamp(1.5rem, 4vw, 1.8rem); /* Larger for touch */
-                font-size: clamp(1rem, 3.5vw, 1.2rem);
-            }
-
-            .contact .calendly-inline-widget {
-                height: 650px; /* Adjust for mobile */
-            }
-
-            footer {
-                padding: clamp(4rem, 8vw, 6rem);
-            }
-
-            .social-links {
-                gap: clamp(2.5rem, 6vw, 3.5rem);
-            }
+            .cta-button { width: 100%; }
+            .contact .calendly-inline-widget { height: 650px; }
         }
 
         @media (max-width: 480px) {
-            .newsletter-form {
-                flex-direction: column;
-            }
-
-            .newsletter-form input,
-            .newsletter-form button {
-                width: 100%;
-            }
-
-            .hero h1 {
-                font-size: clamp(1.8rem, 9vw, 3rem);
-            }
-
-            .hero p {
-                font-size: clamp(0.9rem, 3.5vw, 1.2rem);
-            }
-
-            .about p,
-            .contact p {
-                font-size: clamp(0.9rem, 3vw, 1.1rem);
-            }
-
-            header {
-                padding: clamp(0.8rem, 3vw, 1.2rem) clamp(1.5rem, 6vw, 2.5rem);
-            }
-
-            .menu-toggle {
-                font-size: clamp(1.6rem, 6vw, 2.2rem);
-            }
+            header { padding: clamp(0.8rem, 3vw, 1.2rem) clamp(1.5rem, 6vw, 2.5rem); }
+            .menu-toggle { font-size: clamp(1.6rem, 6vw, 2.2rem); }
         }
     </style>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+
     <!-- Google Analytics gtag.js snippet (replace G-XXXXXXX with your Measurement ID) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
     <script>
@@ -705,6 +653,7 @@
         <nav>
             <ul>
                 <li><a href="#about" aria-label="Learn more about ZestixAI">About</a></li>
+                <li><a href="#call-assistant" aria-label="AI Call Assistant service">AI Call Assistant</a></li>
                 <li><a href="#services" aria-label="View our services">Services</a></li>
                 <li><a href="#testimonials" aria-label="Read client testimonials">Testimonials</a></li>
                 <li><a href="#contact" aria-label="Contact us">Contact</a></li>
@@ -714,85 +663,159 @@
 
     <section class="hero">
         <h1>Emotionally Intelligent AI</h1>
-        <p>Transforming businesses with AI that understands human nuances, drives innovation, and delivers measurable growth.</p>
-        <a href="#contact" class="cta-button">Schedule a Free Consultation</a>
+        <p>
+            AI that understands human nuance — and now, a <b>24/7 AI Call Assistant</b> that answers every call, books appointments,
+            captures leads, and updates your CRM.
+        </p>
+
+        <div class="cta-row">
+            <a href="#contact" class="cta-button">Book a Demo</a>
+            <a href="#call-assistant" class="cta-button cta-secondary">See How It Works</a>
+        </div>
     </section>
 
     <section id="about" class="about">
         <h2>About ZestixAI</h2>
-        <p>Headquartered in Vernon Hills, IL, ZestixAI stands at the forefront of AI consulting, merging profound human insights with cutting-edge machine intelligence to craft bespoke AI solutions that propel your business into the future.</p>
+        <p>
+            Headquartered in Vernon Hills, IL, ZestixAI stands at the forefront of AI consulting, merging profound human insights
+            with cutting-edge machine intelligence to craft bespoke AI solutions that propel your business into the future.
+        </p>
+    </section>
+
+    <!-- FLAGSHIP SECTION -->
+    <section id="call-assistant" class="call-assistant">
+        <div class="featured-wrap">
+            <div class="badge">FLAGSHIP</div>
+
+            <h2>AI Call Assistant (24/7)</h2>
+            <p class="call-sub">
+                Turn missed calls into booked appointments. ZestixAI builds voice AI that answers naturally, qualifies callers,
+                books appointments, routes urgent calls to a human, and sends clean summaries to your team.
+            </p>
+
+            <div class="service-grid" style="margin-top: 2.5rem;">
+                <article class="service-card" role="article">
+                    <i class="fas fa-phone-volume"></i>
+                    <h3>Never miss a lead</h3>
+                    <p>Covers after-hours and peak-hour overflow so every caller gets answered instantly.</p>
+                </article>
+
+                <article class="service-card" role="article">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Books appointments</h3>
+                    <p>Schedules via Calendly / Google Calendar and confirms via SMS or email.</p>
+                </article>
+
+                <article class="service-card" role="article">
+                    <i class="fas fa-database"></i>
+                    <h3>CRM updates</h3>
+                    <p>Logs caller details, intent, and outcomes into your CRM or a simple Google Sheet.</p>
+                </article>
+            </div>
+
+            <h3 class="mini-title">How it works</h3>
+            <div class="service-grid" style="margin-top: 1.5rem;">
+                <article class="service-card" role="article">
+                    <i class="fas fa-phone"></i>
+                    <h3>1) Customer calls</h3>
+                    <p>Your number routes to the assistant (or overflows when your team is busy).</p>
+                </article>
+
+                <article class="service-card" role="article">
+                    <i class="fas fa-microphone"></i>
+                    <h3>2) AI answers</h3>
+                    <p>Greets the caller and understands intent like a great receptionist.</p>
+                </article>
+
+                <article class="service-card" role="article">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h3>3) Qualifies + books</h3>
+                    <p>Collects details, books appointments, or routes urgent calls to a human.</p>
+                </article>
+
+                <article class="service-card" role="article">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>4) Summary + log</h3>
+                    <p>Sends your team a recap and logs everything automatically.</p>
+                </article>
+            </div>
+
+            <h3 class="mini-title">Industries we serve</h3>
+            <div class="chip-row">
+                <span class="chip">Restaurants</span>
+                <span class="chip">Clinics / Dentists</span>
+                <span class="chip">HVAC / Plumbing</span>
+                <span class="chip">Salons / Spas</span>
+                <span class="chip">Real Estate</span>
+                <span class="chip">Auto Repair</span>
+            </div>
+
+            <div style="margin-top: 2.8rem;">
+                <a href="#contact" class="cta-button">Book a Demo</a>
+            </div>
+        </div>
     </section>
 
     <section id="services" class="services">
         <h2>Our Services</h2>
         <div class="service-grid">
+            <!-- FEATURED card inside the normal services grid -->
+            <article class="service-card featured" role="article">
+                <i class="fas fa-headset"></i>
+                <h3>AI Call Assistant (24/7)</h3>
+                <p>Voice AI that answers calls, qualifies customers, books appointments, routes urgent calls, and sends summaries to your team.</p>
+            </article>
+
             <article class="service-card" role="article">
                 <i class="fas fa-brain"></i>
                 <h3>AI Strategy & Implementation</h3>
                 <p>Navigate from ideation to full-scale deployment with expert guidance on intelligent automation tailored to your enterprise needs.</p>
             </article>
+
             <article class="service-card" role="article">
                 <i class="fas fa-robot"></i>
                 <h3>Workflow Automation</h3>
                 <p>Liberate your teams from mundane tasks through bespoke AI bots and scripts engineered for peak efficiency and seamless integration.</p>
             </article>
+
             <article class="service-card" role="article">
                 <i class="fas fa-chart-line"></i>
                 <h3>Predictive Analytics</h3>
                 <p>Harness data to anticipate market shifts, reveal hidden patterns, and refine operations with precision-driven intelligence.</p>
             </article>
+
             <article class="service-card" role="article">
                 <i class="fas fa-comments"></i>
                 <h3>Custom Chatbots</h3>
                 <p>Elevate customer interactions with AI agents that converse with empathy and accuracy, fostering loyalty and satisfaction.</p>
             </article>
+
             <article class="service-card" role="article">
                 <i class="fas fa-plug"></i>
                 <h3>CRM/ERP Integration</h3>
                 <p>Enhance your core systems with AI layers that provide deep insights, automate processes, and support informed decision-making.</p>
             </article>
+
             <article class="service-card" role="article">
                 <i class="fas fa-tachometer-alt"></i>
                 <h3>AI-powered Dashboards</h3>
                 <p>Gain real-time visibility into your operations with intelligent dashboards that analyze, predict, and recommend actions proactively.</p>
             </article>
         </div>
+
         <!-- Schema.org for Services -->
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "ItemList",
           "itemListElement": [
-            {
-              "@type": "Service",
-              "name": "AI Strategy & Implementation",
-              "description": "Navigate from ideation to full-scale deployment with expert guidance on intelligent automation tailored to your enterprise needs."
-            },
-            {
-              "@type": "Service",
-              "name": "Workflow Automation",
-              "description": "Liberate your teams from mundane tasks through bespoke AI bots and scripts engineered for peak efficiency and seamless integration."
-            },
-            {
-              "@type": "Service",
-              "name": "Predictive Analytics",
-              "description": "Harness data to anticipate market shifts, reveal hidden patterns, and refine operations with precision-driven intelligence."
-            },
-            {
-              "@type": "Service",
-              "name": "Custom Chatbots",
-              "description": "Elevate customer interactions with AI agents that converse with empathy and accuracy, fostering loyalty and satisfaction."
-            },
-            {
-              "@type": "Service",
-              "name": "CRM/ERP Integration",
-              "description": "Enhance your core systems with AI layers that provide deep insights, automate processes, and support informed decision-making."
-            },
-            {
-              "@type": "Service",
-              "name": "AI-powered Dashboards",
-              "description": "Gain real-time visibility into your operations with intelligent dashboards that analyze, predict, and recommend actions proactively."
-            }
+            { "@type": "Service", "name": "AI Call Assistant (24/7)", "description": "Voice AI that answers calls, qualifies customers, books appointments, routes urgent calls, and sends summaries to your team." },
+            { "@type": "Service", "name": "AI Strategy & Implementation", "description": "Navigate from ideation to full-scale deployment with expert guidance on intelligent automation tailored to your enterprise needs." },
+            { "@type": "Service", "name": "Workflow Automation", "description": "Liberate your teams from mundane tasks through bespoke AI bots and scripts engineered for peak efficiency and seamless integration." },
+            { "@type": "Service", "name": "Predictive Analytics", "description": "Harness data to anticipate market shifts, reveal hidden patterns, and refine operations with precision-driven intelligence." },
+            { "@type": "Service", "name": "Custom Chatbots", "description": "Elevate customer interactions with AI agents that converse with empathy and accuracy, fostering loyalty and satisfaction." },
+            { "@type": "Service", "name": "CRM/ERP Integration", "description": "Enhance your core systems with AI layers that provide deep insights, automate processes, and support informed decision-making." },
+            { "@type": "Service", "name": "AI-powered Dashboards", "description": "Gain real-time visibility into your operations with intelligent dashboards that analyze, predict, and recommend actions proactively." }
           ]
         }
         </script>
@@ -818,11 +841,13 @@
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <p>Connect with our experts to explore how ZestixAI can revolutionize your business landscape with emotionally intelligent AI consulting. We're here to listen and innovate together.</p>
-        <!-- Calendly inline widget begin -->
+        <p>
+            Want a demo or pricing? Tell us your business type and what you want the AI to handle (calls, booking, FAQs, routing).
+        </p>
+
+        <!-- Calendly inline widget -->
         <div class="calendly-inline-widget" data-url="https://calendly.com/zain-mehta-zestixai/30min" style="min-width:320px;height:700px;"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
     </section>
 
     <footer>
@@ -834,7 +859,7 @@
         </div>
     </footer>
 
-    <!-- Service Worker registration for PWA (create sw.js file with basic content like: self.addEventListener('fetch', e => {}); ) -->
+    <!-- Service Worker registration -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
@@ -845,7 +870,7 @@
         }
     </script>
 
-    <!-- Cookie Consent Initialization -->
+    <!-- Cookie Consent -->
     <script>
         window.addEventListener("load", function(){
             window.cookieconsent.initialise({
@@ -855,7 +880,7 @@
         });
     </script>
 
-    <!-- Interactivity: Smooth Scrolling, Back to Top, Scroll Animations, Analytics Events, and Mobile Menu Toggle -->
+    <!-- Interactivity -->
     <script>
         // Mobile Menu Toggle
         document.querySelector('.menu-toggle').addEventListener('click', () => {
@@ -866,10 +891,9 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // Close mobile menu after click
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+
                 if (window.innerWidth <= 768) {
                     document.querySelector('nav ul').classList.remove('active');
                 }
@@ -889,6 +913,7 @@
         backToTop.style.cursor = 'pointer';
         backToTop.style.opacity = '0';
         backToTop.style.transition = 'opacity 0.3s';
+        backToTop.style.zIndex = '9999';
         backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
         document.body.appendChild(backToTop);
 
@@ -896,7 +921,7 @@
             backToTop.style.opacity = window.scrollY > 300 ? '1' : '0';
         });
 
-        // Scroll Animations (using Intersection Observer)
+        // Scroll Animations
         const sections = document.querySelectorAll('section');
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -916,8 +941,13 @@
         });
 
         // Analytics Event for CTA
-        document.querySelector('.cta-button').addEventListener('click', () => {
-            gtag('event', 'click', { 'event_category': 'CTA', 'event_label': 'Schedule Consultation' });
+        const primaryCtas = document.querySelectorAll('.cta-button');
+        primaryCtas.forEach(btn => {
+            btn.addEventListener('click', () => {
+                try {
+                    gtag('event', 'click', { 'event_category': 'CTA', 'event_label': btn.textContent.trim() });
+                } catch (e) {}
+            });
         });
     </script>
 
