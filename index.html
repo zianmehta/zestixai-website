@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Open Graph Meta Tags (update these to your real domain assets later) -->
+    <!-- Open Graph (update these URLs to your real domain assets later) -->
     <meta property="og:title" content="ZestixAI - Emotionally Intelligent AI + AI Call Assistants">
     <meta property="og:description" content="AI Call Assistants that answer 24/7, book appointments, capture leads, and update your CRM — plus custom AI solutions.">
     <meta property="og:image" content="https://yourdomain.com/og-image.png">
@@ -84,6 +84,7 @@
             position: relative;
         }
 
+        /* Subtle neon background */
         body::before {
             content: '';
             position: absolute;
@@ -100,6 +101,7 @@
             50% { opacity: 0.1; }
         }
 
+        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -186,17 +188,14 @@
         }
 
         .hero p {
-            font-size: clamp(1rem, 4vw, 1.8rem);
-            margin-bottom: 2.2rem;
+            font-size: clamp(1rem, 3.6vw, 1.6rem);
+            margin-bottom: 2rem;
             max-width: 950px;
             color: var(--neutral-gray);
             animation: fadeIn 2s ease-out;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         .cta-row{
             display:flex;
@@ -210,7 +209,7 @@
             border: 2px solid;
             border-image: var(--accent-glow) 1;
             color: var(--secondary-text);
-            padding: clamp(1rem, 3vw, 1.2rem) clamp(2rem, 6vw, 3rem);
+            padding: 1rem 2.2rem;
             border-radius: 0;
             text-decoration: none;
             font-weight: 600;
@@ -235,15 +234,30 @@
             100% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0); }
         }
 
+        /* Base sections */
+        section { position: relative; }
+        section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background: var(--accent-glow);
+        }
+        section.visible::after { animation: expandLine 2s ease forwards 1s; }
+        @keyframes expandLine { to { width: var(--line-width); } }
+
         /* ABOUT */
         .about {
-            padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+            padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem);
             text-align: center;
         }
 
         .about h2 {
-            font-size: clamp(2rem, 8vw, 4rem);
-            margin-bottom: 2.5rem;
+            font-size: clamp(2rem, 7vw, 3.3rem);
+            margin-bottom: 2rem;
             color: var(--secondary-text);
             position: relative;
         }
@@ -260,15 +274,71 @@
         }
 
         .about p {
-            max-width: 1000px;
+            max-width: 980px;
             margin: 0 auto;
-            font-size: clamp(1rem, 3vw, 1.3rem);
+            font-size: clamp(1rem, 2.6vw, 1.2rem);
             color: var(--neutral-gray);
         }
 
-        /* FEATURED CALL ASSISTANT SECTION */
+        /* Shared card style (kept, but slightly tighter) */
+        .service-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(0, 255, 255, 0.12);
+            border-radius: 12px;
+            padding: 1.6rem 1.6rem;
+            text-align: center;
+            transition: border 0.35s ease, box-shadow 0.35s ease, transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 180px;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+
+        .service-card:hover {
+            border-color: rgba(0, 255, 255, 0.30);
+            box-shadow: 0 0 22px rgba(0, 255, 255, 0.16);
+            transform: translateY(-4px);
+        }
+
+        .service-card:hover::before { opacity: 1; }
+
+        .service-card i {
+            font-size: 2rem;
+            color: #00FFFF;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.8rem;
+            color: var(--secondary-text);
+            line-height: 1.25;
+        }
+
+        .service-card p {
+            font-size: 1.02rem;
+            color: var(--neutral-gray);
+            flex-grow: 1;
+            line-height: 1.55;
+        }
+
+        /* CALL ASSISTANT FLAGSHIP */
         .call-assistant {
-            padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+            padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem);
             background: linear-gradient(to bottom, #121212, #1A1A1A);
             text-align: center;
         }
@@ -278,7 +348,7 @@
             margin: 0 auto;
             border: 1px solid rgba(0, 255, 255, 0.18);
             border-radius: 14px;
-            padding: clamp(2rem, 5vw, 3rem);
+            padding: clamp(2rem, 5vw, 2.6rem);
             position: relative;
             overflow: hidden;
             background: rgba(255,255,255,0.02);
@@ -287,12 +357,9 @@
         .featured-wrap::before{
             content:'';
             position:absolute;
-            top:-50%;
-            left:-50%;
-            width:200%;
-            height:200%;
+            inset:-40%;
             background: radial-gradient(circle, rgba(0, 255, 255, 0.06), transparent 60%);
-            opacity: 0.8;
+            opacity: 0.7;
             pointer-events:none;
         }
 
@@ -300,7 +367,7 @@
             position:absolute;
             top: 18px;
             right: 18px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             letter-spacing: 2px;
             padding: 0.35rem 0.7rem;
             border-radius: 999px;
@@ -311,30 +378,120 @@
         }
 
         .call-assistant h2{
-            font-size: clamp(2rem, 8vw, 4rem);
-            margin-bottom: 1.2rem;
-            color: var(--secondary-text);
+            font-size: clamp(2rem, 7vw, 3.3rem);
+            margin-bottom: 1rem;
             position: relative;
             z-index: 1;
         }
 
         .call-sub{
-            max-width: 1000px;
+            max-width: 980px;
             margin: 0 auto;
-            font-size: clamp(1rem, 3vw, 1.25rem);
+            font-size: clamp(1rem, 2.6vw, 1.15rem);
             color: var(--neutral-gray);
             position: relative;
             z-index: 1;
         }
 
         .mini-title{
-            margin-top: 3rem;
-            font-size: clamp(1.2rem, 4vw, 1.6rem);
+            margin-top: 2.4rem;
+            font-size: 1.35rem;
             color: var(--secondary-text);
             position: relative;
             z-index: 1;
         }
 
+        /* Benefits grid (3 across on desktop) */
+        .benefits-grid{
+            max-width: 1100px;
+            margin: 2rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.2rem;
+            position: relative;
+            z-index: 1;
+        }
+        @media (max-width: 980px){
+            .benefits-grid{ grid-template-columns: 1fr; }
+        }
+
+        /* FIX: How it works should be 2x2 on desktop */
+        .steps-grid{
+            max-width: 1100px;
+            margin: 1.6rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.2rem;
+            position: relative;
+            z-index: 1;
+        }
+        @media (max-width: 900px){
+            .steps-grid{ grid-template-columns: 1fr; }
+        }
+
+        .step-card{
+            text-align: left;
+            padding: 1.4rem 1.4rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0,255,255,0.14);
+            background: rgba(255,255,255,0.02);
+            position: relative;
+            overflow: hidden;
+            min-height: 160px;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .step-card::before{
+            content:'';
+            position:absolute;
+            inset:-40%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.06), transparent 60%);
+            opacity: 0;
+            transition: opacity .35s ease;
+        }
+
+        .step-card:hover{
+            border-color: rgba(0,255,255,0.30);
+            box-shadow: 0 0 22px rgba(0,255,255,0.16);
+        }
+        .step-card:hover::before{ opacity: 1; }
+
+        .step-icon{
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border-radius: 10px;
+            border: 1px solid rgba(0,255,255,0.22);
+            background: rgba(0,255,255,0.08);
+            flex: 0 0 42px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-icon i{
+            font-size: 1.1rem;
+            color: #00FFFF;
+        }
+
+        .step-body{ position: relative; z-index: 1; }
+
+        .step-title{
+            font-size: 1.15rem;
+            margin-bottom: .25rem;
+            line-height: 1.25;
+            font-weight: 700;
+        }
+
+        .step-text{
+            font-size: 1.02rem;
+            color: var(--neutral-gray);
+            line-height: 1.55;
+        }
+
+        /* Chip row */
         .chip-row{
             margin-top: 1.2rem;
             display:flex;
@@ -354,209 +511,125 @@
             font-size: 0.95rem;
         }
 
-        /* SERVICES */
+        /* SERVICES section */
         .services {
-            padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+            padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem);
             background: linear-gradient(to bottom, #121212, #1A1A1A);
         }
 
         .services h2 {
             text-align: center;
-            font-size: clamp(2rem, 8vw, 4rem);
-            margin-bottom: clamp(3rem, 6vw, 5rem);
+            font-size: clamp(2rem, 7vw, 3.3rem);
+            margin-bottom: 2.5rem;
             color: var(--secondary-text);
         }
 
         .service-grid {
             display: grid;
-            gap: clamp(2rem, 4vw, 3rem);
-            max-width: 1400px;
+            gap: 1.2rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .service-card {
-            background: transparent;
-            border: 1px solid rgba(0, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2rem);
-            text-align: center;
-            transition: border 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+        @media (min-width: 1100px) {
+            .service-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (min-width: 760px) and (max-width: 1099px) {
+            .service-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 759px) {
+            .service-grid { grid-template-columns: 1fr; }
         }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(0, 255, 255, 0.05), transparent);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .service-card:hover {
-            border-color: rgba(0, 255, 255, 0.3);
-            box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
-            transform: translateY(-4px);
-        }
-
-        .service-card:hover::before { opacity: 1; }
-
-        .service-card i {
-            font-size: clamp(2rem, 6vw, 3rem);
-            color: #00FFFF;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card h3 {
-            font-size: clamp(1.3rem, 5vw, 2.2rem);
-            margin-bottom: 1.2rem;
-            color: var(--secondary-text);
-        }
-
-        .service-card p {
-            font-size: clamp(0.9rem, 3vw, 1.2rem);
-            color: var(--neutral-gray);
-            flex-grow: 1;
-        }
-
-        /* featured card accent (AI Call Assistant) */
         .service-card.featured{
             border-color: rgba(0, 255, 255, 0.35);
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.10);
+            box-shadow: 0 0 26px rgba(0, 255, 255, 0.10);
         }
         .service-card.featured::after{
             content:"FEATURED";
             position:absolute;
-            top: 16px;
-            right: 16px;
-            font-size: 0.75rem;
+            top: 14px;
+            right: 14px;
+            font-size: 0.72rem;
             letter-spacing: 2px;
             color: #00FFFF;
             opacity: 0.85;
-            font-weight: 700;
+            font-weight: 800;
         }
 
         /* Testimonials */
         .testimonials {
-            padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+            padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem);
             text-align: center;
             background: linear-gradient(to bottom, #1A1A1A, #121212);
         }
 
         .testimonials h2 {
-            font-size: clamp(2rem, 8vw, 4rem);
-            margin-bottom: clamp(3rem, 6vw, 5rem);
+            font-size: clamp(2rem, 7vw, 3.3rem);
+            margin-bottom: 2.5rem;
             color: var(--secondary-text);
         }
 
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: clamp(2rem, 4vw, 3rem);
-            max-width: 1400px;
+            gap: 1.2rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .testimonial-card {
-            background: transparent;
-            border: 1px solid rgba(0, 255, 255, 0.1);
-            padding: clamp(2rem, 4vw, 2.5rem);
-            border-radius: 10px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(0, 255, 255, 0.12);
+            padding: 1.6rem;
+            border-radius: 12px;
         }
 
         .testimonial-card p {
-            font-size: clamp(0.9rem, 3vw, 1.2rem);
+            font-size: 1.02rem;
             color: var(--neutral-gray);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.55;
         }
 
         .testimonial-card cite {
             display: block;
-            font-size: clamp(0.8rem, 2.5vw, 1rem);
+            font-size: 0.95rem;
             color: var(--secondary-text);
         }
 
         /* Contact */
         .contact {
-            padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+            padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem);
             text-align: center;
         }
 
         .contact h2 {
-            font-size: clamp(2rem, 8vw, 4rem);
-            margin-bottom: 2.5rem;
+            font-size: clamp(2rem, 7vw, 3.3rem);
+            margin-bottom: 2rem;
             color: var(--secondary-text);
         }
 
         .contact p {
-            margin-bottom: 3.2rem;
-            font-size: clamp(1rem, 3vw, 1.3rem);
+            margin-bottom: 2.5rem;
+            font-size: clamp(1rem, 2.6vw, 1.15rem);
             color: var(--neutral-gray);
         }
 
-        form {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: clamp(1.5rem, 3vw, 2rem);
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: clamp(1.2rem, 3vw, 1.5rem);
-            border: 1px solid rgba(0, 255, 255, 0.1);
-            background: rgba(255, 255, 255, 0.02);
-            color: var(--secondary-text);
-            border-radius: 5px;
-            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-            transition: border 0.3s ease;
-        }
-
-        input:focus, textarea:focus {
-            border-color: #00FFFF;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-            outline: none;
-        }
-
-        button {
-            background: transparent;
-            border: 2px solid;
-            border-image: var(--accent-glow) 1;
-            color: var(--secondary-text);
-            padding: clamp(1.2rem, 3vw, 1.5rem);
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background 0.3s ease;
-            margin-top: 1rem;
-        }
-
-        button:hover {
-            background: rgba(0, 255, 255, 0.1);
-        }
-
         footer {
-            padding: clamp(3rem, 5vw, 4rem);
+            padding: 3rem 1.5rem;
             text-align: center;
             background: rgba(18, 18, 18, 0.7);
             color: var(--neutral-gray);
             border-top: 1px solid rgba(0, 255, 255, 0.05);
         }
 
-        footer p { margin-bottom: 2rem; }
+        footer p { margin-bottom: 1.5rem; }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: clamp(1.5rem, 3vw, 2rem);
+            gap: 1.4rem;
             flex-wrap: wrap;
         }
 
@@ -565,44 +638,13 @@
             text-decoration: none;
             transition: color 0.3s ease;
         }
-
         .social-links a:hover { color: #00FFFF; }
 
-        /* Section lines */
-        section { position: relative; }
-
-        section::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 1px;
-            background: var(--accent-glow);
-        }
-
-        section.visible::after {
-            animation: expandLine 2s ease forwards 1s;
-        }
-
-        @keyframes expandLine {
-            to { width: var(--line-width); }
-        }
-
-        /* Responsive */
-        @media (min-width: 1200px) {
-            .service-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-
-        @media (min-width: 768px) and (max-width: 1199px) {
-            .service-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
+        /* Mobile nav */
         @media (max-width: 767px) {
             :root { --line-width: 80%; }
-            .service-grid, .testimonial-grid { grid-template-columns: 1fr; gap: clamp(3rem, 7vw, 4rem); }
             .menu-toggle { display: block; }
+
             nav ul {
                 display: none;
                 flex-direction: column;
@@ -611,32 +653,21 @@
                 left: 0;
                 width: 100%;
                 background: var(--primary-bg);
-                padding: 2rem 0;
+                padding: 1.6rem 0;
                 border-top: 1px solid rgba(0, 255, 255, 0.1);
             }
+
             nav ul.active { display: flex; }
-            nav ul li { margin: 1.5rem 0; text-align: center; }
-            nav ul li a { padding: 1.5rem; display: block; font-size: clamp(1.1rem, 4vw, 1.3rem); }
+            nav ul li { margin: 1rem 0; text-align: center; }
+            nav ul li a { padding: 1rem; display: block; font-size: 1.1rem; }
 
-            .hero { padding: 0 clamp(2.5rem, 7vw, 3.5rem); height: auto; min-height: 100vh; }
-            .hero h1 { margin-bottom: 2.5rem; }
-            .hero p { margin-bottom: 3.5rem; }
-            .about, .services, .testimonials, .contact, .call-assistant {
-                padding: clamp(6rem, 14vw, 8rem) clamp(2.5rem, 7vw, 3.5rem);
-            }
             .cta-button { width: 100%; }
-            .contact .calendly-inline-widget { height: 650px; }
-        }
-
-        @media (max-width: 480px) {
-            header { padding: clamp(0.8rem, 3vw, 1.2rem) clamp(1.5rem, 6vw, 2.5rem); }
-            .menu-toggle { font-size: clamp(1.6rem, 6vw, 2.2rem); }
         }
     </style>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
 
-    <!-- Google Analytics gtag.js snippet (replace G-XXXXXXX with your Measurement ID) -->
+    <!-- Google Analytics (replace ID) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -682,7 +713,7 @@
         </p>
     </section>
 
-    <!-- FLAGSHIP SECTION -->
+    <!-- FLAGSHIP CALL ASSISTANT -->
     <section id="call-assistant" class="call-assistant">
         <div class="featured-wrap">
             <div class="badge">FLAGSHIP</div>
@@ -693,7 +724,8 @@
                 books appointments, routes urgent calls to a human, and sends clean summaries to your team.
             </p>
 
-            <div class="service-grid" style="margin-top: 2.5rem;">
+            <h3 class="mini-title">What you get</h3>
+            <div class="benefits-grid">
                 <article class="service-card" role="article">
                     <i class="fas fa-phone-volume"></i>
                     <h3>Never miss a lead</h3>
@@ -714,30 +746,38 @@
             </div>
 
             <h3 class="mini-title">How it works</h3>
-            <div class="service-grid" style="margin-top: 1.5rem;">
-                <article class="service-card" role="article">
-                    <i class="fas fa-phone"></i>
-                    <h3>1) Customer calls</h3>
-                    <p>Your number routes to the assistant (or overflows when your team is busy).</p>
-                </article>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-icon"><i class="fas fa-phone"></i></div>
+                    <div class="step-body">
+                        <div class="step-title">1) Customer calls</div>
+                        <div class="step-text">Your number routes to the assistant (or overflows when your team is busy).</div>
+                    </div>
+                </div>
 
-                <article class="service-card" role="article">
-                    <i class="fas fa-microphone"></i>
-                    <h3>2) AI answers</h3>
-                    <p>Greets the caller and understands intent like a great receptionist.</p>
-                </article>
+                <div class="step-card">
+                    <div class="step-icon"><i class="fas fa-microphone"></i></div>
+                    <div class="step-body">
+                        <div class="step-title">2) AI answers</div>
+                        <div class="step-text">Greets the caller and understands intent like a great receptionist.</div>
+                    </div>
+                </div>
 
-                <article class="service-card" role="article">
-                    <i class="fas fa-clipboard-check"></i>
-                    <h3>3) Qualifies + books</h3>
-                    <p>Collects details, books appointments, or routes urgent calls to a human.</p>
-                </article>
+                <div class="step-card">
+                    <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <div class="step-body">
+                        <div class="step-title">3) Qualifies + books</div>
+                        <div class="step-text">Collects details, books appointments, or routes urgent calls to a human.</div>
+                    </div>
+                </div>
 
-                <article class="service-card" role="article">
-                    <i class="fas fa-envelope-open-text"></i>
-                    <h3>4) Summary + log</h3>
-                    <p>Sends your team a recap and logs everything automatically.</p>
-                </article>
+                <div class="step-card">
+                    <div class="step-icon"><i class="fas fa-envelope-open-text"></i></div>
+                    <div class="step-body">
+                        <div class="step-title">4) Summary + log</div>
+                        <div class="step-text">Sends your team a recap and logs everything automatically.</div>
+                    </div>
+                </div>
             </div>
 
             <h3 class="mini-title">Industries we serve</h3>
@@ -750,16 +790,16 @@
                 <span class="chip">Auto Repair</span>
             </div>
 
-            <div style="margin-top: 2.8rem;">
+            <div style="margin-top: 2.2rem;">
                 <a href="#contact" class="cta-button">Book a Demo</a>
             </div>
         </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services" class="services">
         <h2>Our Services</h2>
         <div class="service-grid">
-            <!-- FEATURED card inside the normal services grid -->
             <article class="service-card featured" role="article">
                 <i class="fas fa-headset"></i>
                 <h3>AI Call Assistant (24/7)</h3>
@@ -802,25 +842,9 @@
                 <p>Gain real-time visibility into your operations with intelligent dashboards that analyze, predict, and recommend actions proactively.</p>
             </article>
         </div>
-
-        <!-- Schema.org for Services -->
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "ItemList",
-          "itemListElement": [
-            { "@type": "Service", "name": "AI Call Assistant (24/7)", "description": "Voice AI that answers calls, qualifies customers, books appointments, routes urgent calls, and sends summaries to your team." },
-            { "@type": "Service", "name": "AI Strategy & Implementation", "description": "Navigate from ideation to full-scale deployment with expert guidance on intelligent automation tailored to your enterprise needs." },
-            { "@type": "Service", "name": "Workflow Automation", "description": "Liberate your teams from mundane tasks through bespoke AI bots and scripts engineered for peak efficiency and seamless integration." },
-            { "@type": "Service", "name": "Predictive Analytics", "description": "Harness data to anticipate market shifts, reveal hidden patterns, and refine operations with precision-driven intelligence." },
-            { "@type": "Service", "name": "Custom Chatbots", "description": "Elevate customer interactions with AI agents that converse with empathy and accuracy, fostering loyalty and satisfaction." },
-            { "@type": "Service", "name": "CRM/ERP Integration", "description": "Enhance your core systems with AI layers that provide deep insights, automate processes, and support informed decision-making." },
-            { "@type": "Service", "name": "AI-powered Dashboards", "description": "Gain real-time visibility into your operations with intelligent dashboards that analyze, predict, and recommend actions proactively." }
-          ]
-        }
-        </script>
     </section>
 
+    <!-- TESTIMONIALS -->
     <section id="testimonials" class="testimonials">
         <h2>Testimonials</h2>
         <div class="testimonial-grid">
@@ -839,13 +863,12 @@
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <p>
             Want a demo or pricing? Tell us your business type and what you want the AI to handle (calls, booking, FAQs, routing).
         </p>
-
-        <!-- Calendly inline widget -->
         <div class="calendly-inline-widget" data-url="https://calendly.com/zain-mehta-zestixai/30min" style="min-width:320px;height:700px;"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </section>
@@ -858,17 +881,6 @@
             <a href="#">Email</a>
         </div>
     </footer>
-
-    <!-- Service Worker registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(reg => console.log('Service Worker registered'))
-                    .catch(err => console.log('Service Worker registration failed:', err));
-            });
-        }
-    </script>
 
     <!-- Cookie Consent -->
     <script>
@@ -940,13 +952,12 @@
             observer.observe(section);
         });
 
-        // Analytics Event for CTA
-        const primaryCtas = document.querySelectorAll('.cta-button');
-        primaryCtas.forEach(btn => {
+        // CTA analytics (safe if gtag isn't set)
+        const ctas = document.querySelectorAll('.cta-button');
+        ctas.forEach(btn => {
             btn.addEventListener('click', () => {
-                try {
-                    gtag('event', 'click', { 'event_category': 'CTA', 'event_label': btn.textContent.trim() });
-                } catch (e) {}
+                try { gtag('event', 'click', { 'event_category': 'CTA', 'event_label': btn.textContent.trim() }); }
+                catch (e) {}
             });
         });
     </script>
