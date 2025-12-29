@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Open Graph (update these URLs to your real domain assets later) -->
+    <!-- Open Graph (update URLs later) -->
     <meta property="og:title" content="ZestixAI - Emotionally Intelligent AI + AI Call Assistants">
     <meta property="og:description" content="AI Call Assistants that answer 24/7, book appointments, capture leads, and update your CRM — plus custom AI solutions.">
     <meta property="og:image" content="https://yourdomain.com/og-image.png">
@@ -511,25 +511,30 @@
             color: var(--secondary-text);
         }
 
-        /* ✅ FIX: Better grid for 7 items */
+        /* ✅ FIX: 12-col grid on wide screens so 4+3 fills perfectly */
         .service-grid {
             display: grid;
             gap: 1.2rem;
             max-width: 1400px;
             margin: 0 auto;
-            grid-template-columns: repeat(2, 1fr); /* default tablet-ish */
+            grid-template-columns: repeat(2, 1fr);
         }
 
         @media (min-width: 900px) {
-            .service-grid { grid-template-columns: repeat(3, 1fr); } /* normal desktop */
+            .service-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
+        /* Wide desktop uses a 12-column grid:
+           - Default cards span 3 (4 per row)
+           - Bottom row cards span 4 (3 per row) => no empty space */
         @media (min-width: 1300px) {
-            .service-grid { grid-template-columns: repeat(4, 1fr); } /* wide desktop => 4+3 */
+            .service-grid { grid-template-columns: repeat(12, 1fr); }
+            .service-grid .service-card { grid-column: span 3; }
+            .service-grid .service-card.wide-3 { grid-column: span 4; }
         }
 
         @media (max-width: 599px) {
-            .service-grid { grid-template-columns: 1fr; } /* mobile */
+            .service-grid { grid-template-columns: 1fr; }
         }
 
         .service-card.featured{
@@ -779,7 +784,9 @@
 
     <section id="services" class="services">
         <h2>Our Services</h2>
+
         <div class="service-grid">
+            <!-- Row 1 (4 cards) -->
             <article class="service-card featured" role="article">
                 <i class="fas fa-headset"></i>
                 <h3>AI Call Assistant (24/7)</h3>
@@ -804,19 +811,20 @@
                 <p>Harness data to anticipate market shifts, reveal hidden patterns, and refine operations with precision-driven intelligence.</p>
             </article>
 
-            <article class="service-card" role="article">
+            <!-- Row 2 (3 cards) => span wider on 1300px+ -->
+            <article class="service-card wide-3" role="article">
                 <i class="fas fa-comments"></i>
                 <h3>Custom Chatbots</h3>
                 <p>Elevate customer interactions with AI agents that converse with empathy and accuracy, fostering loyalty and satisfaction.</p>
             </article>
 
-            <article class="service-card" role="article">
+            <article class="service-card wide-3" role="article">
                 <i class="fas fa-plug"></i>
                 <h3>CRM/ERP Integration</h3>
                 <p>Enhance your core systems with AI layers that provide deep insights, automate processes, and support informed decision-making.</p>
             </article>
 
-            <article class="service-card" role="article">
+            <article class="service-card wide-3" role="article">
                 <i class="fas fa-tachometer-alt"></i>
                 <h3>AI-powered Dashboards</h3>
                 <p>Gain real-time visibility into your operations with intelligent dashboards that analyze, predict, and recommend actions proactively.</p>
@@ -877,6 +885,16 @@
                     document.querySelector('nav ul').classList.remove('active');
                 }
             });
+        });
+
+        // Cookie Consent
+        window.addEventListener("load", function(){
+            if (window.cookieconsent) {
+                window.cookieconsent.initialise({
+                    "palette": { "popup": { "background": "#121212" }, "button": { "background": "#00FFFF" } },
+                    "content": { "message": "This website uses cookies to ensure you get the best experience.", "dismiss": "Got it!", "link": "Learn more" }
+                });
+            }
         });
 
         // Scroll Animations
