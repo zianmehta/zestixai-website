@@ -192,10 +192,7 @@
             margin-bottom: 2rem;
             max-width: 950px;
             color: var(--neutral-gray);
-            animation: fadeIn 2s ease-out;
         }
-
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         .cta-row{
             display:flex;
@@ -215,7 +212,6 @@
             font-weight: 600;
             letter-spacing: 1px;
             transition: background 0.4s ease, box-shadow 0.4s ease;
-            animation: pulse 2s infinite;
             display: inline-block;
         }
 
@@ -226,12 +222,6 @@
 
         .cta-secondary{
             background: rgba(255,255,255,0.03);
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(0, 255, 255, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0); }
         }
 
         /* Base sections */
@@ -280,7 +270,7 @@
             color: var(--neutral-gray);
         }
 
-        /* Shared card style (kept, but slightly tighter) */
+        /* Shared card style */
         .service-card {
             background: rgba(255,255,255,0.02);
             border: 1px solid rgba(0, 255, 255, 0.12);
@@ -401,7 +391,6 @@
             z-index: 1;
         }
 
-        /* Benefits grid (3 across on desktop) */
         .benefits-grid{
             max-width: 1100px;
             margin: 2rem auto 0;
@@ -415,7 +404,6 @@
             .benefits-grid{ grid-template-columns: 1fr; }
         }
 
-        /* FIX: How it works should be 2x2 on desktop */
         .steps-grid{
             max-width: 1100px;
             margin: 1.6rem auto 0;
@@ -491,7 +479,6 @@
             line-height: 1.55;
         }
 
-        /* Chip row */
         .chip-row{
             margin-top: 1.2rem;
             display:flex;
@@ -524,21 +511,25 @@
             color: var(--secondary-text);
         }
 
+        /* ✅ FIX: Better grid for 7 items */
         .service-grid {
             display: grid;
             gap: 1.2rem;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
+            grid-template-columns: repeat(2, 1fr); /* default tablet-ish */
         }
 
-        @media (min-width: 1100px) {
-            .service-grid { grid-template-columns: repeat(3, 1fr); }
+        @media (min-width: 900px) {
+            .service-grid { grid-template-columns: repeat(3, 1fr); } /* normal desktop */
         }
-        @media (min-width: 760px) and (max-width: 1099px) {
-            .service-grid { grid-template-columns: repeat(2, 1fr); }
+
+        @media (min-width: 1300px) {
+            .service-grid { grid-template-columns: repeat(4, 1fr); } /* wide desktop => 4+3 */
         }
-        @media (max-width: 759px) {
-            .service-grid { grid-template-columns: 1fr; }
+
+        @media (max-width: 599px) {
+            .service-grid { grid-template-columns: 1fr; } /* mobile */
         }
 
         .service-card.featured{
@@ -666,15 +657,6 @@
     </style>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
-
-    <!-- Google Analytics (replace ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXX');
-    </script>
 </head>
 <body>
 
@@ -713,7 +695,6 @@
         </p>
     </section>
 
-    <!-- FLAGSHIP CALL ASSISTANT -->
     <section id="call-assistant" class="call-assistant">
         <div class="featured-wrap">
             <div class="badge">FLAGSHIP</div>
@@ -796,7 +777,6 @@
         </div>
     </section>
 
-    <!-- SERVICES -->
     <section id="services" class="services">
         <h2>Our Services</h2>
         <div class="service-grid">
@@ -844,7 +824,6 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
     <section id="testimonials" class="testimonials">
         <h2>Testimonials</h2>
         <div class="testimonial-grid">
@@ -863,7 +842,6 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <p>
@@ -882,17 +860,6 @@
         </div>
     </footer>
 
-    <!-- Cookie Consent -->
-    <script>
-        window.addEventListener("load", function(){
-            window.cookieconsent.initialise({
-                "palette": { "popup": { "background": "#121212" }, "button": { "background": "#00FFFF" } },
-                "content": { "message": "This website uses cookies to ensure you get the best experience.", "dismiss": "Got it!", "link": "Learn more" }
-            });
-        });
-    </script>
-
-    <!-- Interactivity -->
     <script>
         // Mobile Menu Toggle
         document.querySelector('.menu-toggle').addEventListener('click', () => {
@@ -912,27 +879,6 @@
             });
         });
 
-        // Back to Top Button
-        const backToTop = document.createElement('button');
-        backToTop.innerText = '↑';
-        backToTop.style.position = 'fixed';
-        backToTop.style.bottom = '2rem';
-        backToTop.style.right = '2rem';
-        backToTop.style.background = 'var(--accent-glow)';
-        backToTop.style.color = 'var(--primary-bg)';
-        backToTop.style.border = 'none';
-        backToTop.style.padding = '1rem';
-        backToTop.style.cursor = 'pointer';
-        backToTop.style.opacity = '0';
-        backToTop.style.transition = 'opacity 0.3s';
-        backToTop.style.zIndex = '9999';
-        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-        document.body.appendChild(backToTop);
-
-        window.addEventListener('scroll', () => {
-            backToTop.style.opacity = window.scrollY > 300 ? '1' : '0';
-        });
-
         // Scroll Animations
         const sections = document.querySelectorAll('section');
         const observer = new IntersectionObserver(entries => {
@@ -950,15 +896,6 @@
             section.style.transform = 'translateY(50px)';
             section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(section);
-        });
-
-        // CTA analytics (safe if gtag isn't set)
-        const ctas = document.querySelectorAll('.cta-button');
-        ctas.forEach(btn => {
-            btn.addEventListener('click', () => {
-                try { gtag('event', 'click', { 'event_category': 'CTA', 'event_label': btn.textContent.trim() }); }
-                catch (e) {}
-            });
         });
     </script>
 
