@@ -3,919 +3,719 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZestixAI builds 24/7 AI call assistants for local businesses that answer calls, qualify leads, book appointments, and update your CRM.">
+    <meta name="keywords" content="AI call assistant, voice AI, appointment booking, local business AI, AI receptionist, lead qualification, CRM updates, AI consulting">
+    <title>ZestixAI | 24/7 AI Call Assistant for Local Businesses</title>
+    <link rel="canonical" href="https://www.zestixai.com/">
 
-    <meta name="description" content="ZestixAI builds emotionally intelligent AI solutions including 24/7 AI Call Assistants, workflow automation, predictive analytics, custom chatbots, and AI dashboards to grow your business.">
-    <meta name="keywords" content="AI consulting, AI call assistant, voice AI, appointment booking, emotionally intelligent AI, workflow automation, predictive analytics, custom chatbots, CRM integration, AI dashboards">
-    <title>ZestixAI - Emotionally Intelligent AI + AI Call Assistants</title>
-
-    <!-- Manifest for PWA -->
-    <link rel="manifest" href="/manifest.json">
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="144x144" href="/icon.png">
-    <link rel="icon" type="image/webp" sizes="144x144" href="/icon.webp">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-    <!-- Font preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Open Graph (update URLs later) -->
-    <meta property="og:title" content="ZestixAI - Emotionally Intelligent AI + AI Call Assistants">
-    <meta property="og:description" content="AI Call Assistants that answer 24/7, book appointments, capture leads, and update your CRM — plus custom AI solutions.">
-    <meta property="og:image" content="https://yourdomain.com/og-image.png">
-    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:title" content="ZestixAI | 24/7 AI Call Assistant for Local Businesses">
+    <meta property="og:description" content="Answer every call, book more appointments, and capture more leads with ZestixAI's AI call assistant.">
+    <meta property="og:image" content="https://www.zestixai.com/logo.png">
+    <meta property="og:url" content="https://www.zestixai.com/">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Schema.org Structured Data for Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "ZestixAI",
-      "url": "https://yourdomain.com",
-      "logo": "https://yourdomain.com/icon.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Your Street Address",
-        "addressLocality": "Vernon Hills",
-        "addressRegion": "IL",
-        "postalCode": "60061",
-        "addressCountry": "US"
-      },
+      "url": "https://www.zestixai.com",
+      "logo": "https://www.zestixai.com/logo.png",
+      "description": "ZestixAI builds AI call assistants for local businesses.",
       "contactPoint": {
         "@type": "ContactPoint",
-        "contactType": "Customer Service",
+        "contactType": "sales",
         "email": "info@zestixai.com"
       }
     }
     </script>
 
-    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Cookie Consent CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <link rel="icon" href="favicon.ico">
 
     <style>
         :root {
-            --primary-bg: #121212;
-            --secondary-text: #FFFFFF;
-            --accent-glow: linear-gradient(135deg, #00FFFF, #00FF7F);
-            --neutral-gray: #A9A9A9;
-            --font-family: 'Inter', sans-serif;
-            --line-width: 50%;
+            --bg: #07111f;
+            --bg-soft: #0b1728;
+            --panel: rgba(255,255,255,0.04);
+            --panel-strong: rgba(255,255,255,0.06);
+            --text: #f5f7fb;
+            --muted: #9eb0c7;
+            --line: rgba(255,255,255,0.10);
+            --accent: #3dd9ff;
+            --accent-2: #6b7cff;
+            --success: #65f0b5;
+            --shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+            --radius: 22px;
+            --max: 1200px;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: var(--font-family);
-            background-color: var(--primary-bg);
-            color: var(--secondary-text);
-            line-height: 1.7;
-            overflow-x: hidden;
-            position: relative;
+            font-family: 'Inter', sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(61,217,255,0.12), transparent 30%),
+                radial-gradient(circle at 85% 20%, rgba(107,124,255,0.10), transparent 28%),
+                linear-gradient(180deg, #07111f 0%, #081321 40%, #050c16 100%);
+            color: var(--text);
+            line-height: 1.6;
         }
 
-        /* Subtle neon background */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: radial-gradient(circle, rgba(0, 255, 255, 0.05), transparent 70%);
-            opacity: 0.2;
-            pointer-events: none;
-            animation: neonPulse 30s ease infinite;
-        }
+        .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
 
-        @keyframes neonPulse {
-            0%, 100% { opacity: 0.2; }
-            50% { opacity: 0.1; }
-        }
-
-        /* Header */
         header {
-            position: fixed;
+            position: sticky;
             top: 0;
-            width: 100%;
-            background: rgba(18, 18, 18, 0.7);
-            backdrop-filter: blur(20px);
-            padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1.5rem, 5vw, 4rem);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             z-index: 1000;
-            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+            backdrop-filter: blur(16px);
+            background: rgba(7,17,31,0.72);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
         }
 
-        .logo {
-            font-size: clamp(1.4rem, 5vw, 2rem);
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 78px;
+            gap: 24px;
+        }
+
+        .brand {
+            font-size: 1.25rem;
             font-weight: 800;
-            letter-spacing: 1px;
-            background: var(--accent-glow);
+            letter-spacing: -0.04em;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .brand span {
+            background: linear-gradient(135deg, var(--accent), var(--success));
             -webkit-background-clip: text;
             color: transparent;
-            text-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
         }
 
-        nav ul { display: flex; list-style: none; }
-        nav ul li { margin-left: clamp(1rem, 3vw, 3rem); }
-
-        nav ul li a {
-            color: var(--neutral-gray);
-            text-decoration: none;
-            position: relative;
-            transition: color 0.4s ease;
-            padding: 0.5rem 0;
-        }
-
-        nav ul li a::before {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0;
-            width: 100%; height: 2px;
-            background: var(--accent-glow);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-            transform-origin: right;
-        }
-
-        nav ul li a:hover { color: var(--secondary-text); }
-        nav ul li a:hover::before { transform: scaleX(1); transform-origin: left; }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--secondary-text);
-            font-size: clamp(1.5rem, 5vw, 2rem);
-            cursor: pointer;
-            margin-left: auto;
-        }
-
-        /* HERO */
-        .hero {
-            height: 100vh;
+        nav ul {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            gap: 28px;
+            list-style: none;
             align-items: center;
-            text-align: center;
-            position: relative;
-            padding: 0 clamp(1.5rem, 5vw, 4rem);
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color .2s ease;
+        }
+
+        nav a:hover { color: var(--text); }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 18px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--accent), #5ce1ff);
+            color: #03131e;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 12px 30px rgba(61,217,255,0.20);
+        }
+
+        .menu-toggle { display: none; background: none; border: 0; color: var(--text); font-size: 1.5rem; }
+
+        .hero {
+            padding: 88px 0 56px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border: 1px solid rgba(61,217,255,0.18);
+            border-radius: 999px;
+            background: rgba(61,217,255,0.08);
+            color: #b8efff;
+            font-size: 0.86rem;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
-            font-size: clamp(2rem, 10vw, 5rem);
-            margin-bottom: 1.2rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            animation: neonText 1.5s ease-out;
-            text-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
-        }
-
-        @keyframes neonText {
-            from { opacity: 0; text-shadow: 0 0 30px rgba(0, 255, 255, 0.5); }
-            to { opacity: 1; text-shadow: 0 0 10px rgba(0, 255, 255, 0.2); }
+            font-size: clamp(2.5rem, 6vw, 4.8rem);
+            line-height: 1.02;
+            letter-spacing: -0.06em;
+            margin-bottom: 18px;
+            max-width: 800px;
         }
 
         .hero p {
-            font-size: clamp(1rem, 3.6vw, 1.6rem);
-            margin-bottom: 2rem;
-            max-width: 950px;
-            color: var(--neutral-gray);
+            font-size: clamp(1rem, 2vw, 1.14rem);
+            color: var(--muted);
+            max-width: 720px;
         }
 
-        .cta-row{
-            display:flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .cta-button {
-            background: transparent;
-            border: 2px solid;
-            border-image: var(--accent-glow) 1;
-            color: var(--secondary-text);
-            padding: 1rem 2.2rem;
-            border-radius: 0;
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 1px;
-            transition: background 0.4s ease, box-shadow 0.4s ease;
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            background: rgba(0, 255, 255, 0.1);
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-        }
-
-        .cta-secondary{
-            background: rgba(255,255,255,0.03);
-        }
-
-        /* Base sections */
-        section { position: relative; }
-        section::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 1px;
-            background: var(--accent-glow);
-        }
-        section.visible::after { animation: expandLine 2s ease forwards 1s; }
-        @keyframes expandLine { to { width: var(--line-width); } }
-
-        /* ABOUT */
-        .about {
-            padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem);
-            text-align: center;
-        }
-
-        .about h2 {
-            font-size: clamp(2rem, 7vw, 3.3rem);
-            margin-bottom: 2rem;
-            color: var(--secondary-text);
-            position: relative;
-        }
-
-        .about h2::after {
-            content: '';
-            position: absolute;
-            bottom: -1rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 1px;
-            background: var(--accent-glow);
-        }
-
-        .about p {
-            max-width: 980px;
-            margin: 0 auto;
-            font-size: clamp(1rem, 2.6vw, 1.2rem);
-            color: var(--neutral-gray);
-        }
-
-        /* Shared card style */
-        .service-card {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(0, 255, 255, 0.12);
-            border-radius: 12px;
-            padding: 1.6rem 1.6rem;
-            text-align: center;
-            transition: border 0.35s ease, box-shadow 0.35s ease, transform 0.3s ease;
-            position: relative;
-            overflow: hidden;
+        .hero-actions {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            min-height: 180px;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 26px;
         }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(0, 255, 255, 0.05), transparent);
-            opacity: 0;
-            transition: opacity 0.35s ease;
-        }
-
-        .service-card:hover {
-            border-color: rgba(0, 255, 255, 0.30);
-            box-shadow: 0 0 22px rgba(0, 255, 255, 0.16);
-            transform: translateY(-4px);
-        }
-
-        .service-card:hover::before { opacity: 1; }
-
-        .service-card i {
-            font-size: 2rem;
-            color: #00FFFF;
-            margin-bottom: 1rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.35rem;
-            margin-bottom: 0.8rem;
-            color: var(--secondary-text);
-            line-height: 1.25;
-        }
-
-        .service-card p {
-            font-size: 1.02rem;
-            color: var(--neutral-gray);
-            flex-grow: 1;
-            line-height: 1.55;
-        }
-
-        /* CALL ASSISTANT FLAGSHIP */
-        .call-assistant {
-            padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem);
-            background: linear-gradient(to bottom, #121212, #1A1A1A);
-            text-align: center;
-        }
-
-        .featured-wrap{
-            max-width: 1200px;
-            margin: 0 auto;
-            border: 1px solid rgba(0, 255, 255, 0.18);
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 20px;
             border-radius: 14px;
-            padding: clamp(2rem, 5vw, 2.6rem);
-            position: relative;
-            overflow: hidden;
-            background: rgba(255,255,255,0.02);
-        }
-
-        .featured-wrap::before{
-            content:'';
-            position:absolute;
-            inset:-40%;
-            background: radial-gradient(circle, rgba(0, 255, 255, 0.06), transparent 60%);
-            opacity: 0.7;
-            pointer-events:none;
-        }
-
-        .badge{
-            position:absolute;
-            top: 18px;
-            right: 18px;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            padding: 0.35rem 0.7rem;
-            border-radius: 999px;
-            background: rgba(0,255,255,0.12);
-            border: 1px solid rgba(0,255,255,0.25);
-            color: #00FFFF;
-            z-index: 1;
-        }
-
-        .call-assistant h2{
-            font-size: clamp(2rem, 7vw, 3.3rem);
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .call-sub{
-            max-width: 980px;
-            margin: 0 auto;
-            font-size: clamp(1rem, 2.6vw, 1.15rem);
-            color: var(--neutral-gray);
-            position: relative;
-            z-index: 1;
-        }
-
-        .mini-title{
-            margin-top: 2.4rem;
-            font-size: 1.35rem;
-            color: var(--secondary-text);
-            position: relative;
-            z-index: 1;
-        }
-
-        .benefits-grid{
-            max-width: 1100px;
-            margin: 2rem auto 0;
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1.2rem;
-            position: relative;
-            z-index: 1;
-        }
-        @media (max-width: 980px){
-            .benefits-grid{ grid-template-columns: 1fr; }
-        }
-
-        .steps-grid{
-            max-width: 1100px;
-            margin: 1.6rem auto 0;
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 1.2rem;
-            position: relative;
-            z-index: 1;
-        }
-        @media (max-width: 900px){
-            .steps-grid{ grid-template-columns: 1fr; }
-        }
-
-        .step-card{
-            text-align: left;
-            padding: 1.4rem 1.4rem;
-            border-radius: 12px;
-            border: 1px solid rgba(0,255,255,0.14);
-            background: rgba(255,255,255,0.02);
-            position: relative;
-            overflow: hidden;
-            min-height: 160px;
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-
-        .step-card::before{
-            content:'';
-            position:absolute;
-            inset:-40%;
-            background: radial-gradient(circle, rgba(0, 255, 255, 0.06), transparent 60%);
-            opacity: 0;
-            transition: opacity .35s ease;
-        }
-
-        .step-card:hover{
-            border-color: rgba(0,255,255,0.30);
-            box-shadow: 0 0 22px rgba(0,255,255,0.16);
-        }
-        .step-card:hover::before{ opacity: 1; }
-
-        .step-icon{
-            width: 42px;
-            height: 42px;
-            display: grid;
-            place-items: center;
-            border-radius: 10px;
-            border: 1px solid rgba(0,255,255,0.22);
-            background: rgba(0,255,255,0.08);
-            flex: 0 0 42px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .step-icon i{
-            font-size: 1.1rem;
-            color: #00FFFF;
-        }
-
-        .step-body{ position: relative; z-index: 1; }
-
-        .step-title{
-            font-size: 1.15rem;
-            margin-bottom: .25rem;
-            line-height: 1.25;
+            border: 1px solid transparent;
+            text-decoration: none;
             font-weight: 700;
+            transition: all .2s ease;
         }
 
-        .step-text{
-            font-size: 1.02rem;
-            color: var(--neutral-gray);
-            line-height: 1.55;
+        .button.primary {
+            background: linear-gradient(135deg, var(--accent), #6de4ff);
+            color: #04131d;
+            box-shadow: 0 16px 40px rgba(61,217,255,0.18);
         }
 
-        .chip-row{
-            margin-top: 1.2rem;
-            display:flex;
-            flex-wrap: wrap;
-            gap: 0.7rem;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
+        .button.secondary {
+            border-color: rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.04);
+            color: var(--text);
         }
 
-        .chip{
-            padding: 0.5rem 0.8rem;
-            border-radius: 999px;
-            border: 1px solid rgba(0,255,255,0.15);
-            background: rgba(255,255,255,0.03);
-            color: var(--neutral-gray);
-            font-size: 0.95rem;
-        }
+        .button:hover { transform: translateY(-1px); }
 
-        /* SERVICES section */
-        .services {
-            padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem);
-            background: linear-gradient(to bottom, #121212, #1A1A1A);
-        }
-
-        .services h2 {
-            text-align: center;
-            font-size: clamp(2rem, 7vw, 3.3rem);
-            margin-bottom: 2.5rem;
-            color: var(--secondary-text);
-        }
-
-        /* ✅ FIX: 12-col grid on wide screens so 4+3 fills perfectly */
-        .service-grid {
+        .proof-strip {
             display: grid;
-            gap: 1.2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 26px;
         }
 
-        @media (min-width: 900px) {
-            .service-grid { grid-template-columns: repeat(3, 1fr); }
+        .proof-strip .item,
+        .hero-card,
+        .section-card,
+        .feature,
+        .step,
+        .service,
+        .industry,
+        .faq-item,
+        .contact-card {
+            border: 1px solid var(--line);
+            background: var(--panel);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
         }
 
-        /* Wide desktop uses a 12-column grid:
-           - Default cards span 3 (4 per row)
-           - Bottom row cards span 4 (3 per row) => no empty space */
-        @media (min-width: 1300px) {
-            .service-grid { grid-template-columns: repeat(12, 1fr); }
-            .service-grid .service-card { grid-column: span 3; }
-            .service-grid .service-card.wide-3 { grid-column: span 4; }
+        .proof-strip .item {
+            padding: 16px;
         }
 
-        @media (max-width: 599px) {
-            .service-grid { grid-template-columns: 1fr; }
-        }
-
-        .service-card.featured{
-            border-color: rgba(0, 255, 255, 0.35);
-            box-shadow: 0 0 26px rgba(0, 255, 255, 0.10);
-        }
-        .service-card.featured::after{
-            content:"FEATURED";
-            position:absolute;
-            top: 14px;
-            right: 14px;
-            font-size: 0.72rem;
-            letter-spacing: 2px;
-            color: #00FFFF;
-            opacity: 0.85;
-            font-weight: 800;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem);
-            text-align: center;
-            background: linear-gradient(to bottom, #1A1A1A, #121212);
-        }
-
-        .testimonials h2 {
-            font-size: clamp(2rem, 7vw, 3.3rem);
-            margin-bottom: 2.5rem;
-            color: var(--secondary-text);
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .testimonial-card {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(0, 255, 255, 0.12);
-            padding: 1.6rem;
-            border-radius: 12px;
-        }
-
-        .testimonial-card p {
-            font-size: 1.02rem;
-            color: var(--neutral-gray);
-            margin-bottom: 1.2rem;
-            line-height: 1.55;
-        }
-
-        .testimonial-card cite {
+        .proof-strip strong {
             display: block;
-            font-size: 0.95rem;
-            color: var(--secondary-text);
+            font-size: 1.2rem;
+            margin-bottom: 4px;
         }
 
-        /* Contact */
-        .contact {
-            padding: clamp(4rem, 10vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+        .proof-strip span {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .hero-card {
+            padding: 22px;
+            background:
+                linear-gradient(180deg, rgba(61,217,255,0.08), rgba(255,255,255,0.03)),
+                rgba(255,255,255,0.03);
+        }
+
+        .hero-card .label {
+            display: inline-flex;
+            padding: 8px 10px;
+            border-radius: 999px;
+            background: rgba(101,240,181,0.12);
+            color: #bdfde1;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .flow {
+            display: grid;
+            gap: 12px;
+        }
+
+        .flow-step {
+            padding: 16px;
+            border-radius: 18px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .flow-step strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.98rem;
+        }
+
+        .flow-step p {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        section.block { padding: 38px 0; }
+
+        .section-head {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .section-head h2 {
+            font-size: clamp(1.9rem, 4vw, 3rem);
+            letter-spacing: -0.05em;
+            margin-bottom: 10px;
+        }
+
+        .section-head p {
+            color: var(--muted);
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .section-card {
+            padding: 28px;
+        }
+
+        .features-grid,
+        .steps-grid,
+        .services-grid,
+        .industries-grid,
+        .faq-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .features-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .steps-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .industries-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+        .feature,
+        .step,
+        .service,
+        .industry,
+        .faq-item,
+        .contact-card {
+            padding: 20px;
+        }
+
+        .feature i,
+        .service i,
+        .industry i {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+
+        .feature h3,
+        .service h3,
+        .industry h3,
+        .step h3,
+        .faq-item h3,
+        .contact-card h3 {
+            font-size: 1.06rem;
+            margin-bottom: 8px;
+        }
+
+        .feature p,
+        .service p,
+        .industry p,
+        .step p,
+        .faq-item p,
+        .contact-card p,
+        .contact-card li {
+            color: var(--muted);
+            font-size: 0.96rem;
+        }
+
+        .step-number {
+            width: 36px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(61,217,255,0.12);
+            color: var(--accent);
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        .faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+        .trust-note {
+            margin-top: 16px;
+            padding: 16px 18px;
+            border: 1px dashed rgba(255,255,255,0.14);
+            border-radius: 18px;
+            color: var(--muted);
+            font-size: 0.95rem;
             text-align: center;
         }
 
-        .contact h2 {
-            font-size: clamp(2rem, 7vw, 3.3rem);
-            margin-bottom: 2rem;
-            color: var(--secondary-text);
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 18px;
+            align-items: start;
         }
 
-        .contact p {
-            margin-bottom: 2.5rem;
-            font-size: clamp(1rem, 2.6vw, 1.15rem);
-            color: var(--neutral-gray);
+        .contact-card ul {
+            padding-left: 18px;
+            margin-top: 12px;
+        }
+
+        .contact-card li { margin: 8px 0; }
+
+        .calendly-inline-widget {
+            min-width: 320px;
+            height: 720px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow);
+            background: rgba(255,255,255,0.04);
         }
 
         footer {
-            padding: 3rem 1.5rem;
-            text-align: center;
-            background: rgba(18, 18, 18, 0.7);
-            color: var(--neutral-gray);
-            border-top: 1px solid rgba(0, 255, 255, 0.05);
+            padding: 34px 0 54px;
+            color: var(--muted);
         }
 
-        footer p { margin-bottom: 1.5rem; }
-
-        .social-links {
+        .footer-wrap {
             display: flex;
-            justify-content: center;
-            gap: 1.4rem;
+            justify-content: space-between;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 24px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 18px;
             flex-wrap: wrap;
         }
 
-        .social-links a {
-            color: var(--neutral-gray);
+        .footer-links a {
+            color: var(--muted);
             text-decoration: none;
-            transition: color 0.3s ease;
         }
-        .social-links a:hover { color: #00FFFF; }
 
-        /* Mobile nav */
-        @media (max-width: 767px) {
-            :root { --line-width: 80%; }
-            .menu-toggle { display: block; }
+        .footer-links a:hover { color: var(--text); }
+
+        @media (max-width: 980px) {
+            .hero-grid,
+            .contact-grid,
+            .features-grid,
+            .steps-grid,
+            .services-grid,
+            .industries-grid,
+            .faq-grid,
+            .proof-strip {
+                grid-template-columns: 1fr;
+            }
 
             nav ul {
                 display: none;
-                flex-direction: column;
                 position: absolute;
-                top: 100%;
+                top: 78px;
                 left: 0;
-                width: 100%;
-                background: var(--primary-bg);
-                padding: 1.6rem 0;
-                border-top: 1px solid rgba(0, 255, 255, 0.1);
+                right: 0;
+                background: rgba(7,17,31,0.96);
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+                padding: 18px 16px 22px;
+                flex-direction: column;
+                gap: 14px;
             }
 
             nav ul.active { display: flex; }
-            nav ul li { margin: 1rem 0; text-align: center; }
-            nav ul li a { padding: 1rem; display: block; font-size: 1.1rem; }
-
-            .cta-button { width: 100%; }
+            .menu-toggle { display: block; }
+            .nav-cta { display: none; }
         }
     </style>
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
 </head>
 <body>
-
     <header>
-        <div class="logo" role="img" aria-label="ZestixAI Logo">ZestixAI</div>
-        <button class="menu-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
-        <nav>
-            <ul>
-                <li><a href="#about" aria-label="Learn more about ZestixAI">About</a></li>
-                <li><a href="#call-assistant" aria-label="AI Call Assistant service">AI Call Assistant</a></li>
-                <li><a href="#services" aria-label="View our services">Services</a></li>
-                <li><a href="#testimonials" aria-label="Read client testimonials">Testimonials</a></li>
-                <li><a href="#contact" aria-label="Contact us">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container nav">
+            <a class="brand" href="#top">Zestix<span>AI</span></a>
+            <button class="menu-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+            <nav>
+                <ul>
+                    <li><a href="#solution">Solution</a></li>
+                    <li><a href="#how-it-works">How it works</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="nav-cta" href="#contact">Book a Demo</a>
+        </div>
     </header>
 
-    <section class="hero">
-        <h1>Emotionally Intelligent AI</h1>
-        <p>
-            AI that understands human nuance — and now, a <b>24/7 AI Call Assistant</b> that answers every call, books appointments,
-            captures leads, and updates your CRM.
-        </p>
+    <main id="top">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <div class="eyebrow"><i class="fas fa-bolt"></i> Flagship offer: AI Call Assistant</div>
+                    <h1>24/7 AI call assistant for local businesses</h1>
+                    <p>
+                        ZestixAI helps businesses answer every call, qualify leads, book appointments, route urgent calls,
+                        and update their CRM automatically — without hiring more front-desk staff.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button primary" href="#contact"><i class="fas fa-calendar"></i> Book a Demo</a>
+                        <a class="button secondary" href="#solution"><i class="fas fa-arrow-down"></i> See the System</a>
+                    </div>
 
-        <div class="cta-row">
-            <a href="#contact" class="cta-button">Book a Demo</a>
-            <a href="#call-assistant" class="cta-button cta-secondary">See How It Works</a>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <h2>About ZestixAI</h2>
-        <p>
-            Headquartered in Vernon Hills, IL, ZestixAI stands at the forefront of AI consulting, merging profound human insights
-            with cutting-edge machine intelligence to craft bespoke AI solutions that propel your business into the future.
-        </p>
-    </section>
-
-    <section id="call-assistant" class="call-assistant">
-        <div class="featured-wrap">
-            <div class="badge">FLAGSHIP</div>
-
-            <h2>AI Call Assistant (24/7)</h2>
-            <p class="call-sub">
-                Turn missed calls into booked appointments. ZestixAI builds voice AI that answers naturally, qualifies callers,
-                books appointments, routes urgent calls to a human, and sends clean summaries to your team.
-            </p>
-
-            <h3 class="mini-title">What you get</h3>
-            <div class="benefits-grid">
-                <article class="service-card" role="article">
-                    <i class="fas fa-phone-volume"></i>
-                    <h3>Never miss a lead</h3>
-                    <p>Covers after-hours and peak-hour overflow so every caller gets answered instantly.</p>
-                </article>
-
-                <article class="service-card" role="article">
-                    <i class="fas fa-calendar-check"></i>
-                    <h3>Books appointments</h3>
-                    <p>Schedules via Calendly / Google Calendar and confirms via SMS or email.</p>
-                </article>
-
-                <article class="service-card" role="article">
-                    <i class="fas fa-database"></i>
-                    <h3>CRM updates</h3>
-                    <p>Logs caller details, intent, and outcomes into your CRM or a simple Google Sheet.</p>
-                </article>
-            </div>
-
-            <h3 class="mini-title">How it works</h3>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-icon"><i class="fas fa-phone"></i></div>
-                    <div class="step-body">
-                        <div class="step-title">1) Customer calls</div>
-                        <div class="step-text">Your number routes to the assistant (or overflows when your team is busy).</div>
+                    <div class="proof-strip">
+                        <div class="item"><strong>24/7</strong><span>Call coverage</span></div>
+                        <div class="item"><strong>Instant</strong><span>Lead response</span></div>
+                        <div class="item"><strong>Automated</strong><span>Booking + CRM updates</span></div>
+                        <div class="item"><strong>Human handoff</strong><span>For urgent cases</span></div>
                     </div>
                 </div>
 
-                <div class="step-card">
-                    <div class="step-icon"><i class="fas fa-microphone"></i></div>
-                    <div class="step-body">
-                        <div class="step-title">2) AI answers</div>
-                        <div class="step-text">Greets the caller and understands intent like a great receptionist.</div>
+                <div class="hero-card">
+                    <div class="label">What your business gets</div>
+                    <div class="flow">
+                        <div class="flow-step">
+                            <strong>AI answers the call</strong>
+                            <p>No missed after-hours leads. No voicemail black hole.</p>
+                        </div>
+                        <div class="flow-step">
+                            <strong>Qualifies the caller</strong>
+                            <p>Collects intent, urgency, service need, and contact info.</p>
+                        </div>
+                        <div class="flow-step">
+                            <strong>Books or routes</strong>
+                            <p>Schedules appointments or escalates urgent calls to your team.</p>
+                        </div>
+                        <div class="flow-step">
+                            <strong>Logs the outcome</strong>
+                            <p>Sends a recap and updates your CRM, calendar, or sheet automatically.</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="step-card">
-                    <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
-                    <div class="step-body">
-                        <div class="step-title">3) Qualifies + books</div>
-                        <div class="step-text">Collects details, books appointments, or routes urgent calls to a human.</div>
-                    </div>
+        <section class="block" id="solution">
+            <div class="container">
+                <div class="section-head">
+                    <h2>The offer is simple</h2>
+                    <p>
+                        If your business loses leads because nobody picks up the phone, ZestixAI gives you a reliable AI receptionist
+                        that answers, qualifies, books, and hands off when needed.
+                    </p>
                 </div>
 
-                <div class="step-card">
-                    <div class="step-icon"><i class="fas fa-envelope-open-text"></i></div>
-                    <div class="step-body">
-                        <div class="step-title">4) Summary + log</div>
-                        <div class="step-text">Sends your team a recap and logs everything automatically.</div>
+                <div class="section-card">
+                    <div class="features-grid">
+                        <article class="feature">
+                            <i class="fas fa-phone-volume"></i>
+                            <h3>Never miss a lead</h3>
+                            <p>Answer after-hours calls and peak-time overflow so every caller gets a response.</p>
+                        </article>
+                        <article class="feature">
+                            <i class="fas fa-calendar-check"></i>
+                            <h3>Book appointments automatically</h3>
+                            <p>Connect booking flows to Calendly or Google Calendar and confirm by SMS or email.</p>
+                        </article>
+                        <article class="feature">
+                            <i class="fas fa-database"></i>
+                            <h3>Keep records clean</h3>
+                            <p>Push caller details, intent, and outcomes into your CRM or a simple Google Sheet.</p>
+                        </article>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <h3 class="mini-title">Industries we serve</h3>
-            <div class="chip-row">
-                <span class="chip">Restaurants</span>
-                <span class="chip">Clinics / Dentists</span>
-                <span class="chip">HVAC / Plumbing</span>
-                <span class="chip">Salons / Spas</span>
-                <span class="chip">Real Estate</span>
-                <span class="chip">Auto Repair</span>
+        <section class="block" id="how-it-works">
+            <div class="container">
+                <div class="section-head">
+                    <h2>How it works</h2>
+                    <p>Built for businesses that need more appointments, faster response time, and less front-desk chaos.</p>
+                </div>
+                <div class="steps-grid">
+                    <article class="step">
+                        <div class="step-number">1</div>
+                        <h3>Customer calls</h3>
+                        <p>Your number routes to the AI assistant directly or only when your team is busy.</p>
+                    </article>
+                    <article class="step">
+                        <div class="step-number">2</div>
+                        <h3>AI answers naturally</h3>
+                        <p>The assistant greets the caller, understands intent, and keeps the conversation moving.</p>
+                    </article>
+                    <article class="step">
+                        <div class="step-number">3</div>
+                        <h3>Qualifies and books</h3>
+                        <p>It captures details, books appointments, and routes urgent cases to a human.</p>
+                    </article>
+                    <article class="step">
+                        <div class="step-number">4</div>
+                        <h3>Summary sent instantly</h3>
+                        <p>Your team gets a clean recap with the caller info and next action already logged.</p>
+                    </article>
+                </div>
             </div>
+        </section>
 
-            <div style="margin-top: 2.2rem;">
-                <a href="#contact" class="cta-button">Book a Demo</a>
+        <section class="block" id="services">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Services</h2>
+                    <p>The AI call assistant is the main offer. ZestixAI can also support the surrounding automation stack.</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service">
+                        <i class="fas fa-headset"></i>
+                        <h3>AI Call Assistant</h3>
+                        <p>24/7 voice AI that answers calls, qualifies leads, books appointments, and routes urgent issues.</p>
+                    </article>
+                    <article class="service">
+                        <i class="fas fa-plug"></i>
+                        <h3>CRM + calendar integration</h3>
+                        <p>Connect the assistant to your existing workflow so booked calls and customer data stay organized.</p>
+                    </article>
+                    <article class="service">
+                        <i class="fas fa-robot"></i>
+                        <h3>Workflow automation</h3>
+                        <p>Automate follow-ups, reminders, lead routing, and internal notifications after every call.</p>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-
-        <div class="service-grid">
-            <!-- Row 1 (4 cards) -->
-            <article class="service-card featured" role="article">
-                <i class="fas fa-headset"></i>
-                <h3>AI Call Assistant (24/7)</h3>
-                <p>Voice AI that answers calls, qualifies customers, books appointments, routes urgent calls, and sends summaries to your team.</p>
-            </article>
-
-            <article class="service-card" role="article">
-                <i class="fas fa-brain"></i>
-                <h3>AI Strategy & Implementation</h3>
-                <p>Navigate from ideation to full-scale deployment with expert guidance on intelligent automation tailored to your enterprise needs.</p>
-            </article>
-
-            <article class="service-card" role="article">
-                <i class="fas fa-robot"></i>
-                <h3>Workflow Automation</h3>
-                <p>Liberate your teams from mundane tasks through bespoke AI bots and scripts engineered for peak efficiency and seamless integration.</p>
-            </article>
-
-            <article class="service-card" role="article">
-                <i class="fas fa-chart-line"></i>
-                <h3>Predictive Analytics</h3>
-                <p>Harness data to anticipate market shifts, reveal hidden patterns, and refine operations with precision-driven intelligence.</p>
-            </article>
-
-            <!-- Row 2 (3 cards) => span wider on 1300px+ -->
-            <article class="service-card wide-3" role="article">
-                <i class="fas fa-comments"></i>
-                <h3>Custom Chatbots</h3>
-                <p>Elevate customer interactions with AI agents that converse with empathy and accuracy, fostering loyalty and satisfaction.</p>
-            </article>
-
-            <article class="service-card wide-3" role="article">
-                <i class="fas fa-plug"></i>
-                <h3>CRM/ERP Integration</h3>
-                <p>Enhance your core systems with AI layers that provide deep insights, automate processes, and support informed decision-making.</p>
-            </article>
-
-            <article class="service-card wide-3" role="article">
-                <i class="fas fa-tachometer-alt"></i>
-                <h3>AI-powered Dashboards</h3>
-                <p>Gain real-time visibility into your operations with intelligent dashboards that analyze, predict, and recommend actions proactively.</p>
-            </article>
-        </div>
-    </section>
-
-    <section id="testimonials" class="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <p>"ZestixAI transformed our workflow with their innovative AI solutions!"</p>
-                <cite>- John Doe, CEO of TechCorp</cite>
+        <section class="block" id="industries">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Great fit for</h2>
+                    <p>Especially useful for service businesses where missed calls usually mean lost revenue.</p>
+                </div>
+                <div class="industries-grid">
+                    <article class="industry"><i class="fas fa-stethoscope"></i><h3>Clinics & dentists</h3><p>Handle scheduling, FAQs, and new patient intake without clogging the front desk.</p></article>
+                    <article class="industry"><i class="fas fa-fan"></i><h3>HVAC, plumbing, home services</h3><p>Catch urgent calls fast and separate real service requests from low-intent inquiries.</p></article>
+                    <article class="industry"><i class="fas fa-scissors"></i><h3>Salons, spas, med spas</h3><p>Book appointments, answer common questions, and reduce missed booking opportunities.</p></article>
+                    <article class="industry"><i class="fas fa-utensils"></i><h3>Restaurants</h3><p>Handle reservations, common questions, and overflow calls during rush hours.</p></article>
+                    <article class="industry"><i class="fas fa-house"></i><h3>Real estate</h3><p>Capture inbound leads quickly and route serious prospects to the right agent.</p></article>
+                    <article class="industry"><i class="fas fa-car"></i><h3>Auto repair</h3><p>Book service calls, collect vehicle details, and keep your shop from losing calls.</p></article>
+                </div>
             </div>
-            <div class="testimonial-card">
-                <p>"The custom chatbots have revolutionized our customer service."</p>
-                <cite>- Jane Smith, Marketing Director at Innovate Ltd.</cite>
-            </div>
-            <div class="testimonial-card">
-                <p>"Predictive analytics from ZestixAI gave us a competitive edge."</p>
-                <cite>- Alex Johnson, Data Analyst at FutureTech</cite>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>
-            Want a demo or pricing? Tell us your business type and what you want the AI to handle (calls, booking, FAQs, routing).
-        </p>
-        <div class="calendly-inline-widget" data-url="https://calendly.com/zain-mehta-zestixai/30min" style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    </section>
+        <section class="block" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <h2>FAQ</h2>
+                    <p>Short answers to the questions people usually ask before booking a demo.</p>
+                </div>
+                <div class="faq-grid">
+                    <article class="faq-item">
+                        <h3>Will it sound robotic?</h3>
+                        <p>No. The goal is a natural, clear, professional voice experience that feels like a strong receptionist, not a clunky IVR tree.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Can it book appointments?</h3>
+                        <p>Yes. It can be connected to scheduling tools like Calendly or Google Calendar depending on your workflow.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Can urgent callers reach a human?</h3>
+                        <p>Yes. Calls can be routed or escalated based on your rules, business hours, and urgency.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Can it update our CRM?</h3>
+                        <p>Yes. ZestixAI can push call outcomes into your CRM, spreadsheet, or another internal workflow.</p>
+                    </article>
+                </div>
+                <div class="trust-note">
+                    No fake testimonials here. If you want this site to convert harder, the next step is adding real demos, real call flows, and real case studies.
+                </div>
+            </div>
+        </section>
+
+        <section class="block" id="contact">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Book a demo</h2>
+                    <p>Tell us what kind of business you run and what you want the AI to handle.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>Best fit if you want to:</h3>
+                        <ul>
+                            <li>stop missing inbound leads</li>
+                            <li>book more appointments without extra staff</li>
+                            <li>route urgent calls properly</li>
+                            <li>keep call data synced into your CRM</li>
+                        </ul>
+                        <p style="margin-top:16px;">During the demo, we can talk through your call flow, booking flow, routing rules, and what integrations you need.</p>
+                    </div>
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/zain-mehta-zestixai/30min"></div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2025 ZestixAI. All rights reserved.</p>
-        <div class="social-links">
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Email</a>
+        <div class="container footer-wrap">
+            <p>© 2026 ZestixAI. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:info@zestixai.com">Email</a>
+                <a href="#top">Back to top</a>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
+        const menuButton = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('nav ul');
+        menuButton?.addEventListener('click', () => navList.classList.toggle('active'));
 
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
-
-                if (window.innerWidth <= 768) {
-                    document.querySelector('nav ul').classList.remove('active');
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    navList?.classList.remove('active');
                 }
             });
-        });
-
-        // Cookie Consent
-        window.addEventListener("load", function(){
-            if (window.cookieconsent) {
-                window.cookieconsent.initialise({
-                    "palette": { "popup": { "background": "#121212" }, "button": { "background": "#00FFFF" } },
-                    "content": { "message": "This website uses cookies to ensure you get the best experience.", "dismiss": "Got it!", "link": "Learn more" }
-                });
-            }
-        });
-
-        // Scroll Animations
-        const sections = document.querySelectorAll('section');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        sections.forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(50px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(section);
         });
     </script>
-
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
