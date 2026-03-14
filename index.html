@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ZestixAI builds 24/7 AI call assistants for local businesses that answer calls, qualify leads, book appointments, and update your CRM.">
-    <meta name="keywords" content="AI call assistant, voice AI, appointment booking, local business AI, AI receptionist, lead qualification, CRM updates, AI consulting">
-    <title>ZestixAI | 24/7 AI Call Assistant for Local Businesses</title>
+    <meta name="description" content="ZestixAI builds practical AI systems for growing businesses, from voice agents and lead capture to workflow automation, CRM integrations, and internal AI tools.">
+    <meta name="keywords" content="AI automation agency, AI voice agent, AI call assistant, workflow automation, CRM integration, lead capture, business AI systems, AI consulting">
+    <title>ZestixAI | AI Systems for Growth, Support, and Operations</title>
     <link rel="canonical" href="https://www.zestixai.com/">
 
-    <meta property="og:title" content="ZestixAI | 24/7 AI Call Assistant for Local Businesses">
-    <meta property="og:description" content="Answer every call, book more appointments, and capture more leads with ZestixAI's AI call assistant.">
-    <meta property="og:image" content="https://www.zestixai.com/icon-512.png">
+    <meta property="og:title" content="ZestixAI | AI Systems for Local Business Growth">
+    <meta property="og:description" content="AI call assistants, workflow automation, CRM integrations, and practical AI systems for local businesses.">
+    <meta property="og:image" content="https://www.zestixai.com/brand-mark.svg">
     <meta property="og:url" content="https://www.zestixai.com/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
@@ -21,8 +21,8 @@
       "@type": "Organization",
       "name": "ZestixAI",
       "url": "https://www.zestixai.com",
-      "logo": "https://www.zestixai.com/icon-512.png",
-      "description": "ZestixAI builds AI call assistants for local businesses.",
+      "logo": "https://www.zestixai.com/brand-mark.svg",
+      "description": "ZestixAI builds practical AI systems for customer conversations, workflow automation, and operations.",
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "sales",
@@ -35,7 +35,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
     <style>
@@ -88,17 +89,43 @@
         }
 
         .brand {
-            font-size: 1.25rem;
-            font-weight: 800;
-            letter-spacing: -0.04em;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
             text-decoration: none;
             color: var(--text);
         }
 
-        .brand span {
+        .brand img {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            box-shadow: 0 10px 24px rgba(61,217,255,0.14);
+        }
+
+        .brand-copy {
+            display: grid;
+            gap: 2px;
+        }
+
+        .brand-name {
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1;
+        }
+
+        .brand-name span {
             background: linear-gradient(135deg, var(--accent), var(--success));
             -webkit-background-clip: text;
             color: transparent;
+        }
+
+        .brand-tag {
+            color: var(--muted);
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
 
         nav ul {
@@ -475,15 +502,21 @@
 <body>
     <header>
         <div class="container nav">
-            <a class="brand" href="#top">Zestix<span>AI</span></a>
+            <a class="brand" href="#top" aria-label="ZestixAI home">
+                <img src="brand-mark.svg" alt="ZestixAI logo mark">
+                <span class="brand-copy">
+                    <span class="brand-name">Zestix<span>AI</span></span>
+                    <span class="brand-tag">AI systems for local business</span>
+                </span>
+            </a>
             <button class="menu-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
             <nav>
                 <ul>
-                    <li><a href="#solution">Solution</a></li>
-                    <li><a href="#call-flow">Call flow</a></li>
-                    <li><a href="#how-it-works">How it works</a></li>
+                    <li><a href="#solution">What we do</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#call-flow">Voice AI</a></li>
+                    <li><a href="#how-it-works">How it works</a></li>
+                    <li><a href="#industries">Who it's for</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -496,43 +529,44 @@
         <section class="hero">
             <div class="container hero-grid">
                 <div>
-                    <div class="eyebrow"><i class="fas fa-bolt"></i> Flagship offer: AI Call Assistant</div>
-                    <h1>24/7 AI call assistant for local businesses</h1>
+                    <div class="eyebrow"><i class="fas fa-bolt"></i> AI systems for growth, support, and operations</div>
+                    <h1>We build AI systems that answer customers, capture leads, and automate busywork</h1>
                     <p>
-                        ZestixAI helps businesses answer every call, qualify leads, book appointments, route urgent calls,
-                        and update their CRM automatically without hiring more front-desk staff.
+                        ZestixAI helps growing businesses deploy practical AI: voice agents, chat and lead capture,
+                        workflow automation, CRM integrations, and internal AI tools. Our flagship offer is voice AI,
+                        but the real goal is bigger: fewer missed opportunities and less manual work across the business.
                     </p>
                     <div class="hero-actions">
-                        <a class="button primary" href="#contact"><i class="fas fa-calendar"></i> Book a Demo</a>
-                        <a class="button secondary" href="#call-flow"><i class="fas fa-arrow-down"></i> View Call Flow</a>
+                        <a class="button primary" href="#contact"><i class="fas fa-calendar"></i> Book a Strategy Call</a>
+                        <a class="button secondary" href="#services"><i class="fas fa-layer-group"></i> Explore Services</a>
                     </div>
 
                     <div class="proof-strip">
-                        <div class="item"><strong>24/7</strong><span>Call coverage</span></div>
-                        <div class="item"><strong>Instant</strong><span>Lead response</span></div>
-                        <div class="item"><strong>Automated</strong><span>Booking + CRM updates</span></div>
-                        <div class="item"><strong>Human handoff</strong><span>For urgent cases</span></div>
+                        <div class="item"><strong>Voice AI</strong><span>Inbound calls and booking</span></div>
+                        <div class="item"><strong>Lead capture</strong><span>Web, chat, SMS, forms</span></div>
+                        <div class="item"><strong>Automation</strong><span>CRM, routing, follow-up</span></div>
+                        <div class="item"><strong>Internal AI</strong><span>Knowledge + team workflows</span></div>
                     </div>
                 </div>
 
                 <div class="hero-card">
-                    <div class="label">What your business gets</div>
+                    <div class="label">What ZestixAI can build</div>
                     <div class="flow">
                         <div class="flow-step">
-                            <strong>AI answers the call</strong>
-                            <p>No missed after-hours leads. No voicemail black hole.</p>
+                            <strong>Customer-facing AI</strong>
+                            <p>Voice agents, website chat, SMS follow-up, and lead capture that respond instantly.</p>
                         </div>
                         <div class="flow-step">
-                            <strong>Qualifies the caller</strong>
-                            <p>Collects intent, urgency, service need, and contact info.</p>
+                            <strong>Connected workflows</strong>
+                            <p>CRM updates, booking, routing, alerts, and handoffs tied into your real stack.</p>
                         </div>
                         <div class="flow-step">
-                            <strong>Books or routes</strong>
-                            <p>Schedules appointments or escalates urgent calls to your team.</p>
+                            <strong>Internal AI tools</strong>
+                            <p>Knowledge assistants, SOP copilots, and searchable team information.</p>
                         </div>
                         <div class="flow-step">
-                            <strong>Logs the outcome</strong>
-                            <p>Sends a recap and updates your CRM, calendar, or sheet automatically.</p>
+                            <strong>Done-for-you implementation</strong>
+                            <p>Strategy, setup, prompt design, testing, and iteration without the DIY mess.</p>
                         </div>
                     </div>
                 </div>
@@ -542,29 +576,29 @@
         <section class="block" id="solution">
             <div class="container">
                 <div class="section-head">
-                    <h2>The offer is simple</h2>
+                    <h2>Practical AI, not gimmicks</h2>
                     <p>
-                        If your business loses leads because nobody picks up the phone, ZestixAI gives you a reliable AI receptionist
-                        that answers, qualifies, books, and hands off when needed.
+                        Most businesses do not need “AI for everything.” They need a few high-leverage systems that save time,
+                        improve response speed, and tighten operations. That is where ZestixAI fits.
                     </p>
                 </div>
 
                 <div class="section-card">
                     <div class="features-grid">
                         <article class="feature">
-                            <i class="fas fa-phone-volume"></i>
-                            <h3>Never miss a lead</h3>
-                            <p>Answer after-hours calls and peak-time overflow so every caller gets a response.</p>
+                            <i class="fas fa-bullseye"></i>
+                            <h3>Start where the ROI is obvious</h3>
+                            <p>We focus on missed leads, slow follow-up, repetitive admin work, and messy handoffs first.</p>
                         </article>
                         <article class="feature">
-                            <i class="fas fa-calendar-check"></i>
-                            <h3>Book appointments automatically</h3>
-                            <p>Connect booking flows to Calendly or Google Calendar and confirm by SMS or email.</p>
+                            <i class="fas fa-diagram-project"></i>
+                            <h3>Connect AI to real workflows</h3>
+                            <p>Every system is tied to the tools your team already uses, from CRM and calendars to email, sheets, and forms.</p>
                         </article>
                         <article class="feature">
-                            <i class="fas fa-database"></i>
-                            <h3>Keep records clean</h3>
-                            <p>Push caller details, intent, and outcomes into your CRM or a simple Google Sheet.</p>
+                            <i class="fas fa-gauge-high"></i>
+                            <h3>Ship usable systems fast</h3>
+                            <p>No long transformation theater. The goal is a working AI asset your team can actually use and measure.</p>
                         </article>
                     </div>
                 </div>
@@ -574,8 +608,8 @@
         <section class="block" id="call-flow">
             <div class="container">
                 <div class="section-head">
-                    <h2>Call flow</h2>
-                    <p>A clear visual of how calls move from inbound lead to booked appointment and team follow-up.</p>
+                    <h2>Flagship offer: AI voice agent</h2>
+                    <p>Voice AI is still the clearest wedge: it answers inbound calls, qualifies intent, books appointments, and routes urgent issues without dropping the ball.</p>
                 </div>
                 <div class="call-flow-wrap">
                     <img src="call-flow.svg" alt="ZestixAI call flow showing inbound call, AI answer, qualify and book, then CRM and calendar sync.">
@@ -586,29 +620,29 @@
         <section class="block" id="how-it-works">
             <div class="container">
                 <div class="section-head">
-                    <h2>How it works</h2>
-                    <p>Built for businesses that need more appointments, faster response time, and less front-desk chaos.</p>
+                    <h2>How engagement works</h2>
+                    <p>We usually start with one high-value workflow, make it real, then expand into a broader AI stack once the first win is proven.</p>
                 </div>
                 <div class="steps-grid">
                     <article class="step">
                         <div class="step-number">1</div>
-                        <h3>Customer calls</h3>
-                        <p>Your number routes to the AI assistant directly or only when your team is busy.</p>
+                        <h3>Find the bottleneck</h3>
+                        <p>We identify the customer or internal workflow that is leaking time, leads, or response quality.</p>
                     </article>
                     <article class="step">
                         <div class="step-number">2</div>
-                        <h3>AI answers naturally</h3>
-                        <p>The assistant greets the caller, understands intent, and keeps the conversation moving.</p>
+                        <h3>Design the AI workflow</h3>
+                        <p>We map prompts, guardrails, handoffs, integrations, and what success should look like.</p>
                     </article>
                     <article class="step">
                         <div class="step-number">3</div>
-                        <h3>Qualifies and books</h3>
-                        <p>It captures details, books appointments, and routes urgent cases to a human.</p>
+                        <h3>Launch and connect</h3>
+                        <p>The system goes live with your phone, website, CRM, calendar, inbox, or internal tools.</p>
                     </article>
                     <article class="step">
                         <div class="step-number">4</div>
-                        <h3>Summary sent instantly</h3>
-                        <p>Your team gets a clean recap with the caller info and next action already logged.</p>
+                        <h3>Refine from real usage</h3>
+                        <p>We tune the workflow using transcripts, edge cases, and conversion or efficiency data.</p>
                     </article>
                 </div>
             </div>
@@ -617,24 +651,39 @@
         <section class="block" id="services">
             <div class="container">
                 <div class="section-head">
-                    <h2>Services</h2>
-                    <p>The AI call assistant is the main offer. ZestixAI can also support the surrounding automation stack.</p>
+                    <h2>Service menu</h2>
+                    <p>Position ZestixAI as a hands-on AI implementation partner. Voice AI is the wedge, but these are the broader offers behind it.</p>
                 </div>
                 <div class="services-grid">
                     <article class="service">
                         <i class="fas fa-headset"></i>
-                        <h3>AI Call Assistant</h3>
-                        <p>24/7 voice AI that answers calls, qualifies leads, books appointments, and routes urgent issues.</p>
+                        <h3>AI Voice Agents</h3>
+                        <p>Inbound and outbound voice systems that answer calls, qualify leads, book appointments, and escalate when a human should step in.</p>
                     </article>
                     <article class="service">
-                        <i class="fas fa-plug"></i>
-                        <h3>CRM + calendar integration</h3>
-                        <p>Connect the assistant to your existing workflow so booked calls and customer data stay organized.</p>
+                        <i class="fas fa-comments"></i>
+                        <h3>Lead Capture and Conversational AI</h3>
+                        <p>Website chat, SMS flows, intake assistants, and follow-up sequences that turn interest into qualified pipeline faster.</p>
                     </article>
                     <article class="service">
-                        <i class="fas fa-robot"></i>
-                        <h3>Workflow automation</h3>
-                        <p>Automate follow-ups, reminders, lead routing, and internal notifications after every call.</p>
+                        <i class="fas fa-gears"></i>
+                        <h3>Workflow Automation and Integrations</h3>
+                        <p>Connect AI outputs to CRM, calendars, inboxes, spreadsheets, and team alerts so work moves automatically after each interaction.</p>
+                    </article>
+                    <article class="service">
+                        <i class="fas fa-book-open-reader"></i>
+                        <h3>Internal AI Knowledge Tools</h3>
+                        <p>Searchable SOP assistants, team knowledge bots, and internal copilots that help staff answer questions and execute faster.</p>
+                    </article>
+                    <article class="service">
+                        <i class="fas fa-sitemap"></i>
+                        <h3>AI Strategy and System Design</h3>
+                        <p>Prioritize the right use cases, map the operating workflow, and build an AI rollout plan that is tied to actual business outcomes.</p>
+                    </article>
+                    <article class="service">
+                        <i class="fas fa-wrench"></i>
+                        <h3>Custom AI Builds</h3>
+                        <p>For edge cases that do not fit an off-the-shelf template, we design custom prompts, logic, guardrails, and integrations around your process.</p>
                     </article>
                 </div>
             </div>
@@ -644,7 +693,7 @@
             <div class="container">
                 <div class="section-head">
                     <h2>Great fit for</h2>
-                    <p>Especially useful for service businesses where missed calls usually mean lost revenue.</p>
+                    <p>Especially strong for service-led businesses that deal with inbound demand, repeat admin work, and fragmented operations.</p>
                 </div>
                 <div class="industries-grid">
                     <article class="industry"><i class="fas fa-stethoscope"></i><h3>Clinics and dentists</h3><p>Handle scheduling, FAQs, and new patient intake without clogging the front desk.</p></article>
@@ -665,24 +714,24 @@
                 </div>
                 <div class="faq-grid">
                     <article class="faq-item">
-                        <h3>Will it sound robotic?</h3>
-                        <p>No. The goal is a natural, clear, professional voice experience that feels like a strong receptionist, not a clunky IVR tree.</p>
+                        <h3>Are you only a call assistant company?</h3>
+                        <p>No. Voice AI is a flagship offer because the ROI is easy to understand, but ZestixAI also builds lead capture, workflow automation, and internal AI systems.</p>
                     </article>
                     <article class="faq-item">
-                        <h3>Can it book appointments?</h3>
-                        <p>Yes. It can be connected to scheduling tools like Calendly or Google Calendar depending on your workflow.</p>
+                        <h3>What should we start with first?</h3>
+                        <p>Usually the workflow with the clearest financial drag: missed calls, slow lead response, repetitive admin work, or messy customer handoffs.</p>
                     </article>
                     <article class="faq-item">
-                        <h3>Can urgent callers reach a human?</h3>
-                        <p>Yes. Calls can be routed or escalated based on your rules, business hours, and urgency.</p>
+                        <h3>Can this work with our current tools?</h3>
+                        <p>In most cases, yes. The goal is to connect AI to your existing stack instead of forcing a full rip-and-replace.</p>
                     </article>
                     <article class="faq-item">
-                        <h3>Can it update our CRM?</h3>
-                        <p>Yes. ZestixAI can push call outcomes into your CRM, spreadsheet, or another internal workflow.</p>
+                        <h3>Do you handle strategy or just implementation?</h3>
+                        <p>Both. ZestixAI can help scope the right use case, design the workflow, build it, and improve it once real usage data starts coming in.</p>
                     </article>
                 </div>
                 <div class="trust-note">
-                    Next credibility upgrade: add a real demo recording, real case study, and one real client result.
+                    Best next credibility upgrades: one packaged-offers section with pricing guidance, one short case study, and one working demo for the flagship voice agent.
                 </div>
             </div>
         </section>
@@ -690,19 +739,19 @@
         <section class="block" id="contact">
             <div class="container">
                 <div class="section-head">
-                    <h2>Book a demo</h2>
-                    <p>Tell us what kind of business you run and what you want the AI to handle.</p>
+                    <h2>Book a strategy call</h2>
+                    <p>Tell us where the bottleneck is — calls, lead response, admin overload, or internal process chaos — and we will map the best AI starting point.</p>
                 </div>
                 <div class="contact-grid">
                     <div class="contact-card">
                         <h3>Best fit if you want to:</h3>
                         <ul>
-                            <li>stop missing inbound leads</li>
-                            <li>book more appointments without extra staff</li>
-                            <li>route urgent calls properly</li>
-                            <li>keep call data synced into your CRM</li>
+                            <li>stop missing inbound leads or slow responses</li>
+                            <li>automate booking, routing, and repetitive follow-up</li>
+                            <li>connect AI to your CRM, calendar, inbox, or internal workflows</li>
+                            <li>figure out which AI use case will actually move the business first</li>
                         </ul>
-                        <p style="margin-top:16px;">During the demo, we can talk through your call flow, booking flow, routing rules, and what integrations you need.</p>
+                        <p style="margin-top:16px;">On the call, we can map your current workflow, identify the highest-leverage AI use case, and recommend whether to start with voice AI, lead capture, automation, or an internal tool.</p>
                         <div class="direct-contact">
                             <a href="mailto:zain.mehta@zestixai.com"><i class="fas fa-envelope"></i> zain.mehta@zestixai.com</a>
                             <a href="mailto:info@zestixai.com"><i class="fas fa-inbox"></i> info@zestixai.com</a>
