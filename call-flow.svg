@@ -1,0 +1,56 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1728"/>
+      <stop offset="1" stop-color="#07111F"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="163" y1="152" x2="1040" y2="594" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3DD9FF"/>
+      <stop offset="1" stop-color="#65F0B5"/>
+    </linearGradient>
+    <filter id="glow" x="0" y="0" width="1200" height="760" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="28" result="blur"/>
+      <feBlend in="SourceGraphic" in2="blur" mode="screen"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" rx="36" fill="url(#bg)"/>
+  <circle cx="188" cy="117" r="4" fill="#3DD9FF" fill-opacity="0.7"/>
+  <circle cx="1032" cy="646" r="4" fill="#65F0B5" fill-opacity="0.7"/>
+  <rect x="70" y="72" width="1060" height="616" rx="30" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.12)"/>
+  <text x="110" y="140" fill="#F5F7FB" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">ZestixAI Call Flow</text>
+  <text x="110" y="176" fill="#9EB0C7" font-family="Inter, Arial, sans-serif" font-size="18">From inbound call to booked appointment and CRM update</text>
+
+  <g filter="url(#glow)">
+    <rect x="110" y="230" width="210" height="120" rx="22" fill="#0D1B2E" stroke="rgba(61,217,255,0.4)"/>
+    <text x="145" y="278" fill="#3DD9FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">1. Inbound call</text>
+    <text x="145" y="315" fill="#D5E3F3" font-family="Inter, Arial, sans-serif" font-size="16">Customer calls your</text>
+    <text x="145" y="338" fill="#D5E3F3" font-family="Inter, Arial, sans-serif" font-size="16">business number</text>
+
+    <rect x="385" y="230" width="210" height="120" rx="22" fill="#0D1B2E" stroke="rgba(61,217,255,0.4)"/>
+    <text x="420" y="278" fill="#3DD9FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">2. AI answers</text>
+    <text x="420" y="315" fill="#D5E3F3" font-family="Inter, Arial, sans-serif" font-size="16">Greets caller and</text>
+    <text x="420" y="338" fill="#D5E3F3" font-family="Inter, Arial, sans-serif" font-size="16">understands intent</text>
+
+    <rect x="660" y="230" width="210" height="120" rx="22" fill="#0D1B2E" stroke="rgba(61,217,255,0.4)"/>
+    <text x="692" y="278" fill="#3DD9FF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">3. Qualify + book</text>
+    <text x="692" y="315" fill="#D5E3F3" font-family="Inter, Arial, sans-serif" font-size="16">Collects details and</text>
+    <text x="692" y="338" fill="#D5E3F3" font-family="Inter, Arial, sans-serif" font-size="16">books appointments</text>
+
+    <rect x="935" y="230" width="160" height="120" rx="22" fill="#0D1B2E" stroke="rgba(101,240,181,0.45)"/>
+    <text x="966" y="278" fill="#65F0B5" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">4. Sync</text>
+    <text x="966" y="315" fill="#D5E3F3" font-family="Inter, Arial, sans-serif" font-size="16">CRM, calendar,</text>
+    <text x="966" y="338" fill="#D5E3F3" font-family="Inter, Arial, sans-serif" font-size="16">team summary</text>
+
+    <path d="M320 290H385" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M595 290H660" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M870 290H935" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+
+    <rect x="375" y="444" width="450" height="160" rx="24" fill="#0D1B2E" stroke="rgba(255,255,255,0.12)"/>
+    <text x="415" y="490" fill="#F5F7FB" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Human handoff when needed</text>
+    <text x="415" y="530" fill="#9EB0C7" font-family="Inter, Arial, sans-serif" font-size="18">Urgent calls can route to your team while routine calls stay fully automated.</text>
+    <text x="415" y="565" fill="#9EB0C7" font-family="Inter, Arial, sans-serif" font-size="18">You control hours, call rules, escalation logic, and follow-up workflows.</text>
+
+    <path d="M765 350V405" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M765 405C765 425 745 444 725 444H600" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

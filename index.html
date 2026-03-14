@@ -10,7 +10,7 @@
 
     <meta property="og:title" content="ZestixAI | 24/7 AI Call Assistant for Local Businesses">
     <meta property="og:description" content="Answer every call, book more appointments, and capture more leads with ZestixAI's AI call assistant.">
-    <meta property="og:image" content="https://www.zestixai.com/logo.png">
+    <meta property="og:image" content="https://www.zestixai.com/icon-512.png">
     <meta property="og:url" content="https://www.zestixai.com/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
@@ -21,12 +21,12 @@
       "@type": "Organization",
       "name": "ZestixAI",
       "url": "https://www.zestixai.com",
-      "logo": "https://www.zestixai.com/logo.png",
+      "logo": "https://www.zestixai.com/icon-512.png",
       "description": "ZestixAI builds AI call assistants for local businesses.",
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "sales",
-        "email": "info@zestixai.com"
+        "email": "zain.mehta@zestixai.com"
       }
     }
     </script>
@@ -35,12 +35,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
     <style>
         :root {
             --bg: #07111f;
-            --bg-soft: #0b1728;
             --panel: rgba(255,255,255,0.04);
             --panel-strong: rgba(255,255,255,0.06);
             --text: #f5f7fb;
@@ -66,6 +66,7 @@
             line-height: 1.6;
         }
 
+        img { max-width: 100%; display: block; }
         .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
 
         header {
@@ -73,11 +74,12 @@
             top: 0;
             z-index: 1000;
             backdrop-filter: blur(16px);
-            background: rgba(7,17,31,0.72);
+            background: rgba(7,17,31,0.78);
             border-bottom: 1px solid rgba(255,255,255,0.06);
         }
 
         .nav {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -128,15 +130,20 @@
             box-shadow: 0 12px 30px rgba(61,217,255,0.20);
         }
 
-        .menu-toggle { display: none; background: none; border: 0; color: var(--text); font-size: 1.5rem; }
-
-        .hero {
-            padding: 88px 0 56px;
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 0;
+            color: var(--text);
+            font-size: 1.5rem;
+            z-index: 2;
         }
+
+        .hero { padding: 88px 0 56px; }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
+            grid-template-columns: 1.1fr 0.9fr;
             gap: 28px;
             align-items: center;
         }
@@ -218,27 +225,17 @@
         .service,
         .industry,
         .faq-item,
-        .contact-card {
+        .contact-card,
+        .call-flow-wrap {
             border: 1px solid var(--line);
             background: var(--panel);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
         }
 
-        .proof-strip .item {
-            padding: 16px;
-        }
-
-        .proof-strip strong {
-            display: block;
-            font-size: 1.2rem;
-            margin-bottom: 4px;
-        }
-
-        .proof-strip span {
-            color: var(--muted);
-            font-size: 0.92rem;
-        }
+        .proof-strip .item { padding: 16px; }
+        .proof-strip strong { display: block; font-size: 1.2rem; margin-bottom: 4px; }
+        .proof-strip span { color: var(--muted); font-size: 0.92rem; }
 
         .hero-card {
             padding: 22px;
@@ -258,11 +255,7 @@
             margin-bottom: 16px;
         }
 
-        .flow {
-            display: grid;
-            gap: 12px;
-        }
-
+        .flow { display: grid; gap: 12px; }
         .flow-step {
             padding: 16px;
             border-radius: 18px;
@@ -270,16 +263,8 @@
             border: 1px solid rgba(255,255,255,0.08);
         }
 
-        .flow-step strong {
-            display: block;
-            margin-bottom: 6px;
-            font-size: 0.98rem;
-        }
-
-        .flow-step p {
-            color: var(--muted);
-            font-size: 0.92rem;
-        }
+        .flow-step strong { display: block; margin-bottom: 6px; font-size: 0.98rem; }
+        .flow-step p { color: var(--muted); font-size: 0.92rem; }
 
         section.block { padding: 38px 0; }
 
@@ -300,9 +285,7 @@
             margin: 0 auto;
         }
 
-        .section-card {
-            padding: 28px;
-        }
+        .section-card { padding: 28px; }
 
         .features-grid,
         .steps-grid,
@@ -317,15 +300,14 @@
         .steps-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
         .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
         .industries-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
         .feature,
         .step,
         .service,
         .industry,
         .faq-item,
-        .contact-card {
-            padding: 20px;
-        }
+        .contact-card { padding: 20px; }
 
         .feature i,
         .service i,
@@ -369,7 +351,17 @@
             margin-bottom: 14px;
         }
 
-        .faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .call-flow-wrap {
+            padding: 18px;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(61,217,255,0.07), rgba(255,255,255,0.03));
+        }
+
+        .call-flow-wrap img {
+            width: 100%;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
 
         .trust-note {
             margin-top: 16px;
@@ -388,12 +380,20 @@
             align-items: start;
         }
 
-        .contact-card ul {
-            padding-left: 18px;
-            margin-top: 12px;
+        .contact-card ul { padding-left: 18px; margin-top: 12px; }
+        .contact-card li { margin: 8px 0; }
+
+        .direct-contact {
+            margin-top: 18px;
+            display: grid;
+            gap: 10px;
         }
 
-        .contact-card li { margin: 8px 0; }
+        .direct-contact a {
+            color: #c7f4ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
         .calendly-inline-widget {
             min-width: 320px;
@@ -445,22 +445,30 @@
                 grid-template-columns: 1fr;
             }
 
+            .nav { gap: 12px; }
             nav ul {
                 display: none;
                 position: absolute;
-                top: 78px;
+                top: calc(100% - 6px);
                 left: 0;
                 right: 0;
-                background: rgba(7,17,31,0.96);
-                border-bottom: 1px solid rgba(255,255,255,0.08);
+                width: 100%;
+                background: rgba(7,17,31,0.98);
+                border: 1px solid rgba(255,255,255,0.08);
+                border-radius: 18px;
                 padding: 18px 16px 22px;
                 flex-direction: column;
                 gap: 14px;
+                box-shadow: var(--shadow);
             }
 
             nav ul.active { display: flex; }
-            .menu-toggle { display: block; }
+            .menu-toggle { display: block; margin-left: auto; }
             .nav-cta { display: none; }
+            .hero { padding-top: 64px; }
+            .hero h1 { font-size: clamp(2.15rem, 10vw, 3.2rem); }
+            .hero-actions .button { width: 100%; }
+            .calendly-inline-widget { height: 660px; }
         }
     </style>
 </head>
@@ -472,6 +480,7 @@
             <nav>
                 <ul>
                     <li><a href="#solution">Solution</a></li>
+                    <li><a href="#call-flow">Call flow</a></li>
                     <li><a href="#how-it-works">How it works</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#industries">Industries</a></li>
@@ -491,11 +500,11 @@
                     <h1>24/7 AI call assistant for local businesses</h1>
                     <p>
                         ZestixAI helps businesses answer every call, qualify leads, book appointments, route urgent calls,
-                        and update their CRM automatically — without hiring more front-desk staff.
+                        and update their CRM automatically without hiring more front-desk staff.
                     </p>
                     <div class="hero-actions">
                         <a class="button primary" href="#contact"><i class="fas fa-calendar"></i> Book a Demo</a>
-                        <a class="button secondary" href="#solution"><i class="fas fa-arrow-down"></i> See the System</a>
+                        <a class="button secondary" href="#call-flow"><i class="fas fa-arrow-down"></i> View Call Flow</a>
                     </div>
 
                     <div class="proof-strip">
@@ -558,6 +567,18 @@
                             <p>Push caller details, intent, and outcomes into your CRM or a simple Google Sheet.</p>
                         </article>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="block" id="call-flow">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Call flow</h2>
+                    <p>A clear visual of how calls move from inbound lead to booked appointment and team follow-up.</p>
+                </div>
+                <div class="call-flow-wrap">
+                    <img src="call-flow.svg" alt="ZestixAI call flow showing inbound call, AI answer, qualify and book, then CRM and calendar sync.">
                 </div>
             </div>
         </section>
@@ -626,7 +647,7 @@
                     <p>Especially useful for service businesses where missed calls usually mean lost revenue.</p>
                 </div>
                 <div class="industries-grid">
-                    <article class="industry"><i class="fas fa-stethoscope"></i><h3>Clinics & dentists</h3><p>Handle scheduling, FAQs, and new patient intake without clogging the front desk.</p></article>
+                    <article class="industry"><i class="fas fa-stethoscope"></i><h3>Clinics and dentists</h3><p>Handle scheduling, FAQs, and new patient intake without clogging the front desk.</p></article>
                     <article class="industry"><i class="fas fa-fan"></i><h3>HVAC, plumbing, home services</h3><p>Catch urgent calls fast and separate real service requests from low-intent inquiries.</p></article>
                     <article class="industry"><i class="fas fa-scissors"></i><h3>Salons, spas, med spas</h3><p>Book appointments, answer common questions, and reduce missed booking opportunities.</p></article>
                     <article class="industry"><i class="fas fa-utensils"></i><h3>Restaurants</h3><p>Handle reservations, common questions, and overflow calls during rush hours.</p></article>
@@ -661,7 +682,7 @@
                     </article>
                 </div>
                 <div class="trust-note">
-                    No fake testimonials here. If you want this site to convert harder, the next step is adding real demos, real call flows, and real case studies.
+                    Next credibility upgrade: add a real demo recording, real case study, and one real client result.
                 </div>
             </div>
         </section>
@@ -682,6 +703,10 @@
                             <li>keep call data synced into your CRM</li>
                         </ul>
                         <p style="margin-top:16px;">During the demo, we can talk through your call flow, booking flow, routing rules, and what integrations you need.</p>
+                        <div class="direct-contact">
+                            <a href="mailto:zain.mehta@zestixai.com"><i class="fas fa-envelope"></i> zain.mehta@zestixai.com</a>
+                            <a href="mailto:info@zestixai.com"><i class="fas fa-inbox"></i> info@zestixai.com</a>
+                        </div>
                     </div>
                     <div class="calendly-inline-widget" data-url="https://calendly.com/zain-mehta-zestixai/30min"></div>
                 </div>
@@ -693,8 +718,8 @@
         <div class="container footer-wrap">
             <p>© 2026 ZestixAI. All rights reserved.</p>
             <div class="footer-links">
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="mailto:info@zestixai.com">Email</a>
+                <a href="mailto:zain.mehta@zestixai.com">zain.mehta@zestixai.com</a>
+                <a href="mailto:info@zestixai.com">info@zestixai.com</a>
                 <a href="#top">Back to top</a>
             </div>
         </div>
