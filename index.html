@@ -3,1003 +3,703 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ZestixAI helps businesses of all sizes implement practical AI systems, from voice agents and lead capture to workflow automation, CRM integrations, and internal AI tools.">
-    <meta name="keywords" content="AI automation agency, AI voice agent, AI call assistant, workflow automation, CRM integration, lead capture, business AI systems, AI consulting, enterprise AI, small business AI, medium business AI">
+    <meta name="description" content="ZestixAI helps businesses of all sizes implement practical AI systems — from voice agents and lead capture to workflow automation and enterprise AI infrastructure.">
+    <meta name="keywords" content="AI automation agency, AI voice agent, AI call assistant, workflow automation, CRM integration, lead capture, business AI systems, AI consulting, enterprise AI, small business AI">
     <title>ZestixAI | AI Systems for Growth, Support, and Operations</title>
     <link rel="canonical" href="https://www.zestixai.com/">
 
-    <meta property="og:title" content="ZestixAI | AI Systems for Local Business Growth">
-    <meta property="og:description" content="AI call assistants, workflow automation, CRM integrations, and practical AI systems for small, medium, and enterprise businesses.">
+    <meta property="og:title" content="ZestixAI | AI Systems That Drive Real Business Results">
+    <meta property="og:description" content="Voice agents, workflow automation, CRM integrations, and practical AI for small, medium, and enterprise businesses.">
     <meta property="og:image" content="https://www.zestixai.com/brand-mark.svg">
     <meta property="og:url" content="https://www.zestixai.com/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "ZestixAI",
-      "url": "https://www.zestixai.com",
-      "logo": "https://www.zestixai.com/brand-mark.svg",
-      "description": "ZestixAI builds practical AI systems for customer conversations, workflow automation, and operations.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "sales",
-        "email": "zain.mehta@zestixai.com"
-      }
-    }
-    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ZestixAI","url":"https://www.zestixai.com","logo":"https://www.zestixai.com/brand-mark.svg","description":"ZestixAI builds practical AI systems for customer conversations, workflow automation, and operations.","contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"zain.mehta@zestixai.com"}}</script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
     <style>
+        /* ── TOKENS ── */
         :root {
-            --bg: #07111f;
-            --panel: rgba(255,255,255,0.04);
-            --panel-strong: rgba(255,255,255,0.06);
-            --text: #f5f7fb;
-            --muted: #9eb0c7;
-            --line: rgba(255,255,255,0.10);
-            --accent: #3dd9ff;
-            --accent-2: #6b7cff;
-            --success: #65f0b5;
-            --shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
-            --radius: 22px;
+            --bg: #05080f;
+            --panel: rgba(255,255,255,0.03);
+            --panel-h: rgba(255,255,255,0.06);
+            --border: rgba(255,255,255,0.08);
+            --border-s: rgba(255,255,255,0.14);
+            --text: #eef2ff;
+            --muted: #7a8fad;
+            --muted2: #a8bcce;
+            --cyan: #00d4ff;
+            --purple: #8b5cf6;
+            --green: #10f0a0;
+            --grad: linear-gradient(135deg,#00d4ff,#8b5cf6);
+            --grad-r: linear-gradient(135deg,#8b5cf6,#00d4ff);
+            --glow-c: 0 0 40px rgba(0,212,255,.22);
+            --glow-p: 0 0 40px rgba(139,92,246,.22);
+            --shadow: 0 24px 80px rgba(0,0,0,.5);
+            --r: 20px;
             --max: 1200px;
         }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background:
-                radial-gradient(circle at top left, rgba(61,217,255,0.12), transparent 30%),
-                radial-gradient(circle at 85% 20%, rgba(107,124,255,0.10), transparent 28%),
-                linear-gradient(180deg, #07111f 0%, #081321 40%, #050c16 100%);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        img { max-width: 100%; display: block; }
-        .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(16px);
-            background: rgba(7,17,31,0.78);
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-        }
-
-        .nav {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 78px;
-            gap: 24px;
-        }
-
-        .brand {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: var(--text);
-        }
-
-        .brand img {
-            width: 42px;
-            height: 42px;
-            border-radius: 12px;
-            box-shadow: 0 10px 24px rgba(61,217,255,0.14);
-        }
-
-        .brand-copy {
-            display: grid;
-            gap: 2px;
-        }
-
-        .brand-name {
-            font-size: 1.1rem;
-            font-weight: 800;
-            letter-spacing: -0.04em;
-            line-height: 1;
-        }
-
-        .brand-name span {
-            background: linear-gradient(135deg, var(--accent), var(--success));
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-
-        .brand-tag {
-            color: var(--muted);
-            font-size: 0.72rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-            align-items: center;
-        }
-
-        nav a {
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color .2s ease;
-        }
-
-        nav a:hover { color: var(--text); }
-
-        .nav-cta {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 18px;
-            border-radius: 999px;
-            background: linear-gradient(135deg, var(--accent), #5ce1ff);
-            color: #03131e;
-            font-weight: 700;
-            text-decoration: none;
-            box-shadow: 0 12px 30px rgba(61,217,255,0.20);
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: 0;
-            color: var(--text);
-            font-size: 1.5rem;
-            z-index: 2;
-        }
-
-        .hero { padding: 88px 0 56px; }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 28px;
-            align-items: center;
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 14px;
-            border: 1px solid rgba(61,217,255,0.18);
-            border-radius: 999px;
-            background: rgba(61,217,255,0.08);
-            color: #b8efff;
-            font-size: 0.86rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4.8rem);
-            line-height: 1.02;
-            letter-spacing: -0.06em;
-            margin-bottom: 18px;
-            max-width: 800px;
-        }
-
-        .hero p {
-            font-size: clamp(1rem, 2vw, 1.14rem);
-            color: var(--muted);
-            max-width: 720px;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-            margin-top: 26px;
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px 20px;
-            border-radius: 14px;
-            border: 1px solid transparent;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all .2s ease;
-        }
-
-        .button.primary {
-            background: linear-gradient(135deg, var(--accent), #6de4ff);
-            color: #04131d;
-            box-shadow: 0 16px 40px rgba(61,217,255,0.18);
-        }
-
-        .button.secondary {
-            border-color: rgba(255,255,255,0.12);
-            background: rgba(255,255,255,0.04);
-            color: var(--text);
-        }
-
-        .button:hover { transform: translateY(-1px); }
-
-        .proof-strip {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 12px;
-            margin-top: 26px;
-        }
-
-        .proof-strip .item,
-        .hero-card,
-        .section-card,
-        .feature,
-        .step,
-        .service,
-        .industry,
-        .faq-item,
-        .contact-card,
-        .call-flow-wrap {
-            border: 1px solid var(--line);
-            background: var(--panel);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-
-        .proof-strip .item { padding: 16px; }
-        .proof-strip strong { display: block; font-size: 1.2rem; margin-bottom: 4px; }
-        .proof-strip span { color: var(--muted); font-size: 0.92rem; }
-
-        .hero-card {
-            padding: 22px;
-            background:
-                linear-gradient(180deg, rgba(61,217,255,0.08), rgba(255,255,255,0.03)),
-                rgba(255,255,255,0.03);
-        }
-
-        .hero-card .label {
-            display: inline-flex;
-            padding: 8px 10px;
-            border-radius: 999px;
-            background: rgba(101,240,181,0.12);
-            color: #bdfde1;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .flow { display: grid; gap: 12px; }
-        .flow-step {
-            padding: 16px;
-            border-radius: 18px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .flow-step strong { display: block; margin-bottom: 6px; font-size: 0.98rem; }
-        .flow-step p { color: var(--muted); font-size: 0.92rem; }
-
-        section.block { padding: 38px 0; }
-
-        .section-head {
-            text-align: center;
-            margin-bottom: 28px;
-        }
-
-        .section-head h2 {
-            font-size: clamp(1.9rem, 4vw, 3rem);
-            letter-spacing: -0.05em;
-            margin-bottom: 10px;
-        }
-
-        .section-head p {
-            color: var(--muted);
-            max-width: 760px;
-            margin: 0 auto;
-        }
-
-        .section-card { padding: 28px; }
-
-        .features-grid,
-        .steps-grid,
-        .services-grid,
-        .industries-grid,
-        .faq-grid {
-            display: grid;
-            gap: 16px;
-        }
-
-        .features-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-        .steps-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-        .services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-        .industries-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-        .faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-        .feature,
-        .step,
-        .service,
-        .industry,
-        .faq-item,
-        .contact-card { padding: 20px; }
-
-        .feature i,
-        .service i,
-        .industry i {
-            color: var(--accent);
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-        }
-
-        .feature h3,
-        .service h3,
-        .industry h3,
-        .step h3,
-        .faq-item h3,
-        .contact-card h3 {
-            font-size: 1.06rem;
-            margin-bottom: 8px;
-        }
-
-        .feature p,
-        .service p,
-        .industry p,
-        .step p,
-        .faq-item p,
-        .contact-card p,
-        .contact-card li {
-            color: var(--muted);
-            font-size: 0.96rem;
-        }
-
-        .step-number {
-            width: 36px;
-            height: 36px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12px;
-            background: rgba(61,217,255,0.12);
-            color: var(--accent);
-            font-weight: 800;
-            margin-bottom: 14px;
-        }
-
-        .call-flow-wrap {
-            padding: 18px;
-            overflow: hidden;
-            background: linear-gradient(180deg, rgba(61,217,255,0.07), rgba(255,255,255,0.03));
-        }
-
-        .call-flow-wrap img {
-            width: 100%;
-            border-radius: 18px;
-            border: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .trust-note {
-            margin-top: 16px;
-            padding: 16px 18px;
-            border: 1px dashed rgba(255,255,255,0.14);
-            border-radius: 18px;
-            color: var(--muted);
-            font-size: 0.95rem;
-            text-align: center;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 18px;
-            align-items: start;
-        }
-
-        .contact-card ul { padding-left: 18px; margin-top: 12px; }
-        .contact-card li { margin: 8px 0; }
-
-        .direct-contact {
-            margin-top: 18px;
-            display: grid;
-            gap: 10px;
-        }
-
-        .direct-contact a {
-            color: #c7f4ff;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .calendly-inline-widget {
-            min-width: 320px;
-            height: 720px;
-            border-radius: var(--radius);
-            overflow: hidden;
-            border: 1px solid var(--line);
-            box-shadow: var(--shadow);
-            background: rgba(255,255,255,0.04);
-        }
-
-        footer {
-            padding: 34px 0 54px;
-            color: var(--muted);
-        }
-
-        .footer-wrap {
-            display: flex;
-            justify-content: space-between;
-            gap: 16px;
-            align-items: center;
-            flex-wrap: wrap;
-            border-top: 1px solid rgba(255,255,255,0.08);
-            padding-top: 24px;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 18px;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: var(--muted);
-            text-decoration: none;
-        }
-
-        .footer-links a:hover { color: var(--text); }
-
-        /* Pricing */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 20px;
-            align-items: start;
-        }
-
-        .pricing-card {
-            border: 1px solid var(--line);
-            background: var(--panel);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            padding: 28px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            position: relative;
-        }
-
-        .pricing-card.featured {
-            border-color: var(--accent);
-            background: linear-gradient(160deg, rgba(61,217,255,0.10), rgba(255,255,255,0.04));
-            box-shadow: 0 0 40px rgba(61,217,255,0.15), var(--shadow);
-        }
-
-        .pricing-badge {
-            position: absolute;
-            top: -14px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--accent), #6de4ff);
-            color: #04131d;
-            font-size: 0.75rem;
-            font-weight: 800;
-            padding: 5px 14px;
-            border-radius: 999px;
-            white-space: nowrap;
-        }
-
-        .pricing-tier {
-            font-size: 0.82rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent);
-        }
-
-        .pricing-name {
-            font-size: 1.4rem;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-        }
-
-        .pricing-price {
-            display: flex;
-            align-items: flex-end;
-            gap: 6px;
-            line-height: 1;
-        }
-
-        .pricing-price .amount {
-            font-size: 2.8rem;
-            font-weight: 800;
-            letter-spacing: -0.05em;
-        }
-
-        .pricing-price .period {
-            color: var(--muted);
-            font-size: 0.95rem;
-            padding-bottom: 6px;
-        }
-
-        .pricing-desc {
-            color: var(--muted);
-            font-size: 0.95rem;
-            border-top: 1px solid var(--line);
-            padding-top: 16px;
-        }
-
-        .pricing-features {
-            list-style: none;
-            display: grid;
-            gap: 10px;
-        }
-
-        .pricing-features li {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 0.94rem;
-            color: var(--text);
-        }
-
-        .pricing-features li i {
-            color: var(--success);
-            font-size: 0.85rem;
-            margin-top: 3px;
-            flex-shrink: 0;
-        }
-
-        .pricing-cta {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 14px 20px;
-            border-radius: 14px;
-            border: 1px solid transparent;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.97rem;
-            transition: all .2s ease;
-            margin-top: auto;
-        }
-
-        .pricing-cta.primary {
-            background: linear-gradient(135deg, var(--accent), #6de4ff);
-            color: #04131d;
-            box-shadow: 0 12px 30px rgba(61,217,255,0.18);
-        }
-
-        .pricing-cta.secondary {
-            border-color: rgba(255,255,255,0.12);
-            background: rgba(255,255,255,0.04);
-            color: var(--text);
-        }
-
-        .pricing-cta:hover { transform: translateY(-1px); }
-
-        @media (max-width: 980px) {
-            .pricing-grid { grid-template-columns: 1fr; }
-        }
-            .hero-grid,
-            .contact-grid,
-            .features-grid,
-            .steps-grid,
-            .services-grid,
-            .industries-grid,
-            .faq-grid,
-            .proof-strip {
-                grid-template-columns: 1fr;
-            }
-
-            .nav { gap: 12px; }
-            nav ul {
-                display: none;
-                position: absolute;
-                top: calc(100% - 6px);
-                left: 0;
-                right: 0;
-                width: 100%;
-                background: rgba(7,17,31,0.98);
-                border: 1px solid rgba(255,255,255,0.08);
-                border-radius: 18px;
-                padding: 18px 16px 22px;
-                flex-direction: column;
-                gap: 14px;
-                box-shadow: var(--shadow);
-            }
-
-            nav ul.active { display: flex; }
-            .menu-toggle { display: block; margin-left: auto; }
-            .nav-cta { display: none; }
-            .hero { padding-top: 64px; }
-            .hero h1 { font-size: clamp(2.15rem, 10vw, 3.2rem); }
-            .hero-actions .button { width: 100%; }
-            .calendly-inline-widget { height: 660px; }
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        img{max-width:100%;display:block}
+        body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+        .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+
+        /* ── ANIMATED BG ORBS ── */
+        .bg-orbs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+        .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.16;animation:orbFloat 22s ease-in-out infinite}
+        .orb1{width:700px;height:700px;background:radial-gradient(circle,#00d4ff,transparent 70%);top:-220px;left:-180px;animation-duration:24s}
+        .orb2{width:550px;height:550px;background:radial-gradient(circle,#8b5cf6,transparent 70%);top:5%;right:-160px;animation-duration:19s;animation-delay:-8s}
+        .orb3{width:450px;height:450px;background:radial-gradient(circle,#10f0a0,transparent 70%);bottom:15%;left:25%;animation-duration:27s;animation-delay:-14s}
+        @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(32px,-44px) scale(1.06)}66%{transform:translate(-22px,32px) scale(.94)}}
+
+        /* ── GRID DOT PATTERN ── */
+        .bg-grid{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.055) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(ellipse at center,black 20%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse at center,black 20%,transparent 80%)}
+
+        main,header,footer{position:relative;z-index:2}
+
+        /* ── HEADER ── */
+        header{position:sticky;top:0;z-index:1000;backdrop-filter:blur(22px) saturate(200%);-webkit-backdrop-filter:blur(22px) saturate(200%);background:rgba(5,8,15,.72);border-bottom:1px solid var(--border)}
+        .nav{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:20px}
+        .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+        .brand-mark{width:40px;height:40px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;box-shadow:var(--glow-c)}
+        .brand-mark img{width:26px;height:26px;filter:brightness(0) invert(1)}
+        .brand-name{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;font-weight:700;letter-spacing:-.04em}
+        .brand-name .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+        nav ul{display:flex;gap:4px;list-style:none;align-items:center}
+        nav a{color:var(--muted);text-decoration:none;font-size:.88rem;font-weight:500;padding:6px 11px;border-radius:8px;transition:all .2s}
+        nav a:hover{color:var(--text);background:var(--panel-h)}
+        .nav-cta{padding:10px 20px;border-radius:10px;background:var(--grad);color:#fff;font-weight:700;font-size:.88rem;text-decoration:none;transition:all .2s;box-shadow:var(--glow-c)}
+        .nav-cta:hover{transform:translateY(-1px);opacity:.9}
+        .menu-toggle{display:none;background:none;border:0;color:var(--text);font-size:1.4rem}
+
+        /* ── HERO ── */
+        .hero{min-height:92vh;display:flex;align-items:center;padding:100px 0 60px;position:relative;overflow:hidden}
+        .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(0,212,255,.07),transparent 60%);pointer-events:none}
+        .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+
+        .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid rgba(0,212,255,.2);background:rgba(0,212,255,.07);color:#7ee8ff;font-size:.82rem;font-weight:600;letter-spacing:.04em;margin-bottom:24px}
+        .pulse{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);animation:pulseAnim 1.8s ease-in-out infinite;flex-shrink:0}
+        @keyframes pulseAnim{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.75)}}
+
+        .hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.8rem,5.5vw,5rem);font-weight:700;letter-spacing:-.04em;line-height:1.0;margin-bottom:22px}
+        .grad-text{background:var(--grad);background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradShift 5s ease infinite}
+        @keyframes gradShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+        .hero p{font-size:1.08rem;color:var(--muted2);max-width:560px;line-height:1.75}
+
+        .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+        .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:12px;font-weight:700;font-size:.97rem;text-decoration:none;transition:all .25s;border:1px solid transparent}
+        .btn-p{background:var(--grad);color:#fff;box-shadow:0 0 30px rgba(0,212,255,.3),0 8px 24px rgba(0,0,0,.3)}
+        .btn-p:hover{transform:translateY(-2px);box-shadow:0 0 55px rgba(0,212,255,.45),0 16px 40px rgba(0,0,0,.3)}
+        .btn-s{background:var(--panel);border-color:var(--border-s);color:var(--text)}
+        .btn-s:hover{background:var(--panel-h);transform:translateY(-2px)}
+
+        .proof-strip{display:flex;gap:10px;flex-wrap:wrap;margin-top:36px}
+        .proof-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:10px;background:var(--panel);border:1px solid var(--border);font-size:.85rem;color:var(--muted2);font-weight:500}
+        .proof-chip i{color:var(--cyan);font-size:.8rem}
+
+        /* Hero panel */
+        .hero-panel{position:relative}
+        .hero-panel::before{content:'';position:absolute;inset:-1px;border-radius:calc(var(--r) + 1px);background:var(--grad);opacity:.25;z-index:0;filter:blur(1px);pointer-events:none}
+        .hero-card{position:relative;z-index:1;padding:28px;border-radius:var(--r);background:linear-gradient(160deg,rgba(0,212,255,.07),rgba(139,92,246,.05),rgba(5,8,15,.92));border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(12px);box-shadow:var(--shadow);animation:floatCard 6s ease-in-out infinite}
+        @keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+        .hc-label{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:8px;background:rgba(16,240,160,.1);border:1px solid rgba(16,240,160,.2);color:#10f0a0;font-size:.78rem;font-weight:700;margin-bottom:20px}
+        .flow-item{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);margin-bottom:10px;transition:all .3s}
+        .flow-item:last-child{margin-bottom:0}
+        .flow-item:hover{background:rgba(255,255,255,.05);border-color:rgba(0,212,255,.2);transform:translateX(4px)}
+        .fi-icon{width:36px;height:36px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff;flex-shrink:0}
+        .fi-text strong{display:block;font-size:.93rem;margin-bottom:3px}
+        .fi-text p{color:var(--muted);font-size:.84rem;line-height:1.4}
+
+        /* ── STATS STRIP ── */
+        .stats-strip{padding:28px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:linear-gradient(90deg,rgba(0,212,255,.03),rgba(139,92,246,.03))}
+        .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+        .stat-item strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:2.4rem;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.1;margin-bottom:4px}
+        .stat-item span{font-size:.86rem;color:var(--muted)}
+
+        /* ── MARQUEE ── */
+        .marquee-wrap{padding:18px 0;overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+        .marquee-track{display:flex;gap:36px;animation:marq 28s linear infinite;white-space:nowrap;width:max-content}
+        .mitem{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:.86rem;font-weight:600;flex-shrink:0}
+        .mitem i{color:var(--cyan)}
+        @keyframes marq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+        /* ── SECTIONS ── */
+        .section{padding:80px 0}
+        .section-head{text-align:center;margin-bottom:52px}
+        .slabel{display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.18);color:var(--cyan);font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px}
+        .section-head h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;letter-spacing:-.04em;line-height:1.1;margin-bottom:14px}
+        .section-head p{color:var(--muted2);max-width:600px;margin:0 auto;font-size:1rem}
+
+        /* ── CARDS ── */
+        .card{border:1px solid var(--border);background:var(--panel);border-radius:var(--r);padding:26px;transition:all .3s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+        .card::after{content:'';position:absolute;inset:0;background:var(--grad);opacity:0;transition:opacity .3s;pointer-events:none}
+        .card:hover{border-color:rgba(0,212,255,.28);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.3),var(--glow-c)}
+        .card:hover::after{opacity:.04}
+        .card>*{position:relative;z-index:1}
+        .card-icon{width:44px;height:44px;border-radius:12px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2);display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:1.1rem;margin-bottom:16px;transition:all .3s}
+        .card:hover .card-icon{background:var(--grad);border-color:transparent;color:#fff;box-shadow:var(--glow-c)}
+        .card h3{font-size:1.04rem;font-weight:700;margin-bottom:8px;letter-spacing:-.02em}
+        .card p{color:var(--muted);font-size:.92rem;line-height:1.65}
+
+        .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+        .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+        .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+
+        .step-num{width:42px;height:42px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:#fff;margin-bottom:16px;box-shadow:var(--glow-c)}
+
+        /* ── CALL FLOW ── */
+        .call-flow-wrap{border-radius:var(--r);overflow:hidden;border:1px solid rgba(0,212,255,.15);background:linear-gradient(180deg,rgba(0,212,255,.07),rgba(139,92,246,.04));padding:20px;box-shadow:var(--shadow),var(--glow-c)}
+        .call-flow-wrap img{width:100%;border-radius:14px}
+
+        /* ── PRICING ── */
+        .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+        .pc{border:1px solid var(--border);background:var(--panel);border-radius:var(--r);padding:32px;display:flex;flex-direction:column;gap:20px;position:relative;transition:all .3s}
+        .pc:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+        .pc.featured{border-color:rgba(0,212,255,.4);background:linear-gradient(160deg,rgba(0,212,255,.09),rgba(139,92,246,.06),rgba(5,8,15,.96));box-shadow:0 0 60px rgba(0,212,255,.13),var(--shadow)}
+        .pc.featured:hover{box-shadow:0 0 90px rgba(0,212,255,.22),var(--shadow)}
+        .pc-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--grad);color:#fff;font-size:.72rem;font-weight:800;padding:5px 18px;border-radius:999px;white-space:nowrap;letter-spacing:.05em;box-shadow:var(--glow-c)}
+        .pc-tier{font-size:.73rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--cyan)}
+        .pc-name{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:-.03em}
+        .pc-price{display:flex;align-items:flex-end;gap:4px}
+        .pc-price .num{font-family:'Space Grotesk',sans-serif;font-size:3.2rem;font-weight:700;letter-spacing:-.05em;line-height:1}
+        .pc.featured .pc-price .num{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+        .pc-price .per{color:var(--muted);font-size:.9rem;padding-bottom:6px}
+        .pc-desc{color:var(--muted2);font-size:.9rem;line-height:1.65;padding-top:14px;border-top:1px solid var(--border)}
+        .pc-feats{list-style:none;display:flex;flex-direction:column;gap:10px;flex-grow:1}
+        .pc-feats li{display:flex;align-items:flex-start;gap:10px;font-size:.91rem;color:var(--text)}
+        .pc-feats li i{color:var(--green);font-size:.78rem;margin-top:4px;flex-shrink:0}
+        .pc-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:12px;font-weight:700;font-size:.94rem;text-decoration:none;transition:all .25s;border:1px solid transparent}
+        .pc-btn.p{background:var(--grad);color:#fff;box-shadow:0 0 30px rgba(0,212,255,.25)}
+        .pc-btn.p:hover{transform:translateY(-2px);box-shadow:0 0 55px rgba(0,212,255,.42)}
+        .pc-btn.g{background:var(--panel);border-color:var(--border-s);color:var(--text)}
+        .pc-btn.g:hover{background:var(--panel-h);border-color:rgba(0,212,255,.3);transform:translateY(-2px)}
+
+        /* ── INDUSTRY CARDS ── */
+        .ic{border:1px solid var(--border);background:var(--panel);border-radius:var(--r);padding:22px;transition:all .3s}
+        .ic:hover{border-color:rgba(0,212,255,.25);transform:translateY(-3px);box-shadow:0 16px 50px rgba(0,0,0,.25)}
+        .ic i{color:var(--cyan);font-size:1.3rem;margin-bottom:12px;display:block}
+        .ic h3{font-size:1rem;font-weight:700;margin-bottom:6px}
+        .ic p{color:var(--muted);font-size:.9rem}
+
+        /* ── FAQ ── */
+        .fq{border:1px solid var(--border);background:var(--panel);border-radius:var(--r);padding:24px;transition:all .3s}
+        .fq:hover{border-color:rgba(0,212,255,.2);background:var(--panel-h)}
+        .fq h3{font-size:1rem;font-weight:700;margin-bottom:10px}
+        .fq p{color:var(--muted2);font-size:.92rem;line-height:1.65}
+
+        /* ── CONTACT ── */
+        .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:start}
+        .contact-info{border:1px solid var(--border);background:var(--panel);border-radius:var(--r);padding:28px}
+        .contact-info h3{font-size:1.15rem;font-weight:700;margin-bottom:16px}
+        .contact-info ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+        .contact-info li{display:flex;align-items:flex-start;gap:10px;color:var(--muted2);font-size:.92rem}
+        .contact-info li i{color:var(--green);margin-top:3px;flex-shrink:0}
+        .contact-links{display:flex;flex-direction:column;gap:10px;margin-top:22px;padding-top:20px;border-top:1px solid var(--border)}
+        .clink{display:inline-flex;align-items:center;gap:10px;color:var(--cyan);text-decoration:none;font-weight:600;font-size:.92rem;transition:opacity .2s}
+        .clink:hover{opacity:.75}
+        .calendly-inline-widget{min-width:320px;height:700px;border-radius:var(--r);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:var(--panel)}
+
+        /* ── FOOTER ── */
+        footer{padding:32px 0 48px;border-top:1px solid var(--border)}
+        .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+        .footer-copy{color:var(--muted);font-size:.86rem}
+        .footer-links{display:flex;gap:20px;flex-wrap:wrap}
+        .footer-links a{color:var(--muted);text-decoration:none;font-size:.86rem;transition:color .2s}
+        .footer-links a:hover{color:var(--text)}
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:980px){
+            .hero-grid,.contact-grid{grid-template-columns:1fr}
+            .grid3,.grid4,.pricing-grid,.stats-grid{grid-template-columns:1fr}
+            .grid2{grid-template-columns:1fr}
+            .hero{min-height:auto;padding:80px 0 48px}
+            .hero h1{font-size:clamp(2.2rem,8vw,3rem)}
+            .hero-actions .btn{width:100%;justify-content:center}
+            .menu-toggle{display:block}
+            nav ul{display:none;position:absolute;top:calc(100% + 4px);left:0;right:0;background:rgba(5,8,15,.98);border:1px solid var(--border);border-radius:16px;padding:16px;flex-direction:column;gap:4px;box-shadow:var(--shadow);z-index:999}
+            nav ul.active{display:flex}
+            .nav-cta{display:none}
+            .calendly-inline-widget{height:640px}
+            .proof-strip{gap:8px}
+            .stats-grid{grid-template-columns:repeat(2,1fr)}
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container nav">
-            <a class="brand" href="#top" aria-label="ZestixAI home">
-                <img src="brand-mark.svg" alt="ZestixAI logo mark">
-                <span class="brand-copy">
-                    <span class="brand-name">Zestix<span>AI</span></span>
-                    <span class="brand-tag">AI systems for every business</span>
-                </span>
-            </a>
-            <button class="menu-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
-            <nav>
-                <ul>
-                    <li><a href="#solution">What we do</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#call-flow">Voice AI</a></li>
-                    <li><a href="#how-it-works">How it works</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#industries">Who it's for</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <a class="nav-cta" href="#contact">Book a Demo</a>
-        </div>
-    </header>
 
-    <main id="top">
-        <section class="hero">
-            <div class="container hero-grid">
-                <div>
-                    <div class="eyebrow"><i class="fas fa-bolt"></i> AI implementation for businesses of every size</div>
-                    <h1>We implement AI systems that answer customers, capture demand, and automate busywork</h1>
-                    <p>
-                        ZestixAI helps small, medium, and enterprise businesses deploy practical AI: voice agents, chat and lead capture,
-                        workflow automation, CRM integrations, and internal AI tools. Voice AI is our flagship offer,
-                        but the bigger value is building an AI-enabled business with fewer missed opportunities and less manual work.
-                    </p>
-                    <div class="hero-actions">
-                        <a class="button primary" href="#contact"><i class="fas fa-calendar"></i> Book a Strategy Call</a>
-                        <a class="button secondary" href="#services"><i class="fas fa-layer-group"></i> Explore Services</a>
-                    </div>
+<div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+</div>
+<div class="bg-grid" aria-hidden="true"></div>
 
-                    <div class="proof-strip">
-                        <div class="item"><strong>Voice AI</strong><span>Inbound calls and booking</span></div>
-                        <div class="item"><strong>Lead capture</strong><span>Web, chat, SMS, forms</span></div>
-                        <div class="item"><strong>Automation</strong><span>CRM, routing, follow-up</span></div>
-                        <div class="item"><strong>Internal AI</strong><span>Knowledge + team workflows</span></div>
-                    </div>
+<header>
+    <div class="container nav">
+        <a class="brand" href="#top" aria-label="ZestixAI home">
+            <div class="brand-mark"><img src="brand-mark.svg" alt="ZestixAI"></div>
+            <span class="brand-name">Zestix<span class="g">AI</span></span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+        <nav>
+            <ul>
+                <li><a href="#solution">What we do</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#industries">Who it's for</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a class="nav-cta" href="#contact">Book a Demo</a>
+    </div>
+</header>
+
+<main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div data-aos="fade-right" data-aos-duration="800">
+                <div class="eyebrow">
+                    <span class="pulse"></span>
+                    AI implementation for every business
                 </div>
+                <h1>AI systems that <span class="grad-text">drive results</span>, not just demos</h1>
+                <p>ZestixAI deploys practical AI across your business — voice agents, lead capture, workflow automation, CRM integrations, and internal tools. Built to work from day one.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-p" href="#contact"><i class="fas fa-calendar"></i> Book a Strategy Call</a>
+                    <a class="btn btn-s" href="#pricing"><i class="fas fa-tag"></i> See Pricing</a>
+                </div>
+                <div class="proof-strip">
+                    <span class="proof-chip"><i class="fas fa-phone"></i> Voice AI</span>
+                    <span class="proof-chip"><i class="fas fa-comments"></i> Lead Capture</span>
+                    <span class="proof-chip"><i class="fas fa-gears"></i> Automation</span>
+                    <span class="proof-chip"><i class="fas fa-brain"></i> Internal AI</span>
+                </div>
+            </div>
 
+            <div class="hero-panel" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
                 <div class="hero-card">
-                    <div class="label">What ZestixAI can build</div>
-                    <div class="flow">
-                        <div class="flow-step">
+                    <div class="hc-label"><span class="pulse"></span> What ZestixAI builds</div>
+                    <div class="flow-item">
+                        <div class="fi-icon"><i class="fas fa-headset"></i></div>
+                        <div class="fi-text">
                             <strong>Customer-facing AI</strong>
                             <p>Voice agents, website chat, SMS follow-up, and lead capture that respond instantly.</p>
                         </div>
-                        <div class="flow-step">
+                    </div>
+                    <div class="flow-item">
+                        <div class="fi-icon"><i class="fas fa-diagram-project"></i></div>
+                        <div class="fi-text">
                             <strong>Connected workflows</strong>
                             <p>CRM updates, booking, routing, alerts, and handoffs tied into your real stack.</p>
                         </div>
-                        <div class="flow-step">
+                    </div>
+                    <div class="flow-item">
+                        <div class="fi-icon"><i class="fas fa-book-open-reader"></i></div>
+                        <div class="fi-text">
                             <strong>Internal AI tools</strong>
                             <p>Knowledge assistants, SOP copilots, and searchable team information.</p>
                         </div>
-                        <div class="flow-step">
+                    </div>
+                    <div class="flow-item">
+                        <div class="fi-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="fi-text">
                             <strong>Done-for-you implementation</strong>
-                            <p>Strategy, setup, prompt design, testing, and iteration without the DIY mess.</p>
+                            <p>Strategy, setup, prompt design, testing, and iteration — no DIY mess.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="block" id="solution">
-            <div class="container">
-                <div class="section-head">
-                    <h2>Practical AI, not gimmicks</h2>
-                    <p>
-                        Most businesses do not need “AI for everything.” They need a few high-leverage systems that save time,
-                        improve response speed, and tighten operations. That is where ZestixAI fits.
-                    </p>
-                </div>
-
-                <div class="section-card">
-                    <div class="features-grid">
-                        <article class="feature">
-                            <i class="fas fa-bullseye"></i>
-                            <h3>Start where the ROI is obvious</h3>
-                            <p>We focus on missed leads, slow follow-up, repetitive admin work, and messy handoffs first.</p>
-                        </article>
-                        <article class="feature">
-                            <i class="fas fa-diagram-project"></i>
-                            <h3>Connect AI to real workflows</h3>
-                            <p>Every system is tied to the tools your team already uses, from CRM and calendars to email, sheets, and forms.</p>
-                        </article>
-                        <article class="feature">
-                            <i class="fas fa-gauge-high"></i>
-                            <h3>Ship usable systems fast</h3>
-                            <p>No long transformation theater. The goal is a working AI asset your team can actually use and measure.</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="block" id="call-flow">
-            <div class="container">
-                <div class="section-head">
-                    <h2>Flagship offer: AI voice agent</h2>
-                    <p>Voice AI is still the clearest wedge: it answers inbound calls, qualifies intent, books appointments, and routes urgent issues without dropping the ball.</p>
-                </div>
-                <div class="call-flow-wrap">
-                    <img src="call-flow.svg" alt="ZestixAI call flow showing inbound call, AI answer, qualify and book, then CRM and calendar sync.">
-                </div>
-            </div>
-        </section>
-
-        <section class="block" id="how-it-works">
-            <div class="container">
-                <div class="section-head">
-                    <h2>How engagement works</h2>
-                    <p>We usually start with one high-value workflow, make it real, then expand into a broader AI stack once the first win is proven.</p>
-                </div>
-                <div class="steps-grid">
-                    <article class="step">
-                        <div class="step-number">1</div>
-                        <h3>Find the bottleneck</h3>
-                        <p>We identify the customer or internal workflow that is leaking time, leads, or response quality.</p>
-                    </article>
-                    <article class="step">
-                        <div class="step-number">2</div>
-                        <h3>Design the AI workflow</h3>
-                        <p>We map prompts, guardrails, handoffs, integrations, and what success should look like.</p>
-                    </article>
-                    <article class="step">
-                        <div class="step-number">3</div>
-                        <h3>Launch and connect</h3>
-                        <p>The system goes live with your phone, website, CRM, calendar, inbox, or internal tools.</p>
-                    </article>
-                    <article class="step">
-                        <div class="step-number">4</div>
-                        <h3>Refine from real usage</h3>
-                        <p>We tune the workflow using transcripts, edge cases, and conversion or efficiency data.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="block" id="pricing">
-            <div class="container">
-                <div class="section-head">
-                    <h2>Simple, transparent pricing</h2>
-                    <p>Pick the plan that matches where your business is today. Every tier includes done-for-you implementation — no DIY setup required.</p>
-                </div>
-                <div class="pricing-grid">
-
-                    <!-- Small Business -->
-                    <div class="pricing-card">
-                        <div class="pricing-tier">Small Business</div>
-                        <div class="pricing-name">Starter AI</div>
-                        <div class="pricing-price">
-                            <span class="amount">$999</span>
-                            <span class="period">/mo</span>
-                        </div>
-                        <p class="pricing-desc">Best for local and small service businesses ready to stop missing leads and automate repetitive work.</p>
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check-circle"></i> 1 AI voice agent (inbound calls + booking)</li>
-                            <li><i class="fas fa-check-circle"></i> Website chat or SMS lead capture</li>
-                            <li><i class="fas fa-check-circle"></i> CRM or calendar integration (1 tool)</li>
-                            <li><i class="fas fa-check-circle"></i> Automated follow-up sequences</li>
-                            <li><i class="fas fa-check-circle"></i> Prompt design and testing included</li>
-                            <li><i class="fas fa-check-circle"></i> Monthly performance review</li>
-                            <li><i class="fas fa-check-circle"></i> Email support</li>
-                        </ul>
-                        <a class="pricing-cta secondary" href="#contact"><i class="fas fa-calendar"></i> Book a Call</a>
-                    </div>
-
-                    <!-- Medium Business -->
-                    <div class="pricing-card featured">
-                        <div class="pricing-badge">Most Popular</div>
-                        <div class="pricing-tier">Medium Business</div>
-                        <div class="pricing-name">Growth AI</div>
-                        <div class="pricing-price">
-                            <span class="amount">$3,000</span>
-                            <span class="period">/mo</span>
-                        </div>
-                        <p class="pricing-desc">For growing businesses that need a full AI stack — voice, chat, automation, and internal tools working together.</p>
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check-circle"></i> Everything in Starter, plus:</li>
-                            <li><i class="fas fa-check-circle"></i> Up to 3 AI voice agents (inbound + outbound)</li>
-                            <li><i class="fas fa-check-circle"></i> Multi-channel lead capture (web, SMS, forms)</li>
-                            <li><i class="fas fa-check-circle"></i> Full CRM + calendar + inbox integration</li>
-                            <li><i class="fas fa-check-circle"></i> Workflow automation (routing, alerts, handoffs)</li>
-                            <li><i class="fas fa-check-circle"></i> Internal AI knowledge tool (SOP assistant)</li>
-                            <li><i class="fas fa-check-circle"></i> AI strategy session + quarterly roadmap</li>
-                            <li><i class="fas fa-check-circle"></i> Priority support + bi-weekly reviews</li>
-                        </ul>
-                        <a class="pricing-cta primary" href="#contact"><i class="fas fa-calendar"></i> Book a Call</a>
-                    </div>
-
-                    <!-- Enterprise -->
-                    <div class="pricing-card">
-                        <div class="pricing-tier">Enterprise</div>
-                        <div class="pricing-name">Enterprise AI</div>
-                        <div class="pricing-price">
-                            <span class="amount" style="font-size:2rem;">Custom</span>
-                        </div>
-                        <p class="pricing-desc">For large organizations that need a fully custom AI infrastructure across departments, teams, and systems.</p>
-                        <ul class="pricing-features">
-                            <li><i class="fas fa-check-circle"></i> Everything in Growth, plus:</li>
-                            <li><i class="fas fa-check-circle"></i> Unlimited AI agents and workflows</li>
-                            <li><i class="fas fa-check-circle"></i> Custom AI builds tailored to your processes</li>
-                            <li><i class="fas fa-check-circle"></i> Multi-department rollout and training</li>
-                            <li><i class="fas fa-check-circle"></i> Advanced analytics and reporting dashboards</li>
-                            <li><i class="fas fa-check-circle"></i> Dedicated implementation manager</li>
-                            <li><i class="fas fa-check-circle"></i> SLA-backed support + on-demand strategy calls</li>
-                            <li><i class="fas fa-check-circle"></i> Custom integrations with enterprise systems</li>
-                        </ul>
-                        <a class="pricing-cta secondary" href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="block" id="services">
-            <div class="container">
-                <div class="section-head">
-                    <h2>Service menu</h2>
-                    <p>ZestixAI is a hands-on AI implementation partner for SMBs. Voice AI is the wedge, but these are the broader offers behind it.</p>
-                </div>
-                <div class="services-grid">
-                    <article class="service">
-                        <i class="fas fa-headset"></i>
-                        <h3>AI Voice Agents</h3>
-                        <p>Inbound and outbound voice systems that answer calls, qualify leads, book appointments, and escalate when a human should step in.</p>
-                    </article>
-                    <article class="service">
-                        <i class="fas fa-comments"></i>
-                        <h3>Lead Capture and Conversational AI</h3>
-                        <p>Website chat, SMS flows, intake assistants, and follow-up sequences that turn interest into qualified pipeline faster.</p>
-                    </article>
-                    <article class="service">
-                        <i class="fas fa-gears"></i>
-                        <h3>Workflow Automation and Integrations</h3>
-                        <p>Connect AI outputs to CRM, calendars, inboxes, spreadsheets, and team alerts so work moves automatically after each interaction.</p>
-                    </article>
-                    <article class="service">
-                        <i class="fas fa-book-open-reader"></i>
-                        <h3>Internal AI Knowledge Tools</h3>
-                        <p>Searchable SOP assistants, team knowledge bots, and internal copilots that help staff answer questions and execute faster.</p>
-                    </article>
-                    <article class="service">
-                        <i class="fas fa-sitemap"></i>
-                        <h3>AI Strategy and System Design</h3>
-                        <p>Prioritize the right use cases, map the operating workflow, and build an AI rollout plan that is tied to actual business outcomes.</p>
-                    </article>
-                    <article class="service">
-                        <i class="fas fa-wrench"></i>
-                        <h3>Custom AI Builds</h3>
-                        <p>For edge cases that do not fit an off-the-shelf template, we design custom prompts, logic, guardrails, and integrations around your process.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="block" id="industries">
-            <div class="container">
-                <div class="section-head">
-                    <h2>Great fit for</h2>
-                    <p>Especially strong for service-led businesses that deal with inbound demand, repeat admin work, and fragmented operations.</p>
-                </div>
-                <div class="industries-grid">
-                    <article class="industry"><i class="fas fa-stethoscope"></i><h3>Clinics and dentists</h3><p>Handle scheduling, FAQs, and new patient intake without clogging the front desk.</p></article>
-                    <article class="industry"><i class="fas fa-fan"></i><h3>HVAC, plumbing, home services</h3><p>Catch urgent calls fast and separate real service requests from low-intent inquiries.</p></article>
-                    <article class="industry"><i class="fas fa-scissors"></i><h3>Salons, spas, med spas</h3><p>Book appointments, answer common questions, and reduce missed booking opportunities.</p></article>
-                    <article class="industry"><i class="fas fa-utensils"></i><h3>Restaurants</h3><p>Handle reservations, common questions, and overflow calls during rush hours.</p></article>
-                    <article class="industry"><i class="fas fa-house"></i><h3>Real estate</h3><p>Capture inbound leads quickly and route serious prospects to the right agent.</p></article>
-                    <article class="industry"><i class="fas fa-car"></i><h3>Auto repair</h3><p>Book service calls, collect vehicle details, and keep your shop from losing calls.</p></article>
-                </div>
-            </div>
-        </section>
-
-        <section class="block" id="faq">
-            <div class="container">
-                <div class="section-head">
-                    <h2>FAQ</h2>
-                    <p>Short answers to the questions people usually ask before booking a demo.</p>
-                </div>
-                <div class="faq-grid">
-                    <article class="faq-item">
-                        <h3>Are you only a call assistant company?</h3>
-                        <p>No. Voice AI is a flagship offer because the ROI is easy to understand, but ZestixAI also builds lead capture, workflow automation, and internal AI systems.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>What should we start with first?</h3>
-                        <p>Usually the workflow with the clearest financial drag: missed calls, slow lead response, repetitive admin work, or messy customer handoffs.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>Can this work with our current tools?</h3>
-                        <p>In most cases, yes. The goal is to connect AI to your existing stack instead of forcing a full rip-and-replace.</p>
-                    </article>
-                    <article class="faq-item">
-                        <h3>Do you handle strategy or just implementation?</h3>
-                        <p>Both. ZestixAI can help scope the right use case, design the workflow, build it, and improve it once real usage data starts coming in.</p>
-                    </article>
-                </div>
-                <div class="trust-note">
-                    Not sure which plan fits? <a href="#contact" style="color: var(--accent); text-decoration: none; font-weight: 600;">Book a free strategy call</a> and we'll map the right AI starting point for your business.
-                </div>
-            </div>
-        </section>
-
-        <section class="block" id="contact">
-            <div class="container">
-                <div class="section-head">
-                    <h2>Book a strategy call</h2>
-                    <p>Tell us where the bottleneck is — calls, lead response, admin overload, or internal process chaos — and we will map the best AI starting point.</p>
-                </div>
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <h3>Best fit if you want to:</h3>
-                        <ul>
-                            <li>stop missing inbound leads or slow responses</li>
-                            <li>automate booking, routing, and repetitive follow-up</li>
-                            <li>connect AI to your CRM, calendar, inbox, or internal workflows</li>
-                            <li>figure out which AI use case will actually move the business first</li>
-                        </ul>
-                        <p style="margin-top:16px;">On the call, we can map your current workflow, identify the highest-leverage AI use case, and recommend whether to start with voice AI, lead capture, automation, or an internal tool.</p>
-                        <div class="direct-contact">
-                            <a href="mailto:zain.mehta@zestixai.com"><i class="fas fa-envelope"></i> zain.mehta@zestixai.com</a>
-                            <a href="mailto:info@zestixai.com"><i class="fas fa-inbox"></i> info@zestixai.com</a>
-                        </div>
-                    </div>
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/zain-mehta-zestixai/30min"></div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container footer-wrap">
-            <p>© 2026 ZestixAI. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="mailto:zain.mehta@zestixai.com">zain.mehta@zestixai.com</a>
-                <a href="mailto:info@zestixai.com">info@zestixai.com</a>
-                <a href="#top">Back to top</a>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        const menuButton = document.querySelector('.menu-toggle');
-        const navList = document.querySelector('nav ul');
-        menuButton?.addEventListener('click', () => navList.classList.toggle('active'));
+    <!-- STATS -->
+    <div class="stats-strip">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+                    <strong><span class="counter" data-target="98">0</span>%</strong>
+                    <span>Call answer rate with AI voice</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="80">
+                    <strong>3×</strong>
+                    <span>Faster lead response time</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="160">
+                    <strong><span class="counter" data-target="40">0</span>%</strong>
+                    <span>Reduction in admin overhead</span>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="240">
+                    <strong><span class="counter" data-target="7">0</span> days</strong>
+                    <span>Average time to first live system</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-            anchor.addEventListener('click', function (e) {
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth' });
-                    navList?.classList.remove('active');
-                }
-            });
+    <!-- MARQUEE -->
+    <div class="marquee-wrap" aria-hidden="true">
+        <div class="marquee-track">
+            <span class="mitem"><i class="fas fa-stethoscope"></i> Clinics &amp; Healthcare</span>
+            <span class="mitem"><i class="fas fa-fan"></i> HVAC &amp; Home Services</span>
+            <span class="mitem"><i class="fas fa-house"></i> Real Estate</span>
+            <span class="mitem"><i class="fas fa-scissors"></i> Salons &amp; Spas</span>
+            <span class="mitem"><i class="fas fa-utensils"></i> Restaurants</span>
+            <span class="mitem"><i class="fas fa-car"></i> Auto Repair</span>
+            <span class="mitem"><i class="fas fa-building"></i> Financial Services</span>
+            <span class="mitem"><i class="fas fa-laptop-code"></i> SaaS &amp; Tech</span>
+            <span class="mitem"><i class="fas fa-truck"></i> Logistics</span>
+            <span class="mitem"><i class="fas fa-graduation-cap"></i> Education</span>
+            <span class="mitem"><i class="fas fa-stethoscope"></i> Clinics &amp; Healthcare</span>
+            <span class="mitem"><i class="fas fa-fan"></i> HVAC &amp; Home Services</span>
+            <span class="mitem"><i class="fas fa-house"></i> Real Estate</span>
+            <span class="mitem"><i class="fas fa-scissors"></i> Salons &amp; Spas</span>
+            <span class="mitem"><i class="fas fa-utensils"></i> Restaurants</span>
+            <span class="mitem"><i class="fas fa-car"></i> Auto Repair</span>
+            <span class="mitem"><i class="fas fa-building"></i> Financial Services</span>
+            <span class="mitem"><i class="fas fa-laptop-code"></i> SaaS &amp; Tech</span>
+            <span class="mitem"><i class="fas fa-truck"></i> Logistics</span>
+            <span class="mitem"><i class="fas fa-graduation-cap"></i> Education</span>
+        </div>
+    </div>
+
+    <!-- WHAT WE DO -->
+    <section class="section" id="solution">
+        <div class="container">
+            <div class="section-head">
+                <div class="slabel">What we do</div>
+                <h2>Practical AI, not gimmicks</h2>
+                <p>Most businesses don't need "AI for everything." They need a few high-leverage systems that save time, improve response speed, and tighten operations.</p>
+            </div>
+            <div class="grid3">
+                <div class="card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Start where the ROI is obvious</h3>
+                    <p>We focus on missed leads, slow follow-up, repetitive admin work, and messy handoffs first.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon"><i class="fas fa-diagram-project"></i></div>
+                    <h3>Connect AI to real workflows</h3>
+                    <p>Every system is tied to tools your team already uses — CRM, calendars, email, sheets, and forms.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon"><i class="fas fa-gauge-high"></i></div>
+                    <h3>Ship usable systems fast</h3>
+                    <p>No long transformation theater. The goal is a working AI asset your team can actually use and measure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VOICE AI -->
+    <section class="section" id="call-flow" style="padding-top:0">
+        <div class="container">
+            <div class="section-head">
+                <div class="slabel">Flagship Offer</div>
+                <h2>AI voice agent</h2>
+                <p>Answers inbound calls, qualifies intent, books appointments, and routes urgent issues without dropping the ball.</p>
+            </div>
+            <div class="call-flow-wrap" data-aos="zoom-in" data-aos-duration="600">
+                <img src="call-flow.svg" alt="ZestixAI call flow — inbound call, AI answer, qualify and book, CRM and calendar sync.">
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <div class="section-head">
+                <div class="slabel">How it works</div>
+                <h2>From bottleneck to live system</h2>
+                <p>We start with one high-value workflow, make it real, then expand into a broader AI stack once the first win is proven.</p>
+            </div>
+            <div class="grid4">
+                <div class="card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="step-num">1</div>
+                    <h3>Find the bottleneck</h3>
+                    <p>We identify the customer or internal workflow leaking time, leads, or response quality.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="step-num">2</div>
+                    <h3>Design the AI workflow</h3>
+                    <p>We map prompts, guardrails, handoffs, integrations, and what success should look like.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="step-num">3</div>
+                    <h3>Launch and connect</h3>
+                    <p>The system goes live with your phone, website, CRM, calendar, inbox, or internal tools.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="240">
+                    <div class="step-num">4</div>
+                    <h3>Refine from real usage</h3>
+                    <p>We tune using transcripts, edge cases, and conversion or efficiency data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-head">
+                <div class="slabel">Pricing</div>
+                <h2>Simple, transparent pricing</h2>
+                <p>Pick the plan that matches where your business is today. Every tier includes done-for-you implementation — no DIY required.</p>
+            </div>
+            <div class="pricing-grid">
+
+                <div class="pc" data-aos="fade-up" data-aos-delay="0">
+                    <div>
+                        <div class="pc-tier">Small Business</div>
+                        <div class="pc-name">Starter AI</div>
+                    </div>
+                    <div class="pc-price"><span class="num">$999</span><span class="per">/mo</span></div>
+                    <p class="pc-desc">Best for local and small service businesses ready to stop missing leads and automate repetitive work.</p>
+                    <ul class="pc-feats">
+                        <li><i class="fas fa-check-circle"></i> 1 AI voice agent (inbound calls + booking)</li>
+                        <li><i class="fas fa-check-circle"></i> Website chat or SMS lead capture</li>
+                        <li><i class="fas fa-check-circle"></i> CRM or calendar integration (1 tool)</li>
+                        <li><i class="fas fa-check-circle"></i> Automated follow-up sequences</li>
+                        <li><i class="fas fa-check-circle"></i> Prompt design and testing included</li>
+                        <li><i class="fas fa-check-circle"></i> Monthly performance review</li>
+                        <li><i class="fas fa-check-circle"></i> Email support</li>
+                    </ul>
+                    <a class="pc-btn g" href="#contact"><i class="fas fa-calendar"></i> Book a Call</a>
+                </div>
+
+                <div class="pc featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pc-badge">✦ Most Popular</div>
+                    <div>
+                        <div class="pc-tier">Medium Business</div>
+                        <div class="pc-name">Growth AI</div>
+                    </div>
+                    <div class="pc-price"><span class="num">$3,000</span><span class="per">/mo</span></div>
+                    <p class="pc-desc">For growing businesses needing a full AI stack — voice, chat, automation, and internal tools working together.</p>
+                    <ul class="pc-feats">
+                        <li><i class="fas fa-check-circle"></i> Everything in Starter, plus:</li>
+                        <li><i class="fas fa-check-circle"></i> Up to 3 AI voice agents (inbound + outbound)</li>
+                        <li><i class="fas fa-check-circle"></i> Multi-channel lead capture (web, SMS, forms)</li>
+                        <li><i class="fas fa-check-circle"></i> Full CRM + calendar + inbox integration</li>
+                        <li><i class="fas fa-check-circle"></i> Workflow automation (routing, alerts, handoffs)</li>
+                        <li><i class="fas fa-check-circle"></i> Internal AI knowledge tool (SOP assistant)</li>
+                        <li><i class="fas fa-check-circle"></i> AI strategy session + quarterly roadmap</li>
+                        <li><i class="fas fa-check-circle"></i> Priority support + bi-weekly reviews</li>
+                    </ul>
+                    <a class="pc-btn p" href="#contact"><i class="fas fa-calendar"></i> Book a Call</a>
+                </div>
+
+                <div class="pc" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <div class="pc-tier">Enterprise</div>
+                        <div class="pc-name">Enterprise AI</div>
+                    </div>
+                    <div class="pc-price"><span class="num" style="font-size:2.2rem">Custom</span></div>
+                    <p class="pc-desc">For large organizations needing a fully custom AI infrastructure across departments, teams, and systems.</p>
+                    <ul class="pc-feats">
+                        <li><i class="fas fa-check-circle"></i> Everything in Growth, plus:</li>
+                        <li><i class="fas fa-check-circle"></i> Unlimited AI agents and workflows</li>
+                        <li><i class="fas fa-check-circle"></i> Custom AI builds tailored to your processes</li>
+                        <li><i class="fas fa-check-circle"></i> Multi-department rollout and training</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced analytics and reporting dashboards</li>
+                        <li><i class="fas fa-check-circle"></i> Dedicated implementation manager</li>
+                        <li><i class="fas fa-check-circle"></i> SLA-backed support + on-demand strategy calls</li>
+                        <li><i class="fas fa-check-circle"></i> Custom integrations with enterprise systems</li>
+                    </ul>
+                    <a class="pc-btn g" href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- SERVICES -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-head">
+                <div class="slabel">Services</div>
+                <h2>Everything you need to go AI-first</h2>
+                <p>ZestixAI is a hands-on AI implementation partner. Voice AI is the wedge, but these are the broader offers behind it.</p>
+            </div>
+            <div class="grid3">
+                <div class="card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card-icon"><i class="fas fa-headset"></i></div>
+                    <h3>AI Voice Agents</h3>
+                    <p>Inbound and outbound voice systems that answer calls, qualify leads, book appointments, and escalate when a human should step in.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="card-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Lead Capture &amp; Conversational AI</h3>
+                    <p>Website chat, SMS flows, intake assistants, and follow-up sequences that turn interest into qualified pipeline faster.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="card-icon"><i class="fas fa-gears"></i></div>
+                    <h3>Workflow Automation &amp; Integrations</h3>
+                    <p>Connect AI outputs to CRM, calendars, inboxes, spreadsheets, and team alerts so work moves automatically after each interaction.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card-icon"><i class="fas fa-book-open-reader"></i></div>
+                    <h3>Internal AI Knowledge Tools</h3>
+                    <p>Searchable SOP assistants, team knowledge bots, and internal copilots that help staff answer questions and execute faster.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="80">
+                    <div class="card-icon"><i class="fas fa-sitemap"></i></div>
+                    <h3>AI Strategy &amp; System Design</h3>
+                    <p>Prioritize the right use cases, map the operating workflow, and build an AI rollout plan tied to actual business outcomes.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="160">
+                    <div class="card-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Custom AI Builds</h3>
+                    <p>For edge cases that don't fit an off-the-shelf template, we design custom prompts, logic, guardrails, and integrations around your process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="section" id="industries">
+        <div class="container">
+            <div class="section-head">
+                <div class="slabel">Who it's for</div>
+                <h2>Great fit for service-led businesses</h2>
+                <p>Especially strong for businesses that deal with inbound demand, repeat admin work, and fragmented operations.</p>
+            </div>
+            <div class="grid3">
+                <div class="ic" data-aos="fade-up" data-aos-delay="0"><i class="fas fa-stethoscope"></i><h3>Clinics &amp; Dentists</h3><p>Handle scheduling, FAQs, and new patient intake without clogging the front desk.</p></div>
+                <div class="ic" data-aos="fade-up" data-aos-delay="60"><i class="fas fa-fan"></i><h3>HVAC, Plumbing &amp; Home Services</h3><p>Catch urgent calls fast and separate real service requests from low-intent inquiries.</p></div>
+                <div class="ic" data-aos="fade-up" data-aos-delay="120"><i class="fas fa-scissors"></i><h3>Salons, Spas &amp; Med Spas</h3><p>Book appointments, answer common questions, and reduce missed booking opportunities.</p></div>
+                <div class="ic" data-aos="fade-up" data-aos-delay="0"><i class="fas fa-utensils"></i><h3>Restaurants</h3><p>Handle reservations, common questions, and overflow calls during rush hours.</p></div>
+                <div class="ic" data-aos="fade-up" data-aos-delay="60"><i class="fas fa-house"></i><h3>Real Estate</h3><p>Capture inbound leads quickly and route serious prospects to the right agent.</p></div>
+                <div class="ic" data-aos="fade-up" data-aos-delay="120"><i class="fas fa-car"></i><h3>Auto Repair</h3><p>Book service calls, collect vehicle details, and keep your shop from losing calls.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-head">
+                <div class="slabel">FAQ</div>
+                <h2>Questions we get asked most</h2>
+                <p>Short answers before you book a demo.</p>
+            </div>
+            <div class="grid2">
+                <div class="fq" data-aos="fade-up" data-aos-delay="0">
+                    <h3>Are you only a call assistant company?</h3>
+                    <p>No. Voice AI is a flagship offer because the ROI is easy to understand, but ZestixAI also builds lead capture, workflow automation, and internal AI systems.</p>
+                </div>
+                <div class="fq" data-aos="fade-up" data-aos-delay="80">
+                    <h3>What should we start with first?</h3>
+                    <p>Usually the workflow with the clearest financial drag: missed calls, slow lead response, repetitive admin work, or messy customer handoffs.</p>
+                </div>
+                <div class="fq" data-aos="fade-up" data-aos-delay="0">
+                    <h3>Can this work with our current tools?</h3>
+                    <p>In most cases, yes. The goal is to connect AI to your existing stack instead of forcing a full rip-and-replace.</p>
+                </div>
+                <div class="fq" data-aos="fade-up" data-aos-delay="80">
+                    <h3>Do you handle strategy or just implementation?</h3>
+                    <p>Both. ZestixAI can help scope the right use case, design the workflow, build it, and improve it once real usage data starts coming in.</p>
+                </div>
+                <div class="fq" data-aos="fade-up" data-aos-delay="0">
+                    <h3>How long does it take to go live?</h3>
+                    <p>Most first systems are live within 7 days. Larger enterprise rollouts are scoped and paced based on complexity.</p>
+                </div>
+                <div class="fq" data-aos="fade-up" data-aos-delay="80">
+                    <h3>Not sure which plan fits?</h3>
+                    <p>Book a free strategy call and we'll map the right AI starting point for your business � no pressure, no fluff.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-head">
+                <div class="slabel">Get Started</div>
+                <h2>Book a strategy call</h2>
+                <p>Tell us where the bottleneck is � calls, lead response, admin overload, or internal process chaos � and we will map the best AI starting point.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Best fit if you want to:</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Stop missing inbound leads or slow responses</li>
+                        <li><i class="fas fa-check-circle"></i> Automate booking, routing, and repetitive follow-up</li>
+                        <li><i class="fas fa-check-circle"></i> Connect AI to your CRM, calendar, inbox, or internal workflows</li>
+                        <li><i class="fas fa-check-circle"></i> Figure out which AI use case will actually move the business first</li>
+                        <li><i class="fas fa-check-circle"></i> Build AI infrastructure that scales from startup to enterprise</li>
+                    </ul>
+                    <p style="margin-top:18px;color:var(--muted2);font-size:.92rem;">On the call, we map your current workflow, identify the highest-leverage AI use case, and recommend where to start � voice AI, lead capture, automation, or an internal tool.</p>
+                    <div class="contact-links">
+                        <a class="clink" href="mailto:zain.mehta@zestixai.com"><i class="fas fa-envelope"></i> zain.mehta@zestixai.com</a>
+                        <a class="clink" href="mailto:info@zestixai.com"><i class="fas fa-inbox"></i> info@zestixai.com</a>
+                    </div>
+                </div>
+                <div class="calendly-inline-widget" data-url="https://calendly.com/zain-mehta-zestixai/30min" data-aos="fade-left"></div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <p class="footer-copy">� 2026 ZestixAI. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="mailto:zain.mehta@zestixai.com">zain.mehta@zestixai.com</a>
+            <a href="mailto:info@zestixai.com">info@zestixai.com</a>
+            <a href="#top">? Back to top</a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+    // AOS
+    AOS.init({ once: true, easing: 'ease-out-cubic', offset: 60 });
+
+    // Mobile nav
+    const menuBtn = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('nav ul');
+    menuBtn?.addEventListener('click', () => navList.classList.toggle('active'));
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e) {
+            const t = document.querySelector(this.getAttribute('href'));
+            if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); navList?.classList.remove('active'); }
         });
-    </script>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    });
+
+    // Animated counters
+    const counters = document.querySelectorAll('.counter');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            const target = +el.dataset.target;
+            let cur = 0;
+            const step = target / 60;
+            const timer = setInterval(() => {
+                cur = Math.min(cur + step, target);
+                el.textContent = Math.floor(cur);
+                if (cur >= target) clearInterval(timer);
+            }, 20);
+            observer.unobserve(el);
+        });
+    }, { threshold: 0.5 });
+    counters.forEach(c => observer.observe(c));
+</script>
 </body>
 </html>
