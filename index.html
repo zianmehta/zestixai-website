@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ZestixAI helps SMBs implement practical AI systems, from voice agents and lead capture to workflow automation, CRM integrations, and internal AI tools.">
-    <meta name="keywords" content="AI automation agency, AI voice agent, AI call assistant, workflow automation, CRM integration, lead capture, business AI systems, AI consulting">
+    <meta name="description" content="ZestixAI helps businesses of all sizes implement practical AI systems, from voice agents and lead capture to workflow automation, CRM integrations, and internal AI tools.">
+    <meta name="keywords" content="AI automation agency, AI voice agent, AI call assistant, workflow automation, CRM integration, lead capture, business AI systems, AI consulting, enterprise AI, small business AI, medium business AI">
     <title>ZestixAI | AI Systems for Growth, Support, and Operations</title>
     <link rel="canonical" href="https://www.zestixai.com/">
 
     <meta property="og:title" content="ZestixAI | AI Systems for Local Business Growth">
-    <meta property="og:description" content="AI call assistants, workflow automation, CRM integrations, and practical AI systems for local businesses.">
+    <meta property="og:description" content="AI call assistants, workflow automation, CRM integrations, and practical AI systems for small, medium, and enterprise businesses.">
     <meta property="og:image" content="https://www.zestixai.com/brand-mark.svg">
     <meta property="og:url" content="https://www.zestixai.com/">
     <meta property="og:type" content="website">
@@ -460,7 +460,139 @@
 
         .footer-links a:hover { color: var(--text); }
 
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            align-items: start;
+        }
+
+        .pricing-card {
+            border: 1px solid var(--line);
+            background: var(--panel);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent);
+            background: linear-gradient(160deg, rgba(61,217,255,0.10), rgba(255,255,255,0.04));
+            box-shadow: 0 0 40px rgba(61,217,255,0.15), var(--shadow);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--accent), #6de4ff);
+            color: #04131d;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 5px 14px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+        .pricing-tier {
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+        }
+
+        .pricing-name {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+
+        .pricing-price {
+            display: flex;
+            align-items: flex-end;
+            gap: 6px;
+            line-height: 1;
+        }
+
+        .pricing-price .amount {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+        }
+
+        .pricing-price .period {
+            color: var(--muted);
+            font-size: 0.95rem;
+            padding-bottom: 6px;
+        }
+
+        .pricing-desc {
+            color: var(--muted);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--line);
+            padding-top: 16px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            display: grid;
+            gap: 10px;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.94rem;
+            color: var(--text);
+        }
+
+        .pricing-features li i {
+            color: var(--success);
+            font-size: 0.85rem;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .pricing-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 20px;
+            border-radius: 14px;
+            border: 1px solid transparent;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.97rem;
+            transition: all .2s ease;
+            margin-top: auto;
+        }
+
+        .pricing-cta.primary {
+            background: linear-gradient(135deg, var(--accent), #6de4ff);
+            color: #04131d;
+            box-shadow: 0 12px 30px rgba(61,217,255,0.18);
+        }
+
+        .pricing-cta.secondary {
+            border-color: rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.04);
+            color: var(--text);
+        }
+
+        .pricing-cta:hover { transform: translateY(-1px); }
+
         @media (max-width: 980px) {
+            .pricing-grid { grid-template-columns: 1fr; }
+        }
             .hero-grid,
             .contact-grid,
             .features-grid,
@@ -506,7 +638,7 @@
                 <img src="brand-mark.svg" alt="ZestixAI logo mark">
                 <span class="brand-copy">
                     <span class="brand-name">Zestix<span>AI</span></span>
-                    <span class="brand-tag">AI systems for local business</span>
+                    <span class="brand-tag">AI systems for every business</span>
                 </span>
             </a>
             <button class="menu-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
@@ -516,6 +648,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#call-flow">Voice AI</a></li>
                     <li><a href="#how-it-works">How it works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#industries">Who it's for</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -529,10 +662,10 @@
         <section class="hero">
             <div class="container hero-grid">
                 <div>
-                    <div class="eyebrow"><i class="fas fa-bolt"></i> AI implementation for SMB growth, support, and operations</div>
+                    <div class="eyebrow"><i class="fas fa-bolt"></i> AI implementation for businesses of every size</div>
                     <h1>We implement AI systems that answer customers, capture demand, and automate busywork</h1>
                     <p>
-                        ZestixAI helps SMBs deploy practical AI: voice agents, chat and lead capture,
+                        ZestixAI helps small, medium, and enterprise businesses deploy practical AI: voice agents, chat and lead capture,
                         workflow automation, CRM integrations, and internal AI tools. Voice AI is our flagship offer,
                         but the bigger value is building an AI-enabled business with fewer missed opportunities and less manual work.
                     </p>
@@ -648,6 +781,83 @@
             </div>
         </section>
 
+        <section class="block" id="pricing">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Simple, transparent pricing</h2>
+                    <p>Pick the plan that matches where your business is today. Every tier includes done-for-you implementation — no DIY setup required.</p>
+                </div>
+                <div class="pricing-grid">
+
+                    <!-- Small Business -->
+                    <div class="pricing-card">
+                        <div class="pricing-tier">Small Business</div>
+                        <div class="pricing-name">Starter AI</div>
+                        <div class="pricing-price">
+                            <span class="amount">$999</span>
+                            <span class="period">/mo</span>
+                        </div>
+                        <p class="pricing-desc">Best for local and small service businesses ready to stop missing leads and automate repetitive work.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check-circle"></i> 1 AI voice agent (inbound calls + booking)</li>
+                            <li><i class="fas fa-check-circle"></i> Website chat or SMS lead capture</li>
+                            <li><i class="fas fa-check-circle"></i> CRM or calendar integration (1 tool)</li>
+                            <li><i class="fas fa-check-circle"></i> Automated follow-up sequences</li>
+                            <li><i class="fas fa-check-circle"></i> Prompt design and testing included</li>
+                            <li><i class="fas fa-check-circle"></i> Monthly performance review</li>
+                            <li><i class="fas fa-check-circle"></i> Email support</li>
+                        </ul>
+                        <a class="pricing-cta secondary" href="#contact"><i class="fas fa-calendar"></i> Book a Call</a>
+                    </div>
+
+                    <!-- Medium Business -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Most Popular</div>
+                        <div class="pricing-tier">Medium Business</div>
+                        <div class="pricing-name">Growth AI</div>
+                        <div class="pricing-price">
+                            <span class="amount">$3,000</span>
+                            <span class="period">/mo</span>
+                        </div>
+                        <p class="pricing-desc">For growing businesses that need a full AI stack — voice, chat, automation, and internal tools working together.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check-circle"></i> Everything in Starter, plus:</li>
+                            <li><i class="fas fa-check-circle"></i> Up to 3 AI voice agents (inbound + outbound)</li>
+                            <li><i class="fas fa-check-circle"></i> Multi-channel lead capture (web, SMS, forms)</li>
+                            <li><i class="fas fa-check-circle"></i> Full CRM + calendar + inbox integration</li>
+                            <li><i class="fas fa-check-circle"></i> Workflow automation (routing, alerts, handoffs)</li>
+                            <li><i class="fas fa-check-circle"></i> Internal AI knowledge tool (SOP assistant)</li>
+                            <li><i class="fas fa-check-circle"></i> AI strategy session + quarterly roadmap</li>
+                            <li><i class="fas fa-check-circle"></i> Priority support + bi-weekly reviews</li>
+                        </ul>
+                        <a class="pricing-cta primary" href="#contact"><i class="fas fa-calendar"></i> Book a Call</a>
+                    </div>
+
+                    <!-- Enterprise -->
+                    <div class="pricing-card">
+                        <div class="pricing-tier">Enterprise</div>
+                        <div class="pricing-name">Enterprise AI</div>
+                        <div class="pricing-price">
+                            <span class="amount" style="font-size:2rem;">Custom</span>
+                        </div>
+                        <p class="pricing-desc">For large organizations that need a fully custom AI infrastructure across departments, teams, and systems.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check-circle"></i> Everything in Growth, plus:</li>
+                            <li><i class="fas fa-check-circle"></i> Unlimited AI agents and workflows</li>
+                            <li><i class="fas fa-check-circle"></i> Custom AI builds tailored to your processes</li>
+                            <li><i class="fas fa-check-circle"></i> Multi-department rollout and training</li>
+                            <li><i class="fas fa-check-circle"></i> Advanced analytics and reporting dashboards</li>
+                            <li><i class="fas fa-check-circle"></i> Dedicated implementation manager</li>
+                            <li><i class="fas fa-check-circle"></i> SLA-backed support + on-demand strategy calls</li>
+                            <li><i class="fas fa-check-circle"></i> Custom integrations with enterprise systems</li>
+                        </ul>
+                        <a class="pricing-cta secondary" href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <section class="block" id="services">
             <div class="container">
                 <div class="section-head">
@@ -731,7 +941,7 @@
                     </article>
                 </div>
                 <div class="trust-note">
-                    Best next credibility upgrades: one packaged-offers section with pricing guidance, one short case study, and one working demo for the flagship voice agent.
+                    Not sure which plan fits? <a href="#contact" style="color: var(--accent); text-decoration: none; font-weight: 600;">Book a free strategy call</a> and we'll map the right AI starting point for your business.
                 </div>
             </div>
         </section>
