@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ZestixAI helps service businesses stop losing customers to missed calls and slow follow-up. We implement AI voice agents, lead capture, and workflow automation — done for you.">
-<meta name="keywords" content="AI voice agent, AI call answering, missed calls automation, AI for clinics, AI for HVAC, AI lead capture, business AI implementation">
-<title>ZestixAI — Stop Losing Customers to Missed Calls</title>
+<meta name="description" content="ZestixAI builds autonomous business systems that stop revenue leaks. Self-driving intake, revenue recovery AI, and operational automation — done for you, not by you.">
+<meta name="keywords" content="autonomous business systems, revenue recovery AI, self-driving operations, AI voice agents, business automation, intake automation, operational scaling">
+<title>ZestixAI | Autonomous Systems That Recover Revenue</title>
 <link rel="canonical" href="https://www.zestixai.com/">
-<meta property="og:title" content="ZestixAI — Your Business, Always On">
-<meta property="og:description" content="AI voice agents and automation that make sure you never miss a lead, a call, or a booking again.">
+<meta property="og:title" content="ZestixAI | Autonomous Systems That Recover Revenue">
+<meta property="og:description" content="Stop losing revenue to slow operations. We build autonomous systems that handle the entire workflow—no human overhead.">
 <meta property="og:url" content="https://www.zestixai.com/">
 <meta property="og:type" content="website">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ZestixAI","url":"https://www.zestixai.com","description":"AI implementation for service businesses — voice agents, lead capture, and workflow automation.","contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"zain.mehta@zestixai.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ZestixAI","url":"https://www.zestixai.com","description":"Autonomous business systems for service businesses — revenue recovery, operational scaling, and self-driving workflows.","contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"zain.mehta@zestixai.com"}}</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,6 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
 <style>
-/* ─── DESIGN TOKENS ─── */
 :root {
   --bg:      #07090e;
   --bg2:     #0b0e16;
@@ -53,19 +52,15 @@ img { max-width:100%; display:block }
 a { text-decoration:none }
 .wrap { width:min(var(--max),calc(100% - 40px)); margin:0 auto }
 
-/* ─── BG LAYER ─── */
 .bg-layer { position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden }
 .orb { position:absolute; border-radius:50%; filter:blur(100px); opacity:.13; animation:drift 22s ease-in-out infinite }
 .orb1 { width:800px; height:800px; background:radial-gradient(circle,#00e87a,transparent 65%); top:-300px; left:-200px; animation-duration:26s }
 .orb2 { width:600px; height:600px; background:radial-gradient(circle,#6366f1,transparent 65%); top:10%; right:-150px; animation-duration:19s; animation-delay:-9s }
 .orb3 { width:500px; height:500px; background:radial-gradient(circle,#6366f1,transparent 65%); bottom:10%; left:30%; animation-duration:30s; animation-delay:-16s }
 @keyframes drift { 0%,100%{transform:translate(0,0)} 33%{transform:translate(30px,-50px)} 66%{transform:translate(-25px,30px)} }
-.noise { position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.025;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size:200px }
+.noise { position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.025; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:200px }
 header, main, footer { position:relative; z-index:2 }
 
-/* ─── NAV ─── */
 header { position:sticky; top:0; z-index:100; backdrop-filter:blur(20px) saturate(180%); -webkit-backdrop-filter:blur(20px) saturate(180%); background:rgba(7,9,14,.8); border-bottom:1px solid var(--bdr) }
 .nav { display:flex; align-items:center; justify-content:space-between; min-height:68px; gap:16px }
 .brand { display:inline-flex; align-items:center; gap:11px; color:var(--txt) }
@@ -80,7 +75,6 @@ nav a:hover { color:var(--txt); background:var(--surH) }
 .cta-nav:hover { background:var(--greenD); transform:translateY(-1px); box-shadow:0 0 35px var(--glow) }
 .menu-toggle { display:none; background:none; border:0; color:var(--txt); font-size:1.4rem; cursor:pointer }
 
-/* ─── HERO ─── */
 .hero { padding:110px 0 80px; position:relative }
 .hero::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent) }
 .hero-inner { display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center }
@@ -100,7 +94,6 @@ nav a:hover { color:var(--txt); background:var(--surH) }
 .hero-cta-ghost { display:inline-flex; align-items:center; gap:10px; padding:16px 24px; border-radius:13px; border:1px solid var(--bdrS); background:var(--surface); color:var(--txt); font-weight:600; font-size:1rem; transition:all .25s; margin-left:12px }
 .hero-cta-ghost:hover { background:var(--surH); transform:translateY(-2px) }
 
-/* Phone mockup */
 .phone-wrap { position:relative; display:flex; justify-content:center }
 .phone-wrap::before { content:''; position:absolute; inset:-40px; background:radial-gradient(ellipse,rgba(0,232,122,.12),transparent 65%); pointer-events:none; z-index:0 }
 .phone { position:relative; z-index:1; width:270px; background:#111520; border-radius:40px; border:2px solid rgba(255,255,255,.12); box-shadow:var(--shadow), inset 0 0 0 1px rgba(255,255,255,.04); padding:20px 16px 28px; animation:phoneFloat 5s ease-in-out infinite }
@@ -130,14 +123,12 @@ nav a:hover { color:var(--txt); background:var(--surH) }
 .ph-end { background:#ff3b5c; color:#fff; box-shadow:0 0 20px rgba(255,59,92,.3) }
 .ph-mute { background:rgba(255,255,255,.1); color:var(--txt) }
 
-/* ─── SOCIAL PROOF STRIP ─── */
 .proof-strip { padding:28px 0; border-top:1px solid var(--bdr); border-bottom:1px solid var(--bdr) }
 .proof-inner { display:flex; align-items:center; justify-content:center; gap:40px; flex-wrap:wrap }
 .proof-item { display:flex; align-items:center; gap:10px; color:var(--muted); font-size:.88rem; font-weight:500 }
 .proof-item i { color:var(--green); font-size:1rem }
 .proof-div { width:1px; height:20px; background:var(--bdr); flex-shrink:0 }
 
-/* ─── COST SECTION ─── */
 .cost-section { padding:90px 0; background:linear-gradient(180deg,transparent,rgba(255,59,92,.03),transparent) }
 .cost-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center }
 .cost-left h2 { font-family:'Space Grotesk',sans-serif; font-size:clamp(2rem,3.5vw,2.8rem); font-weight:700; letter-spacing:-.04em; line-height:1.1; margin-bottom:20px }
@@ -155,7 +146,6 @@ nav a:hover { color:var(--txt); background:var(--surH) }
 .sc-text strong { display:block; font-size:.9rem; font-weight:600; margin-bottom:3px }
 .sc-text p { color:var(--muted); font-size:.83rem }
 
-/* ─── SECTION BASE ─── */
 .section { padding:90px 0 }
 .sec-label { display:inline-block; padding:5px 14px; border-radius:999px; background:rgba(0,232,122,.08); border:1px solid rgba(0,232,122,.18); color:var(--green); font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; margin-bottom:14px }
 .sec-head { margin-bottom:50px }
@@ -164,7 +154,6 @@ nav a:hover { color:var(--txt); background:var(--surH) }
 .sec-head h2 { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.9rem,3.5vw,2.8rem); font-weight:700; letter-spacing:-.04em; line-height:1.1; margin-bottom:12px }
 .sec-head p { color:var(--muted2); font-size:.98rem; line-height:1.75 }
 
-/* ─── HOW IT WORKS ─── */
 .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; position:relative }
 .steps::before { content:''; position:absolute; top:32px; left:calc(12.5% + 16px); right:calc(12.5% + 16px); height:1px; background:linear-gradient(90deg,var(--green),var(--indigo)); opacity:.3; z-index:0 }
 .step { position:relative; z-index:1; padding:28px 20px; background:var(--surface); border:1px solid var(--bdr); border-radius:var(--r); margin:1px; transition:all .3s }
@@ -173,7 +162,6 @@ nav a:hover { color:var(--txt); background:var(--surH) }
 .step h3 { font-size:.98rem; font-weight:700; margin-bottom:8px }
 .step p { color:var(--muted); font-size:.88rem; line-height:1.6 }
 
-/* ─── VOICE DEMO ─── */
 .demo-section { padding:90px 0; background:linear-gradient(180deg,transparent,rgba(0,232,122,.03),transparent) }
 .demo-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center }
 .demo-convo { background:var(--bg2); border:1px solid var(--bdrS); border-radius:var(--rL); padding:28px; box-shadow:var(--shadow) }
@@ -193,7 +181,6 @@ nav a:hover { color:var(--txt); background:var(--surH) }
 .dc-input { flex:1; padding:10px 14px; background:rgba(255,255,255,.05); border:1px solid var(--bdr); border-radius:10px; color:var(--muted); font-size:.83rem }
 .dc-send { padding:10px 16px; background:var(--green); color:#021a0d; border:none; border-radius:10px; font-weight:700; font-size:.83rem; cursor:pointer }
 
-/* ─── SERVICES ─── */
 .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px }
 .svc { background:var(--surface); border:1px solid var(--bdr); border-radius:var(--r); padding:26px; transition:all .3s; position:relative; overflow:hidden }
 .svc::before { content:''; position:absolute; inset:0; background:var(--grad); opacity:0; transition:opacity .3s; pointer-events:none }
@@ -206,7 +193,6 @@ nav a:hover { color:var(--txt); background:var(--surH) }
 .svc p { color:var(--muted); font-size:.88rem; line-height:1.65 }
 .svc-tag { display:inline-block; margin-top:14px; padding:4px 10px; border-radius:6px; background:rgba(0,232,122,.08); border:1px solid rgba(0,232,122,.15); color:var(--green); font-size:.72rem; font-weight:700 }
 
-/* ─── INDUSTRIES ─── */
 .ind-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px }
 .ind { display:flex; align-items:center; gap:14px; padding:18px 20px; background:var(--surface); border:1px solid var(--bdr); border-radius:var(--r); transition:all .3s; cursor:default }
 .ind:hover { border-color:rgba(0,232,122,.2); background:var(--surH); transform:translateX(4px) }
@@ -214,21 +200,18 @@ nav a:hover { color:var(--txt); background:var(--surH) }
 .ind-text strong { display:block; font-size:.9rem; font-weight:700; margin-bottom:2px }
 .ind-text span { color:var(--muted); font-size:.8rem }
 
-/* ─── MARQUEE ─── */
 .marquee-outer { padding:22px 0; overflow:hidden; border-top:1px solid var(--bdr); border-bottom:1px solid var(--bdr); background:linear-gradient(90deg,rgba(0,232,122,.02),rgba(99,102,241,.02)) }
 .marquee-track { display:flex; gap:0; animation:marq 30s linear infinite; width:max-content }
 .mi { display:inline-flex; align-items:center; gap:7px; padding:0 28px; color:var(--muted); font-size:.84rem; font-weight:600; flex-shrink:0; border-right:1px solid var(--bdr) }
 .mi i { color:var(--green); font-size:.8rem }
 @keyframes marq { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 
-/* ─── FAQ ─── */
 .faq-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px }
 .faq { background:var(--surface); border:1px solid var(--bdr); border-radius:var(--r); padding:22px 24px; transition:all .25s }
 .faq:hover { background:var(--surH); border-color:var(--bdrS) }
 .faq h3 { font-size:.95rem; font-weight:700; margin-bottom:10px; letter-spacing:-.01em }
 .faq p { color:var(--muted2); font-size:.88rem; line-height:1.7 }
 
-/* ─── NO PRICING / CTA BAND ─── */
 .cta-band { padding:90px 0; text-align:center; position:relative; overflow:hidden }
 .cta-band::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 80% 70% at 50% 50%,rgba(0,232,122,.07),transparent 65%); pointer-events:none }
 .cta-band>div { position:relative; z-index:1 }
@@ -238,7 +221,6 @@ nav a:hover { color:var(--txt); background:var(--surH) }
 .cta-big:hover { background:var(--greenD); transform:translateY(-3px); box-shadow:0 0 80px var(--glow), 0 20px 50px rgba(0,0,0,.3) }
 .cta-note { margin-top:16px; color:var(--muted); font-size:.84rem }
 
-/* ─── CONTACT ─── */
 .contact-section { padding:90px 0 }
 .contact-grid { display:grid; grid-template-columns:1fr 1.3fr; gap:24px; align-items:start }
 .contact-card { background:var(--surface); border:1px solid var(--bdr); border-radius:var(--rL); padding:32px }
@@ -251,7 +233,6 @@ nav a:hover { color:var(--txt); background:var(--surH) }
 .cc-link:hover { opacity:.7 }
 .calendly-inline-widget { min-width:320px; height:700px; border-radius:var(--rL); overflow:hidden; border:1px solid var(--bdr); box-shadow:var(--shadow); background:var(--surface) }
 
-/* ─── FOOTER ─── */
 footer { padding:32px 0 48px; border-top:1px solid var(--bdr) }
 .foot { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap }
 .foot-left { color:var(--muted); font-size:.84rem }
@@ -259,7 +240,6 @@ footer { padding:32px 0 48px; border-top:1px solid var(--bdr) }
 .foot-links a { color:var(--muted); font-size:.84rem; transition:color .2s }
 .foot-links a:hover { color:var(--txt) }
 
-/* ─── RESPONSIVE ─── */
 @media(max-width:980px){
   .hero-inner,.cost-grid,.demo-grid,.contact-grid{ grid-template-columns:1fr }
   .steps,.services-grid,.ind-grid,.faq-grid{ grid-template-columns:1fr }
@@ -289,7 +269,6 @@ footer { padding:32px 0 48px; border-top:1px solid var(--bdr) }
 </div>
 <div class="noise" aria-hidden="true"></div>
 
-<!-- NAV -->
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top">
@@ -315,11 +294,11 @@ footer { padding:32px 0 48px; border-top:1px solid var(--bdr) }
 <section class="hero">
   <div class="wrap hero-inner">
     <div data-aos="fade-right" data-aos-duration="700">
-      <div class="hero-lede"><span class="dot"></span> AI for service businesses</div>
-      <h1>Every missed call is a<br><span class="hl">missed customer</span></h1>
-      <p class="hero-sub">ZestixAI builds AI voice agents and automation systems that answer every call, capture every lead, and follow up before your competitor does — without adding headcount.</p>
+      <div class="hero-lede"><span class="dot"></span> Autonomous business systems</div>
+      <h1>Build a business that<br><span class="hl">runs without you</span></h1>
+      <p class="hero-sub">ZestixAI builds end-to-end autonomous systems that handle the entire workflow—from first lead to closed deal. No humans in the loop. No bottlenecks. Just revenue recovery and operational scaling.</p>
       <div style="display:flex;flex-wrap:wrap;gap:0">
-        <a class="hero-cta" href="#contact"><i class="fas fa-calendar-check"></i> Book a Free AI Audit</a>
+        <a class="hero-cta" href="#contact"><i class="fas fa-chart-line"></i> Book Revenue Audit</a>
         <a class="hero-cta-ghost" href="#how-it-works"><i class="fas fa-play-circle"></i> See how it works</a>
       </div>
     </div>
@@ -328,24 +307,24 @@ footer { padding:32px 0 48px; border-top:1px solid var(--bdr) }
         <div class="phone-notch"></div>
         <div class="call-status">
           <div class="cs-label">Incoming call</div>
-          <div class="cs-name">New Patient Inquiry</div>
+          <div class="cs-name">New Lead - Auto-Qualified</div>
           <div class="cs-num">+1 (312) 555-0182</div>
         </div>
-        <div class="call-avatar">🤖</div>
+        <div class="call-avatar">⚙️</div>
         <div class="wave-bars">
           <div class="wb"></div><div class="wb"></div><div class="wb"></div>
           <div class="wb"></div><div class="wb"></div><div class="wb"></div><div class="wb"></div>
         </div>
         <div class="msg ai">
-          <div class="chat-label">ZestixAI Voice Agent</div>
-          <div class="chat-bubble chat-ai">Hi! Thanks for calling. Are you looking to schedule a new appointment or do you have a question about an existing visit?</div>
+          <div class="chat-label">Autonomous System</div>
+          <div class="chat-bubble chat-ai">Hi! Thanks for calling. I see you're looking for service. I'm checking availability and can book you right now.</div>
         </div>
         <div class="msg user" style="display:flex;flex-direction:column;align-items:flex-end;margin-bottom:10px">
           <div class="chat-label">Caller</div>
-          <div class="chat-bubble chat-user">I'd like to book a cleaning for next week.</div>
+          <div class="chat-bubble chat-user">Yes, I need to book for tomorrow afternoon.</div>
         </div>
         <div class="msg ai">
-          <div class="chat-bubble chat-ai">Perfect! I have Tuesday at 2pm or Thursday at 10am available. Which works better for you?</div>
+          <div class="chat-bubble chat-ai">Perfect. I've blocked 2pm for you, taken your deposit, and notified your tech. You're all set.</div>
         </div>
         <div class="phone-footer">
           <button class="ph-btn ph-mute"><i class="fas fa-microphone-slash"></i></button>
@@ -359,15 +338,15 @@ footer { padding:32px 0 48px; border-top:1px solid var(--bdr) }
 <!-- PROOF STRIP -->
 <div class="proof-strip">
   <div class="wrap proof-inner">
-    <div class="proof-item"><i class="fas fa-check-circle"></i> Done-for-you implementation</div>
+    <div class="proof-item"><i class="fas fa-check-circle"></i> End-to-end automation</div>
     <div class="proof-div"></div>
-    <div class="proof-item"><i class="fas fa-check-circle"></i> Live in 7 days or less</div>
+    <div class="proof-item"><i class="fas fa-check-circle"></i> Closed-loop integrations</div>
     <div class="proof-div"></div>
-    <div class="proof-item"><i class="fas fa-check-circle"></i> Works with your existing tools</div>
+    <div class="proof-item"><i class="fas fa-check-circle"></i> Revenue recovery in weeks</div>
     <div class="proof-div"></div>
-    <div class="proof-item"><i class="fas fa-check-circle"></i> No tech team required</div>
+    <div class="proof-item"><i class="fas fa-check-circle"></i> Done-for-you setup</div>
     <div class="proof-div"></div>
-    <div class="proof-item"><i class="fas fa-check-circle"></i> 2G · 3G · 4G · 5G · Enterprise</div>
+    <div class="proof-item"><i class="fas fa-check-circle"></i> Performance-based pricing</div>
   </div>
 </div>
 
@@ -397,61 +376,61 @@ footer { padding:32px 0 48px; border-top:1px solid var(--bdr) }
   </div>
 </div>
 
-<!-- COST OF DOING NOTHING -->
+<!-- REVENUE LEAK SECTION -->
 <section class="cost-section">
   <div class="wrap">
     <div class="cost-grid">
       <div class="cost-left" data-aos="fade-right">
-        <div class="sec-label">The real cost</div>
-        <h2>Slow response is slowly killing your business</h2>
-        <p>Every unanswered call, every slow follow-up, and every lead that slips through the cracks is direct revenue walking out the door. Your competitors are already automating this.</p>
+        <div class="sec-label">The hidden cost</div>
+        <h2>Your business is leaking revenue every single day</h2>
+        <p>Every missed call, every slow follow-up, and every manual task drains both money and time. Your team is handling busywork instead of growing the business.</p>
         <div class="cost-stats">
           <div class="cost-stat">
+            <div class="num">$12k</div>
+            <div class="lbl">avg monthly revenue lost to missed calls</div>
+          </div>
+          <div class="cost-stat">
+            <div class="num">40%</div>
+            <div class="lbl">of admin time is repetitive busywork</div>
+          </div>
+          <div class="cost-stat">
             <div class="num">78%</div>
-            <div class="lbl">of customers buy from the first business that responds</div>
-          </div>
-          <div class="cost-stat">
-            <div class="num">62%</div>
-            <div class="lbl">of calls to small businesses go unanswered</div>
-          </div>
-          <div class="cost-stat">
-            <div class="num">5 min</div>
-            <div class="lbl">response window before lead conversion drops 80%</div>
+            <div class="lbl">of customers buy from first responder</div>
           </div>
           <div class="cost-stat">
             <div class="num">$0</div>
-            <div class="lbl">revenue from a missed call that never calls back</div>
+            <div class="lbl">from a lead that slips through cracks</div>
           </div>
         </div>
       </div>
       <div class="cost-right" data-aos="fade-left">
-        <div style="margin-bottom:8px;font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:700">Before &amp; After ZestixAI</div>
+        <div style="margin-bottom:8px;font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:700">The ZestixAI Difference</div>
         <div class="scenario">
           <div class="sc-icon bad"><i class="fas fa-phone-slash"></i></div>
           <div class="sc-text">
-            <strong>Before: Call goes to voicemail</strong>
-            <p>Customer hangs up, Googles your competitor, books with them in 30 seconds.</p>
+            <strong>Manual: Team answers phone</strong>
+            <p>Often missed. Customer waits or calls competitor. Revenue lost forever.</p>
           </div>
         </div>
         <div class="scenario">
-          <div class="sc-icon good"><i class="fas fa-phone"></i></div>
+          <div class="sc-icon good"><i class="fas fa-robot"></i></div>
           <div class="sc-text">
-            <strong>After: AI answers in 2 rings</strong>
-            <p>Qualifies intent, books the appointment, syncs to your calendar. No human needed.</p>
+            <strong>Autonomous: System answers instantly</strong>
+            <p>Qualifies lead, checks schedule, takes deposit, notifies your team. All in 90 seconds. Zero handoff needed.</p>
           </div>
         </div>
         <div class="scenario">
-          <div class="sc-icon bad"><i class="fas fa-clock"></i></div>
+          <div class="sc-icon bad"><i class="fas fa-hourglass-end"></i></div>
           <div class="sc-text">
-            <strong>Before: Follow-up takes 6 hours</strong>
-            <p>Lead fills out your form. Someone remembers to email them tomorrow. They've moved on.</p>
+            <strong>Manual: Follow-up tomorrow</strong>
+            <p>Lead cools off. Intent is gone. You're now competing on price, not timing.</p>
           </div>
         </div>
         <div class="scenario">
-          <div class="sc-icon good"><i class="fas fa-bolt"></i></div>
+          <div class="sc-icon good"><i class="fas fa-zap"></i></div>
           <div class="sc-text">
-            <strong>After: Follow-up in 90 seconds</strong>
-            <p>AI sends a personalized SMS the moment they submit. Engagement while intent is hot.</p>
+            <strong>Autonomous: Follow-up in 60 seconds</strong>
+            <p>Personalized SMS sent before they close the browser. Hot lead, hot response. Revenue recovered.</p>
           </div>
         </div>
       </div>
@@ -464,134 +443,135 @@ footer { padding:32px 0 48px; border-top:1px solid var(--bdr) }
   <div class="wrap">
     <div class="sec-head center">
       <div class="sec-label">How it works</div>
-      <h2>From bottleneck to live system</h2>
-      <p>No long transformation theater. We identify your biggest leak, build the fix, and have it running in days — not months.</p>
+      <h2>From revenue leak to autonomous system</h2>
+      <p>We audit your operations, identify the exact leak, and build a closed-loop system that runs automatically. The entire process takes less than two weeks.</p>
     </div>
     <div class="steps">
       <div class="step" data-aos="fade-up" data-aos-delay="0">
         <div class="step-n">1</div>
-        <h3>Free AI Audit</h3>
-        <p>We map your current workflow, identify where leads and time are being lost, and recommend the highest-ROI starting point.</p>
+        <h3>Revenue Audit</h3>
+        <p>We map exactly where your business loses revenue — calls, follow-up, admin overhead, or customer handoffs.</p>
       </div>
       <div class="step" data-aos="fade-up" data-aos-delay="80">
         <div class="step-n">2</div>
-        <h3>Design the system</h3>
-        <p>We design the AI workflow — prompts, guardrails, handoffs, integrations, and what success looks like for your business.</p>
+        <h3>System Design</h3>
+        <p>We design a closed-loop autonomous system: intake → qualification → booking → deposit → team notification. Zero human overhead.</p>
       </div>
       <div class="step" data-aos="fade-up" data-aos-delay="160">
         <div class="step-n">3</div>
-        <h3>Go live in 7 days</h3>
-        <p>Your AI goes live — connected to your phone, website, CRM, calendar, and inbox. No DIY setup, no IT team needed.</p>
+        <h3>Implementation</h3>
+        <p>We build, integrate, and connect everything to your CRM, calendar, payment processor, and Slack. Done-for-you, no IT team needed.</p>
       </div>
       <div class="step" data-aos="fade-up" data-aos-delay="240">
         <div class="step-n">4</div>
-        <h3>Refine and expand</h3>
-        <p>We tune using real conversation data and expand into more workflows as the first win proves out.</p>
+        <h3>Revenue Recovery</h3>
+        <p>The system goes live. You recover the revenue that was leaking. We optimize based on real performance data.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- VOICE DEMO CONVO -->
+<!-- AUTONOMOUS SYSTEMS SHOWCASE -->
 <section class="demo-section" id="demo">
   <div class="wrap demo-grid">
     <div data-aos="fade-right">
-      <div class="sec-label">See it in action</div>
-      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.9rem,3vw,2.6rem);font-weight:700;letter-spacing:-.04em;line-height:1.1;margin-bottom:16px">Your AI never sleeps, never has a bad day</h2>
-      <p style="color:var(--muted2);font-size:.98rem;line-height:1.75;margin-bottom:28px">It answers on the second ring, qualifies every caller, books appointments, and escalates to a human only when it should. 24/7 — even on weekends and holidays.</p>
+      <div class="sec-label">Autonomous systems in action</div>
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.9rem,3vw,2.6rem);font-weight:700;letter-spacing:-.04em;line-height:1.1;margin-bottom:16px">The system handles the whole workflow</h2>
+      <p style="color:var(--muted2);font-size:.98rem;line-height:1.75;margin-bottom:28px">While you sleep, your system answers calls, qualifies intent, books appointments, collects deposits, sends confirmations, and updates your CRM. Your team only sees "ready-to-work" leads.</p>
       <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
-        <li style="display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--muted2)"><i class="fas fa-check-circle" style="color:var(--green);flex-shrink:0"></i> Answers inbound calls in any language</li>
-        <li style="display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--muted2)"><i class="fas fa-check-circle" style="color:var(--green);flex-shrink:0"></i> Qualifies leads before routing to your team</li>
-        <li style="display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--muted2)"><i class="fas fa-check-circle" style="color:var(--green);flex-shrink:0"></i> Books appointments directly into your calendar</li>
-        <li style="display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--muted2)"><i class="fas fa-check-circle" style="color:var(--green);flex-shrink:0"></i> Escalates urgent calls to a live person instantly</li>
-        <li style="display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--muted2)"><i class="fas fa-check-circle" style="color:var(--green);flex-shrink:0"></i> Syncs every interaction to your CRM automatically</li>
+        <li style="display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--muted2)"><i class="fas fa-check-circle" style="color:var(--green);flex-shrink:0"></i> Answers calls 24/7, handles multi-language</li>
+        <li style="display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--muted2)"><i class="fas fa-check-circle" style="color:var(--green);flex-shrink:0"></i> Qualifies budget and intent in real-time</li>
+        <li style="display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--muted2)"><i class="fas fa-check-circle" style="color:var(--green);flex-shrink:0"></i> Checks live calendar, books directly</li>
+        <li style="display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--muted2)"><i class="fas fa-check-circle" style="color:var(--green);flex-shrink:0"></i> Takes deposits via Stripe / PayPal</li>
+        <li style="display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--muted2)"><i class="fas fa-check-circle" style="color:var(--green);flex-shrink:0"></i> Syncs everything to CRM, alerts team on Slack</li>
+        <li style="display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--muted2)"><i class="fas fa-check-circle" style="color:var(--green);flex-shrink:0"></i> Escalates to human only when needed</li>
       </ul>
     </div>
     <div data-aos="fade-left" data-aos-delay="100">
       <div class="demo-convo">
         <div class="dc-header">
-          <div class="dc-avatar"><i class="fas fa-robot"></i></div>
+          <div class="dc-avatar"><i class="fas fa-cogs"></i></div>
           <div class="dc-info">
-            <strong>ZestixAI Voice Agent</strong>
-            <span>Active · Handling call</span>
+            <strong>ZestixAI Autonomous System</strong>
+            <span>Active · Full workflow</span>
           </div>
           <div class="dc-status"><span class="dot2"></span> Live</div>
         </div>
         <div class="msg ai">
-          <div class="msg-name">AI Agent</div>
-          <div class="msg-bubble">Hi, thanks for calling! You've reached Dr. Patel's office. Are you a new patient or calling about an existing appointment?</div>
+          <div class="msg-name">System</div>
+          <div class="msg-bubble">Hi! Thanks for calling Dr. Patel's office. I see you need a cleaning. I have two slots open: Thursday 2pm ($150) or Friday 10am ($150). Which works?</div>
         </div>
         <div class="msg user">
           <div class="msg-name">Caller</div>
-          <div class="msg-bubble">New patient — I need to book a cleaning.</div>
+          <div class="msg-bubble">Thursday at 2pm is perfect</div>
         </div>
         <div class="msg ai">
-          <div class="msg-name">AI Agent</div>
-          <div class="msg-bubble">Great! I have openings this Thursday at 11am or Friday at 3pm. Do either of those work for you?</div>
+          <div class="msg-name">System</div>
+          <div class="msg-bubble">Got it. Charging your card on file for $150 deposit. Appointment confirmed. You'll get a reminder SMS tomorrow. Any insurance to add?</div>
         </div>
         <div class="msg user">
           <div class="msg-name">Caller</div>
-          <div class="msg-bubble">Thursday at 11 works perfectly.</div>
+          <div class="msg-bubble">No, I don't have insurance</div>
         </div>
         <div class="msg ai">
-          <div class="msg-name">AI Agent</div>
-          <div class="msg-bubble">Booked! I've sent a confirmation to your phone. See you Thursday at 11am. Have a great day! 😊</div>
+          <div class="msg-name">System</div>
+          <div class="msg-bubble">All set! Your confirmation details have been sent. Dr. Patel will see you Thursday at 2pm. Have a great day!</div>
         </div>
         <div class="dc-footer">
-          <input class="dc-input" readonly value="Appointment booked · CRM updated · Confirmation sent">
-          <button class="dc-send">✓ Done</button>
+          <input class="dc-input" readonly value="✓ Booked ✓ Paid ✓ CRM Updated ✓ SMS Sent ✓ Team Notified">
+          <button class="dc-send">Done</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- THREE CORE SYSTEMS -->
 <section class="section" id="services">
   <div class="wrap">
     <div class="sec-head center">
-      <div class="sec-label">What we build</div>
-      <h2>Three core systems, one AI-powered business</h2>
-      <p>We don't sell software. We implement working AI systems tailored to your exact workflows, tools, and team.</p>
+      <div class="sec-label">The three pillars</div>
+      <h2>How we build autonomous businesses</h2>
+      <p>Three interconnected systems that handle everything. You just watch the revenue grow.</p>
     </div>
     <div class="services-grid">
       <div class="svc" data-aos="fade-up" data-aos-delay="0">
         <div class="svc-icon"><i class="fas fa-headset"></i></div>
-        <h3>AI Voice Agent</h3>
-        <p>Answers inbound calls, qualifies leads, books appointments, and escalates to a human when needed. Works 24/7, never misses a call.</p>
-        <span class="svc-tag">🏆 Flagship offer</span>
+        <h3>Autonomous Intake System</h3>
+        <p>24/7 voice agent that answers calls, qualifies leads, books appointments, and collects deposits. Zero missed calls. Zero manual handoff.</p>
+        <span class="svc-tag">Revenue recovery</span>
       </div>
       <div class="svc" data-aos="fade-up" data-aos-delay="80">
-        <div class="svc-icon"><i class="fas fa-comments"></i></div>
-        <h3>Lead Capture & Follow-up</h3>
-        <p>Website chat, SMS flows, and intake assistants that qualify leads the moment they show interest — and follow up before they go cold.</p>
-        <span class="svc-tag">Most requested add-on</span>
+        <div class="svc-icon"><i class="fas fa-brain"></i></div>
+        <h3>Internal Knowledge Brain</h3>
+        <p>AI that has read every SOP, every invoice, every customer note. Your team stops asking questions and starts asking the brain. Onboarding drops from weeks to days.</p>
+        <span class="svc-tag">Operational scaling</span>
       </div>
       <div class="svc" data-aos="fade-up" data-aos-delay="160">
         <div class="svc-icon"><i class="fas fa-gears"></i></div>
-        <h3>Workflow Automation</h3>
-        <p>CRM updates, booking confirmations, routing, and team alerts — all triggered automatically so your team focuses on the work that matters.</p>
-        <span class="svc-tag">Saves 10+ hrs/week</span>
+        <h3>Closed-Loop Workflows</h3>
+        <p>Every customer interaction triggers automated actions: CRM updates, calendar blocks, team alerts, payment processing, follow-ups. No human bottleneck.</p>
+        <span class="svc-tag">Zero manual overhead</span>
       </div>
     </div>
     <div style="margin-top:16px" class="services-grid">
       <div class="svc" data-aos="fade-up" data-aos-delay="0">
-        <div class="svc-icon"><i class="fas fa-book-open-reader"></i></div>
-        <h3>Internal AI Tools</h3>
-        <p>Searchable SOP assistants and knowledge bots that help your team answer questions, onboard faster, and stop asking the same things twice.</p>
-        <span class="svc-tag">Team productivity</span>
+        <div class="svc-icon"><i class="fas fa-comments"></i></div>
+        <h3>Lead Capture &amp; Follow-up</h3>
+        <p>Website chat, SMS flows, intake forms that qualify leads the instant they show interest — then follow up automatically before they go cold.</p>
+        <span class="svc-tag">Lead generation</span>
       </div>
       <div class="svc" data-aos="fade-up" data-aos-delay="80">
-        <div class="svc-icon"><i class="fas fa-sitemap"></i></div>
-        <h3>AI Strategy & Roadmap</h3>
-        <p>Not sure where to start? We audit your operations, find the highest-leverage AI opportunities, and build a prioritized roadmap.</p>
-        <span class="svc-tag">Included in every engagement</span>
+        <div class="svc-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Performance Analytics</h3>
+        <p>Real-time dashboards showing revenue recovered, leads qualified, time saved, and ROI. Optimize based on actual data, not guesses.</p>
+        <span class="svc-tag">Measurable results</span>
       </div>
       <div class="svc" data-aos="fade-up" data-aos-delay="160">
         <div class="svc-icon"><i class="fas fa-puzzle-piece"></i></div>
-        <h3>Custom AI Builds</h3>
-        <p>Complex, unique workflows that don't fit a template. We design custom prompts, logic, and integrations around your exact process.</p>
-        <span class="svc-tag">Enterprise & complex ops</span>
+        <h3>Custom Automations</h3>
+        <p>Unique workflows that don't fit the template. We design and build custom AI systems around your exact operations and rules.</p>
+        <span class="svc-tag">Enterprise ready</span>
       </div>
     </div>
   </div>
@@ -602,16 +582,16 @@ footer { padding:32px 0 48px; border-top:1px solid var(--bdr) }
   <div class="wrap">
     <div class="sec-head center">
       <div class="sec-label">Who we serve</div>
-      <h2>Built for service businesses</h2>
-      <p>If your business runs on inbound calls, repeat bookings, and customer relationships — ZestixAI was built for you.</p>
+      <h2>Service businesses with revenue leaks</h2>
+      <p>If your business runs on calls, bookings, and relationships — ZestixAI recovers the revenue you're losing every day.</p>
     </div>
     <div class="ind-grid">
-      <div class="ind" data-aos="fade-up" data-aos-delay="0"><div class="ind-icon"><i class="fas fa-stethoscope"></i></div><div class="ind-text"><strong>Clinics &amp; Dentists</strong><span>Scheduling, intake, and front desk automation</span></div></div>
-      <div class="ind" data-aos="fade-up" data-aos-delay="40"><div class="ind-icon"><i class="fas fa-fan"></i></div><div class="ind-text"><strong>HVAC &amp; Plumbing</strong><span>Urgent call triage and same-day booking</span></div></div>
-      <div class="ind" data-aos="fade-up" data-aos-delay="80"><div class="ind-icon"><i class="fas fa-scissors"></i></div><div class="ind-text"><strong>Salons &amp; Med Spas</strong><span>Appointment booking and client follow-up</span></div></div>
-      <div class="ind" data-aos="fade-up" data-aos-delay="0"><div class="ind-icon"><i class="fas fa-house"></i></div><div class="ind-text"><strong>Real Estate</strong><span>Lead capture and agent routing</span></div></div>
-      <div class="ind" data-aos="fade-up" data-aos-delay="40"><div class="ind-icon"><i class="fas fa-car"></i></div><div class="ind-text"><strong>Auto Repair</strong><span>Service booking and vehicle intake</span></div></div>
-      <div class="ind" data-aos="fade-up" data-aos-delay="80"><div class="ind-icon"><i class="fas fa-utensils"></i></div><div class="ind-text"><strong>Restaurants</strong><span>Reservations and overflow call handling</span></div></div>
+      <div class="ind" data-aos="fade-up" data-aos-delay="0"><div class="ind-icon"><i class="fas fa-stethoscope"></i></div><div class="ind-text"><strong>Clinics &amp; Dentists</strong><span>Intake, scheduling, follow-up</span></div></div>
+      <div class="ind" data-aos="fade-up" data-aos-delay="40"><div class="ind-icon"><i class="fas fa-fan"></i></div><div class="ind-text"><strong>HVAC &amp; Plumbing</strong><span>Urgent triage, same-day dispatch</span></div></div>
+      <div class="ind" data-aos="fade-up" data-aos-delay="80"><div class="ind-icon"><i class="fas fa-scissors"></i></div><div class="ind-text"><strong>Salons &amp; Med Spas</strong><span>Booking, rescheduling, retention</span></div></div>
+      <div class="ind" data-aos="fade-up" data-aos-delay="0"><div class="ind-icon"><i class="fas fa-house"></i></div><div class="ind-text"><strong>Real Estate</strong><span>Lead capture, qualification, routing</span></div></div>
+      <div class="ind" data-aos="fade-up" data-aos-delay="40"><div class="ind-icon"><i class="fas fa-car"></i></div><div class="ind-text"><strong>Auto Repair</strong><span>Service booking, diagnostic intake</span></div></div>
+      <div class="ind" data-aos="fade-up" data-aos-delay="80"><div class="ind-icon"><i class="fas fa-utensils"></i></div><div class="ind-text"><strong>Restaurants</strong><span>Reservations, waitlist, overflow</span></div></div>
     </div>
   </div>
 </section>
@@ -621,32 +601,32 @@ footer { padding:32px 0 48px; border-top:1px solid var(--bdr) }
   <div class="wrap">
     <div class="sec-head center">
       <div class="sec-label">FAQ</div>
-      <h2>Common questions</h2>
+      <h2>Questions about autonomous systems</h2>
     </div>
     <div class="faq-grid">
       <div class="faq" data-aos="fade-up" data-aos-delay="0">
-        <h3>How long does implementation take?</h3>
-        <p>Most clients have their first system live within 7 days. We handle all setup, prompt engineering, integrations, and testing — you don't need a tech team.</p>
+        <h3>What does "autonomous" actually mean?</h3>
+        <p>It means the system runs without human intervention. A customer calls, the system answers, qualifies them, books them, takes payment, and alerts your team — all while you sleep. No one is sitting at a desk managing it.</p>
       </div>
       <div class="faq" data-aos="fade-up" data-aos-delay="60">
-        <h3>Will it work with our current tools?</h3>
-        <p>In most cases, yes. We connect to CRMs, calendars, inboxes, and scheduling tools your team already uses — no rip-and-replace required.</p>
+        <h3>How fast can you get us live?</h3>
+        <p>Our fastest deployments are 7-10 days from audit to live system. We handle all setup, integrations, and testing. You don't need a tech team.</p>
       </div>
       <div class="faq" data-aos="fade-up" data-aos-delay="0">
-        <h3>What does it cost?</h3>
-        <p>Every business is different. We build custom plans based on your specific workflows, team size, and goals. Book a free 30-min audit and we'll tell you exactly what makes sense for your situation.</p>
+        <h3>What if the AI makes a mistake?</h3>
+        <p>We build guardrails and escalation rules. Complex situations route to a human. The AI knows its limits and hands off appropriately.</p>
       </div>
       <div class="faq" data-aos="fade-up" data-aos-delay="60">
-        <h3>Are you just a software vendor?</h3>
-        <p>No — we're an implementation partner. We design the AI system, configure it, integrate it with your stack, and keep iterating based on real results. You get a partner, not a SaaS login.</p>
+        <h3>Can we start with just voice AI?</h3>
+        <p>Absolutely. We recommend starting with the single biggest leak (usually calls). Once that's working, you expand to follow-up, internal tooling, etc.</p>
       </div>
       <div class="faq" data-aos="fade-up" data-aos-delay="0">
-        <h3>What if the AI says something wrong?</h3>
-        <p>We design every system with guardrails, escalation paths, and human handoff triggers. The AI knows its limits — and routes to a live person when it should.</p>
+        <h3>How is this priced?</h3>
+        <p>We offer two models: (1) flat implementation fee + monthly retainer, or (2) performance-based — you pay per successful interaction the system handles. We'll recommend based on your situation.</p>
       </div>
       <div class="faq" data-aos="fade-up" data-aos-delay="60">
-        <h3>Do I have to start with voice AI?</h3>
-        <p>No. We start where the ROI is most obvious for your business. Sometimes that's voice, sometimes it's follow-up automation or internal tooling. We'll figure that out together on the audit call.</p>
+        <h3>Do we own the system?</h3>
+        <p>You own the output (customer data, conversations, results). We own the operations and keep it running. Think of us as your dedicated "AI operations team."</p>
       </div>
     </div>
   </div>
@@ -655,11 +635,11 @@ footer { padding:32px 0 48px; border-top:1px solid var(--bdr) }
 <!-- CTA BAND -->
 <section class="cta-band">
   <div class="wrap">
-    <div class="sec-label" style="margin-bottom:20px">Ready to stop losing leads?</div>
-    <h2>Your competitors are already<br>automating this.</h2>
-    <p>Book a free 30-minute AI audit. We'll map your workflow, find your biggest leak, and show you exactly how to fix it with AI.</p>
-    <a class="cta-big" href="#contact"><i class="fas fa-calendar-check"></i> Book Your Free AI Audit</a>
-    <p class="cta-note">Free. No commitment. No pitch decks. Just a real conversation about your business.</p>
+    <div class="sec-label" style="margin-bottom:20px">Ready to recover revenue?</div>
+    <h2>Find your exact leak.<br>Build your autonomous system.</h2>
+    <p>Book a free 30-minute revenue audit. We'll show you exactly how much money you're losing and how to automate it back.</p>
+    <a class="cta-big" href="#contact"><i class="fas fa-chart-line"></i> Book Free Revenue Audit</a>
+    <p class="cta-note">No fluff. No pitch. Just a real analysis of where your revenue is leaking and how to fix it.</p>
   </div>
 </section>
 
@@ -667,21 +647,21 @@ footer { padding:32px 0 48px; border-top:1px solid var(--bdr) }
 <section class="contact-section" id="contact">
   <div class="wrap">
     <div class="sec-head center">
-      <div class="sec-label">Let's talk</div>
-      <h2>Book your free AI audit</h2>
-      <p>30 minutes. We'll identify your highest-leverage AI opportunity and map out how to implement it.</p>
+      <div class="sec-label">Get started</div>
+      <h2>Book your free revenue audit</h2>
+      <p>30 minutes. We map your operations, find the leak, and show you your recovery plan.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-card" data-aos="fade-right">
-        <h3>What we'll cover on the call:</h3>
+        <h3>What you'll get:</h3>
         <ul class="cc-list">
-          <li><i class="fas fa-check-circle"></i> Where you're currently losing leads, time, or money</li>
-          <li><i class="fas fa-check-circle"></i> Which AI system will give you the fastest ROI</li>
-          <li><i class="fas fa-check-circle"></i> How it would connect to your existing tools and team</li>
-          <li><i class="fas fa-check-circle"></i> A realistic timeline and what implementation looks like</li>
-          <li><i class="fas fa-check-circle"></i> Honest pricing based on your actual needs</li>
+          <li><i class="fas fa-check-circle"></i> Exact monthly revenue leakage analysis</li>
+          <li><i class="fas fa-check-circle"></i> Which autonomous system will recover the most revenue</li>
+          <li><i class="fas fa-check-circle"></i> Implementation timeline and technical requirements</li>
+          <li><i class="fas fa-check-circle"></i> Realistic ROI and payback period</li>
+          <li><i class="fas fa-check-circle"></i> Custom proposal based on your situation</li>
         </ul>
-        <p style="color:var(--muted2);font-size:.88rem;line-height:1.7;margin-top:16px">No hard sell. If we're not the right fit, we'll tell you. If we are, we'll have a proposal ready before the call ends.</p>
+        <p style="color:var(--muted2);font-size:.88rem;line-height:1.7;margin-top:16px">This isn't a sales call. We'll tell you if ZestixAI is the right fit — and if it isn't, we'll tell you that too.</p>
         <div class="cc-links">
           <a class="cc-link" href="mailto:zain.mehta@zestixai.com"><i class="fas fa-envelope"></i> zain.mehta@zestixai.com</a>
           <a class="cc-link" href="mailto:info@zestixai.com"><i class="fas fa-inbox"></i> info@zestixai.com</a>
@@ -696,7 +676,7 @@ footer { padding:32px 0 48px; border-top:1px solid var(--bdr) }
 
 <footer>
   <div class="wrap foot">
-    <span class="foot-left">© 2026 ZestixAI · AI implementation for service businesses</span>
+    <span class="foot-left">© 2026 ZestixAI · Autonomous systems for service businesses</span>
     <div class="foot-links">
       <a href="mailto:zain.mehta@zestixai.com">zain.mehta@zestixai.com</a>
       <a href="mailto:info@zestixai.com">info@zestixai.com</a>
@@ -709,8 +689,6 @@ footer { padding:32px 0 48px; border-top:1px solid var(--bdr) }
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
 AOS.init({ once: true, offset: 60, duration: 650, easing: 'ease-out-cubic' });
-
-// Mobile nav
 const menuBtn = document.querySelector('.menu-toggle');
 const navList = document.querySelector('nav ul');
 menuBtn?.addEventListener('click', () => navList.classList.toggle('active'));
@@ -720,26 +698,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); navList?.classList.remove('active'); }
   });
 });
-
-// Animated counter for cost stats
-const nums = document.querySelectorAll('.cost-stat .num[data-count]');
-const countObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const el = e.target;
-      const target = parseFloat(el.dataset.count);
-      let cur = 0;
-      const step = target / 50;
-      const t = setInterval(() => {
-        cur += step;
-        if (cur >= target) { el.textContent = target + (el.dataset.suffix || ''); clearInterval(t); }
-        else el.textContent = Math.floor(cur) + (el.dataset.suffix || '');
-      }, 25);
-      countObs.unobserve(el);
-    }
-  });
-}, { threshold: 0.5 });
-nums.forEach(n => countObs.observe(n));
 </script>
 </body>
 </html>
