@@ -79,12 +79,21 @@ section{padding:72px 0;border-top:1px solid var(--line)}
 .kicker{font-size:.72rem;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--pine)}
 header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
-.brand{font-family:'Fraunces',serif;font-size:1.32rem;font-weight:700;color:var(--ink)}
+.brand{display:inline-flex;align-items:baseline;gap:2px;font-family:'Fraunces',serif;font-size:1.32rem;font-weight:700;color:var(--ink)}
+.brand::after{content:'';width:6px;height:6px;background:var(--pine);border-radius:50%;margin-left:3px;align-self:center;margin-top:5px}
 .brand b{color:var(--pine)}
 nav ul{display:flex;gap:22px;list-style:none}
 nav a{color:var(--ink2);font-size:.9rem;font-weight:500}
 nav a:hover{color:var(--pine)}
 .cta-nav{background:var(--pine);color:#fff;padding:9px 16px;border-radius:var(--r);font-size:.86rem;font-weight:600}
+nav ul li.dropdown{position:relative}
+nav ul li.dropdown>span{cursor:default;color:var(--ink2);font-size:.9rem;font-weight:500}
+nav ul li.dropdown:hover>span,nav ul li.dropdown:focus-within>span{color:var(--pine)}
+nav ul li.dropdown>ul{display:none;position:absolute;top:100%;left:0;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:8px;min-width:230px;box-shadow:0 12px 28px rgba(21,36,29,.12);list-style:none;margin-top:10px;z-index:60}
+nav ul li.dropdown:hover>ul,nav ul li.dropdown:focus-within>ul{display:block}
+nav ul li.dropdown>ul li{padding:0}
+nav ul li.dropdown>ul a{display:block;padding:8px 10px;border-radius:6px;font-size:.88rem}
+nav ul li.dropdown>ul a:hover{background:var(--paper2);color:var(--pine)}
 .menu-toggle{display:none;background:none;border:0;font-size:1.5rem;color:var(--ink);cursor:pointer}
 .hero{padding:64px 0 56px}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
@@ -131,12 +140,14 @@ footer{background:var(--ink);color:#C9D2CC;padding:44px 0;font-size:.9rem}
 .foot-brand b{color:#6FCFA3}
 .foot-links{display:flex;flex-direction:column;gap:7px}
 .foot-links a{color:#C9D2CC}
+.foot-note{margin-top:14px;font-size:.85rem;font-style:italic;color:#C9D2CC}
 @media(max-width:940px){
   .hero-grid{grid-template-columns:1fr;gap:34px}
   .grid3,.grid2,.stat-row{grid-template-columns:1fr}
   nav{display:none;position:absolute;top:66px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:14px 24px}
   nav.open{display:block}
   nav ul{flex-direction:column;gap:14px}
+  nav ul li.dropdown>ul{display:block;position:static;box-shadow:none;border:none;padding:6px 0 0 10px;margin-top:6px}
   .menu-toggle{display:block}
   .cta-nav{font-size:.8rem;padding:8px 12px}
   .btn{width:100%;text-align:center}
@@ -155,7 +166,7 @@ footer{background:var(--ink);color:#C9D2CC;padding:44px 0;font-size:.9rem}
         <li><a href="#try">Try the demo</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="/">All services</a></li>
+        <li class="dropdown" tabindex="0"><span>Industries</span><ul><li><a href="/ai-receptionist.html">Restaurants &amp; Local Business</a></li><li><a href="/ai-receptionist-dental.html">Dental &amp; Medical</a></li><li><a href="/">All Services (Home)</a></li></ul></li>
       </ul>
     </nav>
     <a class="cta-nav" href="tel:+18476131949">Call the demo</a>
@@ -271,14 +282,16 @@ footer{background:var(--ink);color:#C9D2CC;padding:44px 0;font-size:.9rem}
       <p>AI receptionists &amp; automation for salons, spas, and local businesses.<br>
       Vernon Hills, Illinois · Serving Chicagoland, Lake County, southern Wisconsin &amp; Indiana.<br>
       © <span id="yr">2026</span> ZestixAI. All rights reserved.</p>
+      <p class="foot-note">Every account is set up, and personally answered, by me &mdash; not a call center. &mdash; Zain</p>
     </div>
     <div class="foot-links">
-      <a href="/">All services</a>
-      <a href="/ai-receptionist.html">AI Receptionist overview</a>
-      <a href="/ai-receptionist-dental.html">For dental &amp; medical practices</a>
+      <a href="/">Home</a>
+      <a href="/ai-receptionist.html">Restaurants &amp; Local Business</a>
+      <a href="/ai-receptionist-dental.html">Dental &amp; Medical</a>
       <a href="tel:+18476131949">Demo line: (847) 613-1949</a>
       <a href="tel:+12244270498">Zain: (224) 427-0498</a>
       <a href="mailto:zain.mehta@zestixai.com">zain.mehta@zestixai.com</a>
+      <a href="#top">Back to top ↑</a>
     </div>
   </div>
 </footer>
