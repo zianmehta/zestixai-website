@@ -130,6 +130,8 @@ nav ul a:hover { color:var(--ink); background:var(--paper2) }
 .kicker::before { content:''; width:26px; height:1.5px; background:var(--pine) }
 .hero h1 { font-family:'Fraunces',serif; font-size:clamp(2.5rem,4.6vw,3.9rem); font-weight:600; line-height:1.08; letter-spacing:-.015em; margin-bottom:24px }
 .hero h1 em { font-style:italic; color:var(--pine) }
+.hl{position:relative;display:inline-block}
+.hl .swash{position:absolute;left:0;bottom:-6px;width:100%;height:12px;pointer-events:none}
 .hero-sub { font-size:1.1rem; color:var(--ink2); line-height:1.7; max-width:34em; margin-bottom:34px }
 .btn { display:inline-flex; align-items:center; gap:10px; padding:15px 28px; border-radius:8px; background:var(--pine); color:#fff; font-weight:600; font-size:1rem; transition:background .2s, transform .15s }
 .btn:hover { background:var(--pineD); color:#fff; transform:translateY(-1px) }
@@ -320,7 +322,7 @@ footer { padding:44px 0 56px; background:var(--paper) }
   <div class="wrap hero-grid">
     <div>
       <div class="kicker">Vernon Hills, IL · Serving Chicagoland, Wisconsin &amp; Indiana</div>
-      <h1>Put AI to work in <em>your</em> business.</h1>
+      <h1>Put AI to work in <span class="hl"><em>your</em><svg class="swash" viewBox="0 0 140 14" fill="none" preserveAspectRatio="none"><path d="M2 8c20-7 40-7 68 0s48 7 68 0" stroke="var(--amber)" stroke-width="3" stroke-linecap="round"/></svg></span> business.</h1>
       <p class="hero-sub">Whatever your business runs on — phone calls, paperwork, orders, or clients — we find where AI pays for itself and set it up for you. Done for you, in plain English.</p>
       <div>
         <a class="btn" href="#contact">Book a free AI audit <span class="arr">→</span></a>
