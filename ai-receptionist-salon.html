@@ -131,6 +131,13 @@ nav ul li.dropdown>ul a:hover{background:var(--paper2);color:var(--pine)}
 .card p{font-size:.93rem}
 .num-badge{font-family:'Fraunces',serif;font-size:.8rem;font-weight:700;color:var(--pine);background:var(--pineT);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
 .alt{background:var(--paper2)}
+/* background line illustrations */
+#how,#who,#stats{position:relative;overflow:hidden}
+#how>.wrap,#who>.wrap,#stats>.wrap{position:relative;z-index:1}
+.bg-lines{position:absolute;pointer-events:none;z-index:0;color:var(--pine);opacity:.07}
+.bg-lines.tr{top:-40px;right:-70px;width:320px}
+.bg-lines.bl{bottom:-60px;left:-80px;width:290px}
+@media(max-width:900px){.bg-lines{display:none}}
 .faq details{border-bottom:1px solid var(--line);padding:16px 0}
 .faq summary{cursor:pointer;font-weight:600;font-size:1rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
 .faq summary::-webkit-details-marker{display:none}
@@ -221,6 +228,10 @@ footer{background:var(--ink);color:#C9D2CC;padding:44px 0;font-size:.9rem}
 </section>
 
 <section id="stats" class="alt">
+  <svg class="bg-lines tr" viewBox="0 0 400 400" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+    <circle cx="200" cy="200" r="70"/><circle cx="200" cy="200" r="112"/><circle cx="200" cy="200" r="154"/>
+    <path d="M46 200h308M200 46v308"/>
+  </svg>
   <div class="wrap">
     <span class="kicker">Why this matters</span>
     <h2>A missed call is a client you never get to keep</h2>
@@ -262,6 +273,11 @@ footer{background:var(--ink);color:#C9D2CC;padding:44px 0;font-size:.9rem}
 </section>
 
 <section id="how">
+  <svg class="bg-lines bl" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+    <path d="M30 250h90a40 40 0 0 0 40-40v-60a40 40 0 0 1 40-40h80a40 40 0 0 0 40-40V40"/>
+    <circle cx="30" cy="250" r="9"/><circle cx="160" cy="150" r="9"/><circle cx="290" cy="70" r="9"/>
+    <path d="M30 290h340"/>
+  </svg>
   <div class="wrap">
     <span class="kicker">How it works</span>
     <h2>Your phone number doesn't change. Neither does your team.</h2>
