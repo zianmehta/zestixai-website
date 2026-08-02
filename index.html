@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="impact-site-verification" value="c9b8f551-427c-4da5-902f-23d5eb45eca9">
 <title>AI Services & Consulting for Businesses — Vernon Hills, IL | Chicagoland, Wisconsin & Indiana | ZestixAI</title>
 <meta name="description" content="ZestixAI is a Vernon Hills, Illinois AI consulting firm for businesses of every kind — AI receptionists, chatbots, document automation, workflow automation, AI marketing, dashboards, custom copilots, and team training. Serving Chicagoland, Wisconsin and Indiana. Free 30-minute AI audit.">
 <meta name="keywords" content="AI consultant Chicago, AI automation agency Chicago, AI consulting for business, AI receptionist small business, AI chatbot for business, document automation AI, missed call text back, workflow automation Chicagoland, AI marketing automation, AI training for employees, AI consultant Vernon Hills, business automation Lake County IL, AI automation Milwaukee, AI automation Indianapolis">
@@ -300,6 +299,12 @@ footer { padding:44px 0 56px; background:var(--paper) }
   .steps { grid-template-columns:1fr }
   .ind-grid,.faq-grid { grid-template-columns:1fr 1fr }
   .trust-inner { justify-content:flex-start }
+  /* collapse nav here: the inline links + CTA button need ~1000px to fit,
+     so below this the header overflowed horizontally */
+  .menu-toggle { display:flex; align-items:center; justify-content:flex-end; order:9; margin-left:auto; min-width:44px; min-height:44px }
+  nav ul { display:none; position:absolute; top:calc(100% + 6px); left:16px; right:16px; background:var(--white); border:1px solid var(--line); border-radius:12px; padding:12px; flex-direction:column; align-items:stretch; box-shadow:0 20px 50px -20px rgba(26,36,32,.3); z-index:200 }
+  nav ul.active { display:flex }
+  .cta-nav { display:none }
 }
 @media(max-width:680px){
   body { font-size:16px }
@@ -312,10 +317,6 @@ footer { padding:44px 0 56px; background:var(--paper) }
   .grp-head .gc { margin-left:0; width:100% }
   .btn,.btn.ghost { width:100%; justify-content:center }
   .btn.ghost { margin:10px 0 0 }
-  .menu-toggle { display:block; order:9; margin-left:auto }
-  nav ul { display:none; position:absolute; top:calc(100% + 6px); left:16px; right:16px; background:var(--white); border:1px solid var(--line); border-radius:12px; padding:12px; flex-direction:column; align-items:stretch; box-shadow:0 20px 50px -20px rgba(26,36,32,.3); z-index:200 }
-  nav ul.active { display:flex }
-  .cta-nav { display:none }
   .calendly-inline-widget { height:620px }
 }
 </style>
@@ -858,6 +859,7 @@ footer { padding:44px 0 56px; background:var(--paper) }
         </ul>
         <p class="cc-fine">You'll meet Zain Mehta, ZestixAI's founder — not a sales rep. If AI isn't a fit for your business right now, he'll tell you that, and you'll have lost nothing but half an hour.</p>
         <div class="cc-links">
+          <a href="tel:+12244270498">Call or text 224-427-0498</a>
           <a href="mailto:zain.mehta@zestixai.com">zain.mehta@zestixai.com</a>
           <a href="mailto:info@zestixai.com">info@zestixai.com</a>
         </div>
